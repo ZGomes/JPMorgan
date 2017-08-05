@@ -34,7 +34,9 @@ section
   height 100vh
   width 100%
   overflow hidden
-  display block
+  display flex
+  align-items center
+  flex-direction column
 
 a
   text-decoration none
@@ -109,3 +111,13 @@ main
 
 .circle
   border-radius 50%
+  z-index -1
+  background-color transparent
+
+#equipe
+  .circle
+    border 3px solid color-4
+    width 60%
+    position relative
+    height 100%
+    top -60px

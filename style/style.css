@@ -2,9 +2,10 @@
   font-family: "Proxima Nova";
   src: url("../fonts/Proxima Nova Extrabold.otf");
   font-weight: bold;
+}
+@font-face {
   font-family: "Proxima Nova";
   src: url("../fonts/Proxima Nova Light.otf");
-  font-style: normal;
 }
 * {
   margin: 0px;
@@ -25,27 +26,6 @@ section {
 }
 a {
   text-decoration: none;
-}
-.btn {
-  padding: 10px 20px 10px 20px;
-  border-radius: 20px;
-  transition: all 0.6s ease;
-}
-.btn-contrast {
-  border: 3px solid #fff;
-  color: #fff;
-}
-.btn-contrasthover {
-  background-color: #fff;
-  color: #743ad0;
-}
-.btn-contrast-full {
-  border: 3px solid #fff;
-  background-color: #fff;
-  color: #743ad0;
-}
-.btn-contrast-fullhover {
-  background-color: transparent;
   color: #fff;
 }
 header {
@@ -64,8 +44,11 @@ header #top nav ul {
   list-style: none;
   justify-content: space-between;
 }
-header #top nav ul li a {
-  color: #fff;
+header #top nav ul li a:hover {
+  border-bottom: 2px solid #fff;
+}
+header #top nav ul li .btn-contrast:hover {
+  color: contrastInsident;
 }
 main #inicio {
   background: url("../images/top-bg.png") fixed no-repeat 0 0;
@@ -94,11 +77,25 @@ main #inicio {
     margin: 5px;
     text-align: center;
   }
-  header #top nav ul li a {
-    color: #fff;
-  }
-  main #inicio {
-    background: url("../images/top-bg.png") fixed no-repeat 0 0;
-    background-size: auto auto;
-  }
+}
+.btn {
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  transition: all 0.6s ease;
+}
+.btn-contrast {
+  border: 2px solid #fff;
+  color: #fff;
+}
+.btn-contrast:hover {
+  background-color: #fff;
+  color: #743ad0;
+}
+.btn-contrast-full {
+  border: 2px solid #fff;
+  background-color: #fff;
+  color: #743ad0;
+}
+.btn-contrast-full:hover {
+  background-color: transparent;
 }

@@ -15,9 +15,9 @@ contrastInside = #743ad0
   src url('../fonts/Proxima Nova Extrabold.otf')
   font-weight bold
 
+@font-face
   font-family "Proxima Nova"
   src url('../fonts/Proxima Nova Light.otf')
-  font-style normal
 
 *
   margin 0px
@@ -38,28 +38,6 @@ section
 
 a
   text-decoration none
-
-//  BOTÕES
-.btn
-  padding 10px 20px 10px 20px
-  border-radius 20px
-  transition all 0.6s ease
-
-.btn-contrast
-  border 3px solid contrast
-  color contrast
-
-.btn-contrasthover
-  background-color contrast
-  color contrastInside
-
-.btn-contrast-full
-  border 3px solid contrast
-  background-color contrast
-  color contrastInside
-
-.btn-contrast-fullhover
-  background-color transparent
   color contrast
 
 header
@@ -75,8 +53,10 @@ header
         list-style none
         justify-content space-between
         li
-          a
-            color contrast
+          a:hover
+            border-bottom 2px solid contrast
+          .btn-contrast:hover
+            color contrastInsident
 
 main
   #inicio
@@ -101,10 +81,25 @@ main
             padding 5px;
             margin 5px;
             text-align center
-            a
-              color contrast
 
-  main
-    #inicio
-      background url('../images/top-bg.png') fixed no-repeat 0 0
-      background-size auto auto
+//  BOTÕES
+.btn
+  padding 10px 20px 10px 20px
+  border-radius 20px
+  transition all 0.6s ease
+
+.btn-contrast
+  border 2px solid contrast
+  color contrast
+
+.btn-contrast:hover
+  background-color contrast
+  color contrastInside
+
+.btn-contrast-full
+  border 2px solid contrast
+  background-color contrast
+  color contrastInside
+
+.btn-contrast-full:hover
+  background-color transparent

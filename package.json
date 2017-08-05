@@ -1,7 +1,6 @@
 {
   "name": "project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +11,14 @@
     "gulp": "^3.9.1",
     "gulp-stylus": "^2.6.0",
     "stylus": "^0.54.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlackLawzin/JPMorgan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BlackLawzin/JPMorgan/issues"
+  },
+  "homepage": "https://github.com/BlackLawzin/JPMorgan#readme",
+  "description": ""
 }

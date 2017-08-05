@@ -1,0 +1,110 @@
+// PADRÃO DE CORES DO WEBSITE
+
+// PADRÕES
+color-1 = #101d48
+color-2 = #d8157d
+color-3 = #dd5632
+color-4 = #2acfc1
+
+// EXTRAS
+contrast = white
+contrastInside = #743ad0
+
+@font-face
+  font-family "Proxima Nova"
+  src url('../fonts/Proxima Nova Extrabold.otf')
+  font-weight bold
+
+  font-family "Proxima Nova"
+  src url('../fonts/Proxima Nova Light.otf')
+  font-style normal
+
+*
+  margin 0px
+  padding 0px
+  box-sizing border-box
+
+body
+  font-size 18px
+  margin 0px
+  padding 0px
+  font-family "Proxima Nova"
+
+section
+  height 100vh
+  width 100%
+  overflow hidden
+  display block
+
+a
+  text-decoration none
+
+//  BOTÕES
+.btn
+  padding 10px 20px 10px 20px
+  border-radius 20px
+  transition all 0.6s ease
+
+.btn-contrast
+  border 3px solid contrast
+  color contrast
+
+.btn-contrasthover
+  background-color contrast
+  color contrastInside
+
+.btn-contrast-full
+  border 3px solid contrast
+  background-color contrast
+  color contrastInside
+
+.btn-contrast-fullhover
+  background-color transparent
+  color contrast
+
+header
+  display flex
+  justify-content center
+  #top
+    position fixed
+    padding 20px
+    nav
+      padding 20px
+      ul
+        display flex
+        list-style none
+        justify-content space-between
+        li
+          a
+            color contrast
+
+main
+  #inicio
+    background url('../images/top-bg.png') fixed no-repeat 0 0
+    background-size 100% 100%
+
+@media only screen and (max-width 1000px)
+  header
+    display flex
+    justify-content center
+    #top
+      position fixed
+      padding 20px
+      nav
+        padding 20px
+        ul
+          display flex
+          list-style none
+          justify-content space-between
+          flex-direction column
+          li
+            padding 5px;
+            margin 5px;
+            text-align center
+            a
+              color contrast
+
+  main
+    #inicio
+      background url('../images/top-bg.png') fixed no-repeat 0 0
+      background-size auto auto

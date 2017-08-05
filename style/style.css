@@ -1,3 +1,104 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/Proxima Nova Extrabold.otf");
+  font-weight: bold;
+  font-family: "Proxima Nova";
+  src: url("../fonts/Proxima Nova Light.otf");
+  font-style: normal;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 body {
-  background: #00008b;
+  font-size: 18px;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Proxima Nova";
+}
+section {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  transition: all 0.6s ease;
+}
+.btn-contrast {
+  border: 3px solid #fff;
+  color: #fff;
+}
+.btn-contrasthover {
+  background-color: #fff;
+  color: #743ad0;
+}
+.btn-contrast-full {
+  border: 3px solid #fff;
+  background-color: #fff;
+  color: #743ad0;
+}
+.btn-contrast-fullhover {
+  background-color: transparent;
+  color: #fff;
+}
+header {
+  display: flex;
+  justify-content: center;
+}
+header #top {
+  position: fixed;
+  padding: 20px;
+}
+header #top nav {
+  padding: 20px;
+}
+header #top nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+header #top nav ul li a {
+  color: #fff;
+}
+main #inicio {
+  background: url("../images/top-bg.png") fixed no-repeat 0 0;
+  background-size: 100% 100%;
+}
+@media only screen and (max-width: 1000px) {
+  header {
+    display: flex;
+    justify-content: center;
+  }
+  header #top {
+    position: fixed;
+    padding: 20px;
+  }
+  header #top nav {
+    padding: 20px;
+  }
+  header #top nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  header #top nav ul li {
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+  }
+  header #top nav ul li a {
+    color: #fff;
+  }
+  main #inicio {
+    background: url("../images/top-bg.png") fixed no-repeat 0 0;
+    background-size: auto auto;
+  }
 }

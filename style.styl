@@ -10,6 +10,28 @@ color-4 = #2acfc1
 contrast = white
 contrastInside = #743ad0
 
+// KEYFRAMES
+@keyframes lineGrowFX {
+  from {
+    width 0px;
+  }
+  to {
+    width 100px;
+  }
+}
+
+@keyframes appear {
+  from {
+    margin-top 20px
+    opacity 0
+  }
+  to {
+    margin-top 0px
+    opacity 1
+  }
+}
+
+// FONTS
 @font-face
   font-family "Proxima Nova"
   src url('../fonts/Proxima Nova Extrabold.otf')
@@ -35,10 +57,14 @@ section
   width 100%
   overflow hidden
   display block
+  padding-top 120px
 
 a
   text-decoration none
   color contrast
+
+.appear
+  animation appear 1.5s ease forwards
 
 header
   display flex
@@ -46,6 +72,7 @@ header
   #top
     position fixed
     padding 20px
+    padding-top 40px
     nav
       padding 20px
       ul
@@ -60,8 +87,33 @@ header
 
 main
   #inicio
+    h2
+      font-size 72px
+      font-weight normal
+    .divisor
+      display block
+      .l1
+        display inline-block
+        width 5px
+        height 5px
+        background-color color-4
+      .l2
+        display inline-block
+        height 5px
+        background-color color-2
+        animation lineGrowFX 1s ease forwards
+    p
+      margin-top 30px
+      margin-bottom 30px
+    .btn
+      padding 2px 3px 2px 3px
+      margin-top 50px
     background url('../images/top-bg.png') fixed no-repeat 0 0
     background-size 100% 100%
+    color contrast
+    align-content center
+    align-items center
+    display flex
 
 @media only screen and (max-width 1000px)
   header
@@ -70,6 +122,7 @@ main
     #top
       position fixed
       padding 20px
+      text-align center
       nav
         padding 20px
         ul
@@ -79,8 +132,13 @@ main
           flex-direction column
           li
             padding 5px;
-            margin 5px;
+            margin 10px;
             text-align center
+
+  main
+    #inicio
+      background url('../images/top-bg.png') fixed no-repeat 0 0
+      background-size auto auto
 
 //  BOTÕES
 .btn
@@ -103,3 +161,4 @@ main
 
 .btn-contrast-full:hover
   background-color transparent
+  color contrast

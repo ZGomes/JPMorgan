@@ -23,10 +23,14 @@ section {
   width: 100%;
   overflow: hidden;
   display: block;
+  padding-top: 120px;
 }
 a {
   text-decoration: none;
   color: #fff;
+}
+.appear {
+  animation: appear 1.5s ease forwards;
 }
 header {
   display: flex;
@@ -35,6 +39,7 @@ header {
 header #top {
   position: fixed;
   padding: 20px;
+  padding-top: 40px;
 }
 header #top nav {
   padding: 20px;
@@ -53,6 +58,37 @@ header #top nav ul li .btn-contrast:hover {
 main #inicio {
   background: url("../images/top-bg.png") fixed no-repeat 0 0;
   background-size: 100% 100%;
+  color: #fff;
+  align-content: center;
+  align-items: center;
+  display: flex;
+}
+main #inicio h2 {
+  font-size: 72px;
+  font-weight: normal;
+}
+main #inicio .divisor {
+  display: block;
+}
+main #inicio .divisor .l1 {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #2acfc1;
+}
+main #inicio .divisor .l2 {
+  display: inline-block;
+  height: 5px;
+  background-color: #d8157d;
+  animation: lineGrowFX 1s ease forwards;
+}
+main #inicio p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+main #inicio .btn {
+  padding: 2px 3px 2px 3px;
+  margin-top: 50px;
 }
 @media only screen and (max-width: 1000px) {
   header {
@@ -62,6 +98,7 @@ main #inicio {
   header #top {
     position: fixed;
     padding: 20px;
+    text-align: center;
   }
   header #top nav {
     padding: 20px;
@@ -74,8 +111,12 @@ main #inicio {
   }
   header #top nav ul li {
     padding: 5px;
-    margin: 5px;
+    margin: 10px;
     text-align: center;
+  }
+  main #inicio {
+    background: url("../images/top-bg.png") fixed no-repeat 0 0;
+    background-size: auto auto;
   }
 }
 .btn {
@@ -98,4 +139,77 @@ main #inicio {
 }
 .btn-contrast-full:hover {
   background-color: transparent;
+  color: #fff;
+}
+@-moz-keyframes lineGrowFX {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100px;
+  }
+}
+@-webkit-keyframes lineGrowFX {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100px;
+  }
+}
+@-o-keyframes lineGrowFX {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100px;
+  }
+}
+@keyframes lineGrowFX {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100px;
+  }
+}
+@-moz-keyframes appear {
+  from {
+    margin-top: 20px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes appear {
+  from {
+    margin-top: 20px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+@-o-keyframes appear {
+  from {
+    margin-top: 20px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  from {
+    margin-top: 20px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0px;
+    opacity: 1;
+  }
 }

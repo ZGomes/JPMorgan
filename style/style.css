@@ -19,7 +19,7 @@ body {
   font-family: "Proxima Nova";
 }
 section {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
   padding-top: 100px;
@@ -51,13 +51,8 @@ header #top nav ul {
   list-style: none;
   justify-content: space-between;
 }
-<<<<<<< HEAD
 header #top nav ul li a {
   transition: border 1s color 1s;
-=======
-header #top nav ul li a:hover {
-  font-weight: bold;
->>>>>>> 75edd5c2b59c50893053736aca7084cd1c394a83
 }
 .divisor {
   display: block;
@@ -104,17 +99,14 @@ main #inicio p {
   margin-bottom: 30px;
   max-width: 50%;
 }
-<<<<<<< HEAD
 main #inicio .btn {
   padding: 15px 17px 15px 17px;
   margin-top: 50px;
   font-weight: bold;
 }
-=======
->>>>>>> 75edd5c2b59c50893053736aca7084cd1c394a83
 @media only screen and (max-width: 1000px) {
   section {
-    height: calc(100vh - 800px);
+    height: calc(100vh - 120px);
   }
   header {
     display: flex;
@@ -200,17 +192,8 @@ main #inicio .btn {
   color: #f5f5f5;
 }
 .btn-contrast:hover {
-<<<<<<< HEAD
   border: 2px solid #d8157d;
   background-color: transparent;
-=======
-  background-color: #fff;
-  color: #d8157d;
-}
-.btn-contrast-full {
-  border: 2px solid #fff;
-  background-color: #fff;
->>>>>>> 75edd5c2b59c50893053736aca7084cd1c394a83
   color: #d8157d;
 }
 .btn-contrast-full {
@@ -264,7 +247,6 @@ main #inicio .btn {
   padding-top: 0;
   justify-content: center;
 }
-<<<<<<< HEAD
 #missao section {
   width: 35%;
 }
@@ -401,11 +383,6 @@ main #inicio .btn {
 .arrowRight {
   transform: rotate(-90deg);
 }
-=======
-#curso {
-  background-color: #2acfc1;
-}
->>>>>>> 75edd5c2b59c50893053736aca7084cd1c394a83
 @-moz-keyframes lineGrowFX {
   from {
     width: 0px;

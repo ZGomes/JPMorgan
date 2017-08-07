@@ -53,7 +53,7 @@ body
   font-family "Proxima Nova"
 
 section
-  height 100%
+  height 100vh
   width 100%
   overflow hidden
   padding-top 100px
@@ -98,10 +98,6 @@ header
     border-radius 10px
     display inline-block
     height 5px
-          a:hover
-            font-weight bold
-          .btn-contrast:hover
-            color contrastInsident
 
 main
   #inicio
@@ -117,7 +113,6 @@ main
       flex-direction column
       height calc(100vh - 100px)
       justify-content space-around
-      height calc(100vh - 100px)
     h2
       font-size 72px
       font-weight normal
@@ -130,7 +125,6 @@ main
       margin-top 30px
       margin-bottom 30px
       max-width 50%
-
     .btn
       padding 15px 17px 15px 17px
       margin-top 50px
@@ -140,16 +134,7 @@ main
 @media only screen and (max-width 1000px)
   section
     height calc(100vh - 120px)
-    background url('../images/top-bg.jpg') fixed no-repeat 0 0
-    background-size 100% 100%
-    color contrast
-    align-content center
-    align-items center
-    display flex
 
-@media only screen and (max-width 1000px)
-  section
-    height calc(100vh - 800px)
   header
     display flex
     justify-content center
@@ -226,10 +211,6 @@ main
     border 2px solid color-2
     background-color transparent
     color color-2
-
-.btn-contrast:hover
-  background-color contrast
-  color color-2
 
 .btn-contrast-full
   border 2px solid contrast!important
@@ -386,12 +367,3 @@ main
   transform rotate(90deg)
 .arrowRight
   transform rotate(-90deg)
-    width 50%
-    position relative
-    height 100%
-    top -60px
-
-#curso
-  background-color color-4
-    display flex
-    justify-content center

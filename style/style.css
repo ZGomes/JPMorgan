@@ -19,7 +19,7 @@ body {
   font-family: "Proxima Nova";
 }
 section {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   overflow: hidden;
   padding-top: 100px;
@@ -53,7 +53,7 @@ header #top nav ul {
   justify-content: space-between;
 }
 header #top nav ul li a:hover {
-  border-bottom: 2px solid #fff;
+  font-weight: bold;
 }
 header #top nav ul li .btn-contrast:hover {
   color: contrastInsident;
@@ -97,14 +97,9 @@ main #inicio p {
   margin-bottom: 30px;
   max-width: 50%;
 }
-main #inicio .btn {
-  padding: 5px 7px 5px 7px;
-  margin-top: 50px;
-  font-weight: bold;
-}
 @media only screen and (max-width: 1000px) {
   section {
-    height: calc(100vh - 120px);
+    height: calc(100vh - 800px);
   }
   header {
     display: flex;
@@ -192,7 +187,7 @@ main #inicio .btn {
 }
 .btn-contrast:hover {
   background-color: #fff;
-  color: #743ad0;
+  color: #d8157d;
 }
 .btn-contrast-full {
   border: 2px solid #fff;
@@ -217,6 +212,9 @@ main #inicio .btn {
   position: relative;
   height: 100%;
   top: -60px;
+}
+#curso {
+  background-color: #2acfc1;
 }
 @-moz-keyframes lineGrowFX {
   from {

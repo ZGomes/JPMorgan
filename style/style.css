@@ -71,7 +71,7 @@ main #inicio .container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 100vh;
+  height: calc(100vh - 100px);
 }
 main #inicio h2 {
   font-size: 72px;
@@ -103,6 +103,9 @@ main #inicio .btn {
   font-weight: bold;
 }
 @media only screen and (max-width: 1000px) {
+  section {
+    height: calc(100vh - 120px);
+  }
   header {
     display: flex;
     justify-content: center;

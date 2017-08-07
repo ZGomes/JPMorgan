@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/Proxima Nova Bold.otf");
+  src: url("../fonts/Proxima Nova Bold.ttf");
   font-weight: bold;
 }
 @font-face {
@@ -22,7 +22,7 @@ section {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  padding-top: 120px;
+  padding-top: 100px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -119,6 +119,7 @@ main #inicio .btn {
     margin-left: 20px;
     max-width: 100px;
     margin-bottom: -20px;
+    margin-top: 5px;
   }
   header #top #menu-icon {
     padding: 5px;
@@ -129,6 +130,7 @@ main #inicio .btn {
     float: right;
     margin-right: 20px;
     margin-bottom: -20px;
+    border-radius: 10px;
   }
   header #top #menu-icon .line {
     width: 100%;
@@ -137,19 +139,28 @@ main #inicio .btn {
     display: block;
     margin-top: 20%;
   }
+  header #top #menu-icon.active {
+    background-color: #fff;
+  }
+  header #top #menu-icon.active .line {
+    background-color: #101d48;
+  }
   header #top nav {
     padding: 10px;
     margin-top: 20px;
     display: none;
   }
-  header #top nav ul {
+  header #top nav.active {
+    display: block;
+  }
+  header #top nav.active ul {
     display: flex;
     list-style: none;
     justify-content: space-between;
     flex-direction: column;
     padding-top: 20px;
   }
-  header #top nav ul li {
+  header #top nav.active ul li {
     padding: 5px;
     margin: 10px;
     text-align: center;
@@ -159,6 +170,10 @@ main #inicio .btn {
   }
   main #inicio p {
     max-width: 100%;
+  }
+  main #inicio #senai-logo {
+    margin-top: 20px;
+    max-height: 40px;
   }
 }
 .btn {

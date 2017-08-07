@@ -8,6 +8,7 @@
     <title>Code</title>
     <link href="style/grid.css" rel="stylesheet">
     <link href="style/style.css" rel="stylesheet">
+    <link href="style/onepage-scroll.css" rel="stylesheet">
 </head>
 <body>
 <!-- TOPO DO WEB SITE -->
@@ -24,7 +25,7 @@
             </div>
             <div class="col col-9">
                 <!-- MENU DE NAVEGAÇÃO -->
-                <nav>
+                <nav id="menu">
                     <ul>
                         <li><a href="#">A INICIATIVA</a></li>
                         <li><a href="#">O CURSO</a></li>
@@ -42,56 +43,59 @@
 <!-- FIM DO TOPO DO WEB SITE -->
 <!-- INICIO DO CORPO DO SITE -->
 <main>
-    <!-- INICIO SECTION -->
-    <section id="inicio">
-        <div class="container appear">
-            <div class="row">
-                <h2>Lorem Ipsum Dolor Sit</h2>
-                <span class="divisor">
+    <div id="fullpage">
+        <!-- INICIO SECTION -->
+        <section id="inicio">
+            <div class="container appear">
+                <div class="row">
+                    <h2>Lorem Ipsum Dolor Sit</h2>
+                    <span class="divisor">
                     <span class="l1"></span> <span class="l2"></span>
                 </span>
-                <p>
-                    Ensinando tecnologia através de projetos reais e formando profissionais aptos para atuar no mercado
-                    de trabalho.
-                </p>
-            </div>
-            <div class="row">
-                <div class="col col-3">
-                    <a href="#" class="btn btn-contrast-full">VER OS DETALHES DO CURSO</a>
+                    <p>
+                        Ensinando tecnologia através de projetos reais e formando profissionais aptos para atuar no mercado
+                        de trabalho.
+                    </p>
                 </div>
-                <div class="col col-5"> </div>
-                <div class="col col-4">
-                    <img src="images/senai.png" alt="SENAI Logo imagem">
+                <div class="row">
+                    <div class="col col-4">
+                        <a href="#" class="btn btn-contrast-full">VER OS DETALHES DO CURSO</a>
+                    </div>
+                    <div class="col col-4"> </div>
+                    <div class="col col-4">
+                        <img src="images/senai.png" alt="SENAI Logo imagem" id="senai-logo">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- FIM INICIO SECTION-->
-    <section id="curso">
-        <h2 class="title">O Curso</h2>
-    </section>
-    <section id="grade">
-        <h2 class="title">Grade Curricular</h2>
+        </section>
+        <!-- FIM INICIO SECTION-->
+        <section id="curso">
+            <h2 class="title">O Curso</h2>
+        </section>
+        <section id="grade">
+            <h2 class="title">Grade Curricular</h2>
 
-    </section>
-    <section id="inscricoes">
-        <h2 class="title">Inscrições</h2>
-        <p>Lorem ipsum dolor sit amet,
-            consectetuer adipiscing elit, sed</p>
-        <p>wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
-            commodo </p>
-        <button class="btn">Inscrever-se</button>
-    </section>
-    <section id="equipe">
-        <div class="circle">
-            <h2 class="title">Equipe</h2>
-        </div>
-    </section>
-    <section id="conosco">
-        <h2 class="title">Fale Conosco</h2>
-    </section>
-
+        </section>
+        <section id="inscricoes">
+            <h2 class="title">Inscrições</h2>
+            <p>Lorem ipsum dolor sit amet,
+                consectetuer adipiscing elit, sed</p>
+            <p>wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+                commodo </p>
+            <button class="btn">Inscrever-se</button>
+        </section>
+        <section id="equipe">
+            <div class="circle">
+                <h2 class="title">Equipe</h2>
+            </div>
+        </section>
+        <section id="conosco">
+            <h2 class="title">Fale Conosco</h2>
+        </section>
+    </div>
 </main>
 <!-- FIM DO CORPO DO SITE -->
+<script src="js/onepagescroll.js"></script>
+<script src="js/default.js"></script>
 </body>
 </html>

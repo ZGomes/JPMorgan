@@ -34,7 +34,7 @@ contrast = white
 // FONTS
 @font-face
   font-family "Proxima Nova"
-  src url('../fonts/Proxima Nova Bold.otf')
+  src url('../fonts/Proxima Nova Bold.ttf')
   font-weight bold
 
 @font-face
@@ -56,7 +56,7 @@ section
   height 100vh
   width 100%
   overflow hidden
-  padding-top 120px
+  padding-top 100px
   display flex
   align-items center
   flex-direction column
@@ -142,6 +142,7 @@ main
         margin-left 20px
         max-width 100px
         margin-bottom -20px
+        margin-top 5px
       #menu-icon
         padding 5px
         width 40px
@@ -151,16 +152,23 @@ main
         float right
         margin-right 20px
         margin-bottom -20px
+        border-radius 10px
         .line
           width 100%
           height 2px
           background-color contrast
           display block
           margin-top 20%
+      #menu-icon.active
+        background-color contrast
+        .line
+          background-color color-1
       nav
         padding 10px
         margin-top 20px
         display none
+      nav.active
+        display block
         ul
           display flex
           list-style none
@@ -177,6 +185,9 @@ main
       background-size auto auto
       p
         max-width 100%
+      #senai-logo
+        margin-top 20px
+        max-height 40px
 
 //  BOTÕES
 .btn

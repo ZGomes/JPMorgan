@@ -29,7 +29,6 @@ section {
 }
 a {
   text-decoration: none;
-  color: #fff;
 }
 .appear {
   animation: appear 1.5s ease forwards;
@@ -52,45 +51,48 @@ header #top nav ul {
   list-style: none;
   justify-content: space-between;
 }
-header #top nav ul li a:hover {
-  border-bottom: 2px solid #fff;
+header #top nav ul li a {
+  transition: border 1s color 1s;
 }
-header #top nav ul li .btn-contrast:hover {
-  color: contrastInsident;
+.divisor {
+  display: block;
+}
+.divisor .l1 {
+  border-radius: 5px;
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+}
+.divisor .l2 {
+  animation: lineGrowFX 1s ease forwards 0.4s;
+  border-radius: 10px;
+  display: inline-block;
+  height: 5px;
 }
 main #inicio {
-  justify-content: center;
-  background: url("../images/top-bg.jpg") fixed no-repeat 0 0;
-  background-size: 100% 100%;
-  color: #fff;
   align-content: center;
   align-items: center;
+  background: url("../images/top-bg.jpg") fixed no-repeat 0 0;
+  background-size: 100% 100%;
+  color: #f5f5f5;
   display: flex;
+  justify-content: center;
 }
 main #inicio .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   height: calc(100vh - 100px);
+  justify-content: space-around;
 }
 main #inicio h2 {
   font-size: 72px;
   font-weight: normal;
 }
-main #inicio .divisor {
-  display: block;
-}
 main #inicio .divisor .l1 {
-  display: inline-block;
-  width: 5px;
-  height: 5px;
   background-color: #2acfc1;
 }
 main #inicio .divisor .l2 {
-  display: inline-block;
-  height: 5px;
   background-color: #d8157d;
-  animation: lineGrowFX 1s ease forwards 0.4s;
 }
 main #inicio p {
   margin-top: 30px;
@@ -98,7 +100,7 @@ main #inicio p {
   max-width: 50%;
 }
 main #inicio .btn {
-  padding: 5px 7px 5px 7px;
+  padding: 15px 17px 15px 17px;
   margin-top: 50px;
   font-weight: bold;
 }
@@ -128,7 +130,7 @@ main #inicio .btn {
     padding: 5px;
     width: 40px;
     height: 40px;
-    border: 2px solid #fff;
+    border: 2px solid #f5f5f5;
     margin-top: 5px;
     float: right;
     margin-right: 20px;
@@ -138,32 +140,31 @@ main #inicio .btn {
   header #top #menu-icon .line {
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: #f5f5f5;
     display: block;
     margin-top: 20%;
   }
-  header #top #menu-icon.active {
-    background-color: #fff;
+  header #top #menu-icon .line:active {
+    background-color: #f5f5f5;
   }
-  header #top #menu-icon.active .line {
+  header #top #menu-icon .line:active .line {
     background-color: #101d48;
   }
   header #top nav {
     padding: 10px;
     margin-top: 20px;
-    display: none;
   }
-  header #top nav.active {
+  header #top nav display none:active {
     display: block;
   }
-  header #top nav.active ul {
+  header #top nav display none:active ul {
     display: flex;
     list-style: none;
     justify-content: space-between;
     flex-direction: column;
     padding-top: 20px;
   }
-  header #top nav.active ul li {
+  header #top nav display none:active ul li {
     padding: 5px;
     margin: 10px;
     text-align: center;
@@ -179,52 +180,208 @@ main #inicio .btn {
     max-height: 40px;
   }
 }
-.onepage-pagination {
-  margin-right: 2%;
-}
 .btn {
   padding: 10px 20px 10px 20px;
-  border-radius: 20px;
-  transition: all 0.6s ease;
+  border-radius: 25px;
   font-weight: bold;
   font-size: 16px;
+  transition: all 1s;
 }
 .btn-contrast {
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid #f5f5f5;
+  color: #f5f5f5;
 }
 .btn-contrast:hover {
-  background-color: #fff;
-  color: #743ad0;
-}
-.btn-contrast-full {
-  border: 2px solid #fff;
-  background-color: #fff;
+  border: 2px solid #d8157d;
+  background-color: transparent;
   color: #d8157d;
 }
-.btn-contrast-full:hover {
+.btn-contrast-full {
+  border: 2px solid #f5f5f5 !important;
   background-color: transparent;
-  color: #fff;
+  color: #f5f5f5;
 }
-.title:before {
-  content: "//";
+.btn-contrast-full:hover {
+  background-color: #f5f5f5;
+  color: #d8157d !important;
+  border: none;
 }
 .title {
   margin-top: 5%;
+}
+.title:before {
+  content: "//";
 }
 .circle {
   border-radius: 50%;
   z-index: -1;
   background-color: transparent;
 }
+#equipe {
+  overflow: hidden;
+}
 #equipe .circle {
   border: 3px solid #2acfc1;
-  width: 50%;
-  position: relative;
-  height: 100%;
-  top: -60px;
+  width: 65%;
+  position: absolute;
+  height: 120vh;
+  top: -10vh;
   display: flex;
   justify-content: center;
+}
+#circleGround {
+  border-radius: 50%;
+  height: 140vh;
+  position: absolute;
+  width: 70%;
+  border: solid 1px #2acfc1;
+  z-index: -1;
+  left: -10vw;
+  top: -20vh;
+  opacity: 0.5;
+}
+#missao {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding-top: 0;
+  justify-content: center;
+}
+#missao section {
+  width: 35%;
+}
+#missao #missaoL img {
+  width: 100%;
+}
+#missao #missaoR {
+  display: block !important;
+}
+#missao #missaoR h1 {
+  color: #353535;
+  font-size: 65px;
+  margin-bottom: 5%;
+}
+#missao #missaoR .divisor {
+  margin-bottom: 7%;
+}
+#missao #missaoR .divisor .l1 {
+  background-color: #2acfc1;
+}
+#missao #missaoR .divisor .l2 {
+  background-color: #dd5632;
+}
+#missao #missaoR h3 {
+  color: #2acfc1;
+  font-size: 24px;
+  margin-bottom: 3%;
+}
+#missao #missaoR p {
+  color: #7f7f7f;
+  font-size: 20px;
+}
+#missao #missaoR .passCircles {
+  width: 20%;
+  margin-top: 25%;
+}
+#missao #missaoR .passCircles .passCircle {
+  background-color: #e2e2e2;
+}
+#missao #missaoR .passCircles .passCircle:hover {
+  background-color: #743ad0;
+}
+#missao #missaoR .passCircles .passCircle:active {
+  border: 2px solid #743ad0;
+  background-color: transparent;
+}
+.passCircles {
+  display: flex;
+  height: 15px;
+  flex-direction: row;
+  justify-content: space-between;
+  float: right;
+  position: relative;
+}
+.passCircles .passCircle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+#passMissao {
+  display: flex;
+  align-items: baseline;
+  height: 50px;
+}
+#passMissao img {
+  width: 3%;
+  cursor: pointer;
+  margin-left: 2%;
+}
+#passMissao img:hover {
+  width: 4%;
+}
+#passMissao img:nth-child(2) {
+  margin-left: 5%;
+}
+#curso {
+  background-color: #743ad0;
+}
+#curso .title {
+  color: #f5f5f5;
+}
+#curso .title:before {
+  color: #d8157d;
+}
+#curso .passCircles {
+  width: 7%;
+}
+#curso .passCircles .passCircle {
+  background-color: #f5f5f5;
+}
+#curso .passCircles .passCircle:hover {
+  background-color: #2acfc1;
+}
+#curso .passCircles .passCircle:active {
+  border: 2px solid #2acfc1;
+  background-color: transparent;
+}
+#curso a {
+  display: flex;
+  flex-direction: column;
+}
+#curso a:nth-child(1) {
+  background-color: #7f7f7f;
+}
+#curso a img {
+  margin-bottom: 3%;
+  width: 20px;
+  height: 30px;
+}
+.viewing-page-2 a {
+  color: #d8157d;
+}
+.viewing-page-2 a:hover {
+  border-bottom: 3px solid #2acfc1;
+}
+.viewing-page-2 .btn-contrast {
+  border: 2px solid #d8157d;
+}
+.viewing-page-2 .btn-contrast:hover {
+  border: 2px solid #2acfc1;
+  color: #2acfc1;
+}
+.viewing-page-1 a {
+  color: #f5f5f5;
+  text-decoration: none;
+}
+.viewing-page-1 a:hover {
+  padding-bottom: 5%;
+  border-bottom: 3px solid #d8157d;
+}
+.arrowLeft {
+  transform: rotate(90deg);
+}
+.arrowRight {
+  transform: rotate(-90deg);
 }
 @-moz-keyframes lineGrowFX {
   from {

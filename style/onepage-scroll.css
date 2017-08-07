@@ -35,9 +35,10 @@ body, .onepage-wrapper, html {
     top: 50%;
     z-index: 5;
     list-style: none;
-    margin: 0;
+
     padding: 0;
     color: white;
+    margin-right: 1%;
 }
 
 .onepage-pagination li {
@@ -86,7 +87,9 @@ body, .onepage-wrapper, html {
     position: relative !important;
     top: auto !important;
 }
-
+.onepage-pagination li a:hover{
+    border: none;
+}
 .disabled-onepage-scroll .onepage-wrapper {
     -webkit-transform: none !important;
     -moz-transform: none !important;
@@ -101,4 +104,8 @@ body, .onepage-wrapper, html {
 
 body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
     position: inherit;
+}
+
+.onepage-pagination li a[data-index = '1'].active:before{
+    border: 2px solid #f4f4f4;
 }

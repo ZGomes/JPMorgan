@@ -179,6 +179,9 @@ main #inicio .btn {
     max-height: 40px;
   }
 }
+.onepage-pagination {
+  margin-right: 2%;
+}
 .btn {
   padding: 10px 20px 10px 20px;
   border-radius: 20px;
@@ -206,6 +209,9 @@ main #inicio .btn {
 .title:before {
   content: "//";
 }
+.title {
+  margin-top: 5%;
+}
 .circle {
   border-radius: 50%;
   z-index: -1;
@@ -213,10 +219,12 @@ main #inicio .btn {
 }
 #equipe .circle {
   border: 3px solid #2acfc1;
-  width: 60%;
+  width: 50%;
   position: relative;
   height: 100%;
   top: -60px;
+  display: flex;
+  justify-content: center;
 }
 @-moz-keyframes lineGrowFX {
   from {

@@ -36,7 +36,7 @@ function onePageScroll(element, options) {
 	    status = "off",
 	    topPos = 0,
 	    lastAnimation = 0,
-	    quietPeriod = 500,
+	    quietPeriod = 100,
 	    paginationList = "",
 	    body = document.querySelector("body");
   

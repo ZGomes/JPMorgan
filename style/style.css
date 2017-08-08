@@ -44,6 +44,10 @@ header #top {
   padding: 20px;
   padding-top: 40px;
   z-index: 20;
+  transition: all 1s ease;
+}
+header #top .container {
+  padding: 2px;
 }
 header #top nav {
   padding: 20px;
@@ -53,7 +57,11 @@ header #top nav ul {
   list-style: none;
   justify-content: space-between;
 }
+header #top nav ul li:hover a {
+  font-weight: bold;
+}
 header #top nav ul li a {
+  color: #f5f5f5;
   transition: border 1s color 1s;
 }
 section .divisor {
@@ -118,7 +126,7 @@ main #inicio .btn {
 @media only screen and (max-width: 1000px) {
   section {
     height: 100vh;
-    padding-top: 40px;
+    padding-top: 60px;
   }
   header {
     display: flex;
@@ -129,7 +137,7 @@ main #inicio .btn {
     max-height: auto;
     max-width: 100%;
     padding: 5px 0px 0px 0px;
-    background-color: rgba(16,29,72,0.8);
+    background-color: #dd5632;
   }
   header #top img {
     float: left;
@@ -149,18 +157,18 @@ main #inicio .btn {
     margin-bottom: -20px;
     border-radius: 10px;
   }
+  header #top #menu-icon.active {
+    background-color: #f5f5f5;
+  }
+  header #top #menu-icon.active .line {
+    background-color: #2acfc1;
+  }
   header #top #menu-icon .line {
     width: 100%;
     height: 2px;
     background-color: #f5f5f5;
     display: block;
     margin-top: 20%;
-  }
-  header #top #menu-icon .line:active {
-    background-color: #f5f5f5;
-  }
-  header #top #menu-icon .line:active .line {
-    background-color: #101d48;
   }
   header #top nav {
     padding: 10px;
@@ -191,6 +199,10 @@ main #inicio .btn {
   main #inicio #senai-logo {
     margin-top: 20px;
     max-height: 40px;
+  }
+  #nossaMissao,
+  #missao {
+    padding-top: 10px;
   }
 }
 .btn {
@@ -257,16 +269,17 @@ main #inicio .btn {
   display: flex;
   flex-direction: row;
   align-content: center;
-  padding-top: 0;
+  padding-top: 80px;
   justify-content: center;
 }
-#nossaMissao #missao section {
+#nossaMissao #missao #missaoL {
   width: 45%;
 }
 #nossaMissao #missao #missaoL img {
   width: 80%;
 }
 #nossaMissao #missao #missaoR {
+  width: 55%;
   display: block !important;
 }
 #nossaMissao #missao #missaoR h1 {
@@ -421,27 +434,14 @@ main #inicio .btn {
   color: #f5f5f5;
   font-weight: normal;
 }
-.viewing-page-2 a {
-  color: #d8157d;
-}
-.viewing-page-2 a:hover {
-  border-bottom: 3px solid #2acfc1;
-}
-.viewing-page-2 .btn-contrast {
-  border: 2px solid #d8157d;
-}
-.viewing-page-2 .btn-contrast:hover {
-  border: 2px solid #2acfc1;
-  color: #2acfc1;
-}
-.viewing-page-1 a,
-.viewing-page-3 a {
-  color: #f5f5f5;
-  text-decoration: none;
-}
-.viewing-page-1 a:hover,
-.viewing-page-3 a:hover {
-  border-bottom: 3px solid #d8157d;
+.viewing-page-2 #top,
+.viewing-page-3 #top,
+.viewing-page-4 #top,
+.viewing-page-5 #top,
+.viewing-page-6 #top,
+.viewing-page-7 #top {
+  background-color: #dd5632;
+  padding: 5px 0px 0px 0px;
 }
 .arrowLeft {
   transform: rotate(90deg);

@@ -8,7 +8,6 @@ color-4 = #2acfc1
 contrastInside = #743ad0
 color-5 = #e2e2e2
 color-6 = #7f7f7f
-// EXTRAS
 contrast = #f5f5f5
 
 // KEYFRAMES
@@ -90,6 +89,9 @@ header
     padding 20px
     padding-top 40px
     z-index 20
+    transition all 1s ease
+    .container
+      padding 2px
     nav
       padding 20px
       ul
@@ -97,7 +99,11 @@ header
         list-style none
         justify-content space-between
         li
+          &:hover
+            a
+              font-weight bold
           a
+            color contrast
             transition border 1s color 1s
 
 section
@@ -156,7 +162,7 @@ main
 @media only screen and (max-width 1000px)
   section
     height 100vh
-    padding-top 40px
+    padding-top 60px
   header
     display flex
     justify-content center
@@ -165,7 +171,7 @@ main
       max-height auto
       max-width 100%
       padding 5px 0px 0px 0px
-      background-color rgba(16, 29, 72, 0.8)
+      background-color color-3
       img
         float left
         margin-left 20px
@@ -182,16 +188,16 @@ main
         margin-right 20px
         margin-bottom -20px
         border-radius 10px
+        &.active
+          background-color contrast
+          .line
+            background-color color-4
         .line
           width 100%
           height 2px
           background-color contrast
           display block
           margin-top 20%
-          &:active
-            background-color contrast
-            .line
-              background-color color-1
       nav
         padding 10px
         margin-top 20px
@@ -217,6 +223,9 @@ main
       #senai-logo
         margin-top 20px
         max-height 40px
+  #nossaMissao
+  #missao
+    padding-top 10px
 
 //  BOTÕES
 .btn
@@ -281,14 +290,14 @@ main
     display flex
     flex-direction row
     align-content center
-    padding-top 0
+    padding-top 80px
     justify-content center
-    section
-      width 45%
     #missaoL
+      width 45%
       img
         width 80%
     #missaoR
+      width 55%
       display block !important
       h1
         color color-1
@@ -414,23 +423,10 @@ main
           color contrast
           font-weight normal
 
-.viewing-page-2
-  a
-    color color-2
-    &:hover
-      border-bottom 3px solid color-4
-  .btn-contrast
-    border 2px solid color-2
-    &:hover
-      border 2px solid color-4
-      color color-4
-
-.viewing-page-1, .viewing-page-3
-  a
-    color contrast
-    text-decoration none
-    &:hover
-      border-bottom 3px solid color-2
+.viewing-page-2, .viewing-page-3, .viewing-page-4, .viewing-page-5, .viewing-page-6, .viewing-page-7
+  #top
+    background-color color-3
+    padding 5px 0px 0px 0px
 
 //edit arrows
 .arrowLeft

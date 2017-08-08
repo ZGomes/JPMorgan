@@ -5,6 +5,11 @@
 }
 @font-face {
   font-family: "Proxima Nova";
+  src: url("../fonts/Proxima Nova Extrabold.ttf");
+  font-weight: bolder;
+}
+@font-face {
+  font-family: "Proxima Nova";
   src: url("../fonts/Proxima Nova Light.otf");
 }
 * {
@@ -207,7 +212,7 @@ main #inicio .btn {
   border: none;
 }
 .title {
-  margin-top: 5%;
+  margin-top: 3%;
 }
 .title:before {
   content: "//";
@@ -257,7 +262,7 @@ main #inicio .btn {
   display: block !important;
 }
 #missao #missaoR h1 {
-  color: #353535;
+  color: #101d48;
   font-size: 65px;
   margin-bottom: 5%;
 }
@@ -306,33 +311,40 @@ main #inicio .btn {
   height: 10px;
   border-radius: 50%;
 }
-#passMissao {
-  display: flex;
-  align-items: baseline;
+#passArrowMissao {
   height: 50px;
+  display: flex;
+  align-items: center;
 }
-#passMissao img {
+#passArrowMissao:hover {
+  border: none;
+}
+#passArrowMissao img {
   width: 3%;
-  cursor: pointer;
   margin-left: 2%;
 }
-#passMissao img:hover {
+#passArrowMissao img:hover {
   width: 4%;
 }
-#passMissao img:nth-child(2) {
+#passArrowMissao img:nth-child(2) {
   margin-left: 5%;
 }
 #curso {
   background-color: #743ad0;
+  display: flex;
 }
 #curso .title {
   color: #f5f5f5;
+  margin-bottom: 5%;
 }
 #curso .title:before {
   color: #d8157d;
 }
 #curso .passCircles {
   width: 7%;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2%;
 }
 #curso .passCircles .passCircle {
   background-color: #f5f5f5;
@@ -344,17 +356,62 @@ main #inicio .btn {
   border: 2px solid #2acfc1;
   background-color: transparent;
 }
-#curso a {
+#curso .content {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  width: 80%;
+}
+#curso .content a {
+  justify-content: flex-end;
   display: flex;
   flex-direction: column;
+  color: #f5f5f5;
+  font-weight: bolder;
 }
-#curso a:nth-child(1) {
-  background-color: #7f7f7f;
+#curso .content a:hover {
+  padding: 0;
+  border: none;
+  color: #d8157d;
 }
-#curso a img {
+#curso .content a:hover img {
+  width: 25px;
+  height: 35px;
+}
+#curso .content a:nth-child(1) img {
+  align-self: flex-end;
+}
+#curso .content a img {
   margin-bottom: 3%;
   width: 20px;
   height: 30px;
+}
+#curso .content #passos {
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+}
+#curso .content #passos .passo {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#curso .content #passos .passo img {
+  width: 70%;
+  margin-bottom: 10%;
+}
+#curso .content #passos .passo h2 {
+  font-size: 24px;
+  font-weight: bolder;
+  color: #f5f5f5;
+}
+#curso .content #passos .passo p {
+  text-align: justify;
+  font-size: 20px;
+  color: #f5f5f5;
+  font-weight: normal;
 }
 .viewing-page-2 a {
   color: #d8157d;
@@ -369,11 +426,13 @@ main #inicio .btn {
   border: 2px solid #2acfc1;
   color: #2acfc1;
 }
-.viewing-page-1 a {
+.viewing-page-1 a,
+.viewing-page-3 a {
   color: #f5f5f5;
   text-decoration: none;
 }
-.viewing-page-1 a:hover {
+.viewing-page-1 a:hover,
+.viewing-page-3 a:hover {
   padding-bottom: 5%;
   border-bottom: 3px solid #d8157d;
 }
@@ -382,6 +441,36 @@ main #inicio .btn {
 }
 .arrowRight {
   transform: rotate(-90deg);
+}
+.arrow {
+  transition: all 0.4s;
+  cursor: pointer;
+}
+#inscricoes .title {
+  color: #743ad0;
+}
+#inscricoes .title:before {
+  color: #2acfc1;
+}
+#inscricoes .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  height: 70%;
+}
+#inscricoes .content h3 {
+  font-size: 65px;
+}
+#inscricoes .content p {
+  font-size: 26px;
+}
+#inscricoes .content .col .btn {
+  background-color: transparent;
+  color: #d8157d;
+  border: 1px solid #d8157d;
+  font-size: 25px;
+  font-weight: bold;
 }
 @-moz-keyframes lineGrowFX {
   from {

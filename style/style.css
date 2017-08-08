@@ -112,7 +112,8 @@ main #inicio .btn {
 }
 @media only screen and (max-width: 1000px) {
   section {
-    height: calc(100vh - 120px);
+    height: 100vh;
+    padding-top: 60px;
   }
   header {
     display: flex;
@@ -258,7 +259,7 @@ main #inicio .btn {
   width: 35%;
 }
 #nossaMissao #missao #missaoL img {
-  width: 100%;
+  width: 80%;
 }
 #nossaMissao #missao #missaoR {
   display: block !important;
@@ -435,7 +436,6 @@ main #inicio .btn {
 }
 .viewing-page-1 a:hover,
 .viewing-page-3 a:hover {
-  padding-bottom: 5%;
   border-bottom: 3px solid #d8157d;
 }
 .arrowLeft {

@@ -35,9 +35,6 @@ section {
 a {
   text-decoration: none;
 }
-.appear {
-  animation: appear 1.5s ease forwards;
-}
 header {
   display: flex;
   justify-content: center;
@@ -59,20 +56,29 @@ header #top nav ul {
 header #top nav ul li a {
   transition: border 1s color 1s;
 }
-.divisor {
+section .divisor {
   display: block;
 }
-.divisor .l1 {
+section .divisor .l1 {
   border-radius: 5px;
   display: inline-block;
   height: 5px;
   width: 5px;
 }
-.divisor .l2 {
-  animation: lineGrowFX 1s ease forwards 0.4s;
+section .divisor .l2 {
   border-radius: 10px;
   display: inline-block;
   height: 5px;
+}
+section .appear {
+  opacity: 0;
+  animation: appear-out 0.6s ease forwards;
+}
+section.active .appear {
+  animation: appear 1.3s ease forwards 0.4s;
+}
+section.active .divisor .l2 {
+  animation: lineGrowFX 1s ease forwards 0.8s;
 }
 main #inicio {
   align-content: center;
@@ -97,7 +103,6 @@ main #inicio .divisor .l1 {
   background-color: #2acfc1;
 }
 main #inicio .divisor .l2 {
-  animation: lineGrowFX 1s ease forwards 0.4s;
   background-color: #d8157d;
 }
 main #inicio p {
@@ -113,7 +118,7 @@ main #inicio .btn {
 @media only screen and (max-width: 1000px) {
   section {
     height: 100vh;
-    padding-top: 60px;
+    padding-top: 40px;
   }
   header {
     display: flex;
@@ -256,7 +261,7 @@ main #inicio .btn {
   justify-content: center;
 }
 #nossaMissao #missao section {
-  width: 35%;
+  width: 45%;
 }
 #nossaMissao #missao #missaoL img {
   width: 80%;
@@ -544,5 +549,45 @@ main #inicio .btn {
   to {
     margin-top: 0px;
     opacity: 1;
+  }
+}
+@-moz-keyframes appear-out {
+  from {
+    margin-top: 0px;
+    opacity: 1;
+  }
+  to {
+    margin-top: 20px;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes appear-out {
+  from {
+    margin-top: 0px;
+    opacity: 1;
+  }
+  to {
+    margin-top: 20px;
+    opacity: 0;
+  }
+}
+@-o-keyframes appear-out {
+  from {
+    margin-top: 0px;
+    opacity: 1;
+  }
+  to {
+    margin-top: 20px;
+    opacity: 0;
+  }
+}
+@keyframes appear-out {
+  from {
+    margin-top: 0px;
+    opacity: 1;
+  }
+  to {
+    margin-top: 20px;
+    opacity: 0;
   }
 }

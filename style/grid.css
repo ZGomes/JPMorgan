@@ -82,6 +82,10 @@
     display: none;
 }
 
+.hidden-small{
+    display: inline-block;
+}
+
 @media only screen and (max-width: 1000px){
     .container{
         width: 100%;
@@ -98,5 +102,8 @@
     }
     .hidden-big{
         display: inline-block;
+    }
+    .hidden-small{
+        display: none;
     }
 }

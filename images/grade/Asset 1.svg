@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 127">
+    <defs>
+        <style>
+            .cls-1, .cls-2, .cls-4, .cls-5 {
+            fill: none;
+
+            stroke-miterlimit: 10;
+            }
+
+            .cls-1 {
+            stroke: #999;
+            animation: circle 2s ;
+            stroke-width: 2px;
+            stroke-dasharray: 400 400;
+            }
+
+            .cls-2 {
+            stroke: #743ad0;
+            stroke-width: 30px;
+            animation: tela 1s ease-in-out;
+            transform-origin: center;
+            }
+
+            .cls-3 {
+            fill: gray;
+            }
+
+            .cls-4 {
+            stroke: #fff;
+            animation: dash 3s ;
+            stroke-dasharray: 100 100;
+            }
+
+            .cls-5 {
+            stroke: gray;
+            stroke-width: 1.5px;
+            animation: dash 3s ;
+            stroke-dasharray: 100 100;
+            }
+
+            @keyframes tela{
+            to{
+            transform: scale(1);
+            }
+            from{
+            transform: scale(0);}
+            }
+            @keyframes dash{
+            to{    stroke-dashoffset: 0;}
+            from{    stroke-dashoffset: 100;}
+            }
+            @keyframes circle{
+            to{    stroke-dashoffset: 0;}
+            from{    stroke-dashoffset: 400;}
+            }
+        </style>
+    </defs>
+    <title>Asset 1</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <circle class="cls-1" cx="63.5" cy="63.5" r="62.5"/>
+            <rect class="cls-2" x="64.21" y="51.5" width="0.7" height="23.58"/>
+            <circle id="_Path_4" data-name=" Path 4" class="cls-3" cx="64.91" cy="34.72" r="1.31"/>
+            <path class="cls-4"
+                  d="M65.83,78.69a5,5,0,0,1-5-5q0-.09,0-.18V67c0-1.29-.6-2.38-1.82-2.38V62.41c1.23,0,1.82-1.08,1.82-2.38V53.52a5,5,0,0,1,4.78-5.22H68v2.52H65.83a2.43,2.43,0,0,0-2.25,2.6v7c0,1.47-.46,2.63-1.61,3.12,1.15.49,1.61,1.65,1.61,3.12v6.86a2.45,2.45,0,0,0,2.18,2.69H68v2.52Z"/>
+            <path class="cls-5" d="M83.75,70.51V92.29a4.3,4.3,0,0,1-4.29,4.29H49.12a4.3,4.3,0,0,1-4.29-4.29V70.51"/>
+            <path class="cls-5" d="M44.83,55.2V35.29A4.3,4.3,0,0,1,49.12,31H79.46a4.3,4.3,0,0,1,4.29,4.29V55.2"/>
+        </g>
+    </g>
+</svg>

@@ -17,7 +17,7 @@
     <div class="container-fluid" id="top">
         <div class="container">
             <div class="row" id="top-inside">
-                <div class="col col-3">
+                <div class="col col-2">
                     <a href="#1" data-index="1"><img src="images/logo.png" alt="Code Logo Imagem" id="logo"></a>
                     <span id="menu-icon" class="hidden-big">
                         <span class="line"></span>
@@ -25,15 +25,17 @@
                         <span class="line"></span>
                     </span>
                 </div>
-                <div class="col col-9">
+                <div class="col col-10">
                     <!-- MENU DE NAVEGAÇÃO -->
                     <nav id="menu">
-                        <ul id="menu-pagination">
+                        <ul>
                             <li><a href="#2" data-index="2">A INICIATIVA</a></li>
                             <li><a href="#3" data-index="3">O CURSO</a></li>
+                            <li><a href="#4" data-index="4">GRADE CURRICULAR</a></li>
                             <li><a href="#5" data-index="5">INSCRIÇÕES</a></li>
                             <li><a href="#6" data-index="6">EQUIPE</a></li>
                             <li><a href="#7" data-index="7">PARCEIROS</a></li>
+                            <li><a href="#8" data-index="8">FALE CONOSCO</a></li>
                             <li><a href="#5" data-index="5" class="btn btn-contrast-full">INSCREVA-SE</a></li>
                         </ul>
                     </nav>
@@ -47,7 +49,6 @@
 <!-- INICIO DO CORPO DO SITE -->
 <main>
     <div id="fullpage">
-        <!-- INICIO SECTION -->
         <section id="inicio">
             <div class="container appear">
                 <div class="row">
@@ -74,8 +75,6 @@
             </div>
         </section>
         <section id="nossaMissao">
-            <div id="circleGround">
-            </div>
             <article id="missao" class="container">
                 <div id="missaoL" class="hidden-small appear">
                     <img src="images/missao/missao-optimized.png" alt="imagem de pessoas">
@@ -112,7 +111,6 @@
                 </div>
             </article>
         </section>
-        <!-- FIM INICIO SECTION-->
         <section id="curso">
             <h2 class="title">O Curso</h2>
             <div class="content appear">
@@ -152,9 +150,30 @@
             </div>
         </section>
         <section id="grade">
-            <h2 class="title">Grade Curricular</h2>
+            <h2>SELECIONE O CURSO:</h2>
+
+            <div class="content">
+                <div class="grades" data-grade="mobile">
+                    <img src="images/grade/mobile.svg" alt="">
+
+                    <p>DESENVOLVIMENTO MOBILE</p>
+                </div>
+                <div class="grades" data-grade="web">
+                    <img src="images/grade/frontend.svg" alt="">
+                    <p>DESENVOLVIMENTO FRONT-END</p>
+                </div>
+                <div class="grades" data-grade="back">
+                    <img src="images/grade/backend.svg" alt="">
+                    <p>DESENVOLVIMENTO BACK-END</p>
+                </div>
+                <div class="grades" data-grade="iot">
+                    <img src="images/grade/iot.svg" alt="">
+                    <p>IOT</p>
+                </div>
+            </div>
 
         </section>
+
         <section id="inscricoes">
             <h2 class="title">Inscrições</h2>
             <div class="content">
@@ -168,14 +187,25 @@
                 </div>
             </div>
         </section>
+
         <section id="equipe">
-            <div class="circle">
-                <h2 class="title">Equipe</h2>
-            </div>
+            <h2 class="title">Equipe</h2>
         </section>
-        <section id="conosco">
+
+        <section id="parceiros">
+            <h2 class="title">Parceiros</h2>
+        </section>
+
+        <section id="fale-conosco">
             <h2 class="title">Fale Conosco</h2>
+            <form action="">
+                <input type="text" placeholder="// Nome">
+                <input type="text" placeholder="// E-mail">
+                <textarea name="" id="" cols="0" rows="15"></textarea>
+                <input type="submit" class="btn btn-blue" value="Enviar mensagem">
+            </form>
         </section>
+
     </div>
 </main>
 <!-- FIM DO CORPO DO SITE -->

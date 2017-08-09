@@ -117,13 +117,14 @@ function onePageScroll(element, options) {
     
   	if(settings.pagination == true)  {
   	  var pagination_links = document.querySelectorAll(".onepage-pagination li a");
-      var pagination_navs = document.querySelectorAll("#top a");
+  	  var pagination_nav = document.querySelectorAll("#top a");
     
   	  for( var i = 0; i < pagination_links.length; i++){
     	  pagination_links[i].addEventListener('click', _paginationHandler);
       }
-        for( var i = 0; i < pagination_navs.length; i++){
-            pagination_navs[i].addEventListener('click', _paginationHandler);
+
+        for( var i = 0; i < pagination_nav.length; i++){
+            pagination_nav[i].addEventListener('click', _paginationHandler);
         }
   	}
     
@@ -405,6 +406,8 @@ function onePageScroll(element, options) {
 		_addClass(next, "active");
 		
 		if(settings.pagination == true) {
+            _removeClass(document.querySelector("#top a" + "[data-index='" + index + "']"), "active");
+            _addClass(document.querySelector("#top a" + "[data-index='" + next_index + "']"), "active");
 		  _removeClass(document.querySelector(".onepage-pagination li a" + "[data-index='" + index + "']"), "active");
 		  _addClass(document.querySelector(".onepage-pagination li a" + "[data-index='" + next_index + "']"), "active");
 		}

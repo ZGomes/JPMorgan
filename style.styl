@@ -7,7 +7,7 @@ color-3 = #dd5632
 color-4 = #2acfc1
 contrastInside = #743ad0
 color-5 = #e2e2e2
-color-6 = #7f7f7f
+color-6 = #999999
 contrast = #f5f5f5
 
 // KEYFRAMES
@@ -28,6 +28,19 @@ contrast = #f5f5f5
   to {
     margin-top 0px
     opacity 1
+  }
+}
+
+@keyframes pulse {
+  from {
+    opacity 0
+    width 0
+    height 0
+  }
+  to {
+    height: 120vh;
+    width 65%
+    opacity .7
   }
 }
 
@@ -63,7 +76,7 @@ contrast = #f5f5f5
   box-sizing border-box
 
 body
-  font-size 18px
+  font-size 16px
   margin 0px
   padding 0px
   font-family "Proxima Nova"
@@ -79,7 +92,6 @@ section
 
 a
   text-decoration none
-
 
 header
   display flex
@@ -105,6 +117,10 @@ header
           a
             color contrast
             transition border 1s color 1s
+          .btn-contrast-full
+            &:hover
+              background-color contrast
+              color color-2
 
 section
   .divisor
@@ -163,6 +179,7 @@ main
   section
     height 100vh
     padding-top 60px
+
   header
     display flex
     justify-content center
@@ -214,7 +231,6 @@ main
             padding 5px;
             margin 10px;
             text-align center
-
   main
     #inicio
       background-size auto auto
@@ -223,39 +239,51 @@ main
       #senai-logo
         margin-top 20px
         max-height 40px
-  #nossaMissao
-  #missao
-    padding-top 10px
+    #nossaMissao
+    #missao
+      padding-top 10px
+    #fale-conosco
+      form
+        display flex
+        width 90%
+        flex-direction column
 
 //  BOTÕES
 .btn
-  padding 10px 20px 10px 20px
+  padding 10px 30px 10px 30px
   border-radius 25px
   font-weight bold
+  width auto
   font-size 16px
   transition all 1s
+  outline none
+  border none
 
 .btn-contrast
   border 2px solid contrast
   color contrast
   &:hover
-    border 2px solid color-2
     background-color transparent
     color color-2
 
 .btn-contrast-full
-  border 2px solid contrast!important
+  border 2px solid contrast
   background-color transparent
   color contrast
   &:hover
     background-color contrast
-    color color-2!important
-    border none
+    color color-2
+
+.btn-blue
+  background-color color-1
+  color contrast
+  &:hover
+    background-color color-4
 
 .title
   margin-top 3%
   &:before
-    content "//"
+    content "// "
 
 .circle
   border-radius 50%
@@ -263,29 +291,20 @@ main
   background-color transparent
 
 #equipe
-  overflow hidden
-  .circle
-    border 3px solid color-4
-    width 65%
-    position absolute
-    height: 120vh;
-    top: -10vh;
-    display flex
-    justify-content center
-
-// Nossa Missao
-#circleGround
-  border-radius 50%
-  height 140vh
-  position absolute
-  width 70%
-  border solid 1px color-4
-  z-index -1
-  left -10vw
-  top -20vh
-  opacity .5
+  background-image url('../images/equipe/background.png')
+  background-repeat no-repeat
+  background-size cover
+  background-color contrast
+  .title
+    color contrastInside
+    &:before
+      color color-4
 
 #nossaMissao
+  background-image url('../images/missao/background.png')
+  background-repeat no-repeat
+  background-size cover
+  background-color contrast
   #missao
     display flex
     flex-direction row
@@ -293,7 +312,7 @@ main
     padding-top 80px
     justify-content center
     #missaoL
-      width 45%
+      width 45%1
       img
         width 80%
     #missaoR
@@ -352,7 +371,6 @@ main
       width 4%
     &:nth-child(2)
       margin-left 5%
-
 // Curso
 #curso
   background-color contrastInside
@@ -423,18 +441,13 @@ main
           color contrast
           font-weight normal
 
-.viewing-page-2, .viewing-page-3, .viewing-page-4, .viewing-page-5, .viewing-page-6, .viewing-page-7
+.viewing-page-2, .viewing-page-3, .viewing-page-4, .viewing-page-5, .viewing-page-6, .viewing-page-7, .viewing-page-8
   #top
     background-color color-3
     padding 5px 0px 0px 0px
-  .btn-contrast-full
-    border 2px solid contrast!important
-    background-color transparent
-    color contrast
-    &:hover
-      background-color contrast
-      color color-3!important
-      border none
+    .btn-contrast-full
+      &:hover
+        color color-3
 
 //edit arrows
 .arrowLeft
@@ -457,7 +470,6 @@ main
     display flex
     align-items center
     flex-direction column
-
     width 60%
     height 70%
     h3
@@ -471,3 +483,71 @@ main
         border 1px solid color-2
         font-size 25px
         font-weight bold
+
+textarea
+  border-radius 5px
+  border none
+  outline none
+  font-size 18px
+  padding 20px
+
+input[type ='text']
+  background-color transparent
+  border none
+  outline none
+  color contrast
+  height 40px
+  padding-left 1%
+  font-size 18px
+  border-bottom 2px solid contrast
+  &::placeholder
+    color contrast
+    &:before
+      content "//"
+
+#fale-conosco
+  background-color color-3
+  .title
+    color contrast
+    margin-bottom 5%
+    &:before
+      color color-1
+  form
+    display flex
+    width 50%
+    flex-direction column
+    input
+      margin-bottom 5%
+    .btn
+      padding 15px 30px 15px 30px
+      align-self center
+      top -15px
+      position relative
+
+#grade
+  background-image url('../images/grade/background.png')
+  background-repeat no-repeat
+  background-size cover
+  background-color contrast
+  h2
+    margin-top 3%
+    font-weight normal
+    color contrastInside
+  .content
+    height 85%
+    width 50%
+    display flex
+    align-items center
+    justify-content space-between
+    .grades
+      cursor pointer
+      width 90%
+      text-align center
+      &:hover
+        img
+          width 90%
+      img
+        margin-bottom 5%
+        transition all 1s
+        width 70%
+

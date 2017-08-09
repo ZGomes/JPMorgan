@@ -18,7 +18,7 @@
   box-sizing: border-box;
 }
 body {
-  font-size: 18px;
+  font-size: 16px;
   margin: 0px;
   padding: 0px;
   font-family: "Proxima Nova";
@@ -63,6 +63,10 @@ header #top nav ul li:hover a {
 header #top nav ul li a {
   color: #f5f5f5;
   transition: border 1s color 1s;
+}
+header #top nav ul li .btn-contrast-full:hover {
+  background-color: #f5f5f5;
+  color: #d8157d;
 }
 section .divisor {
   display: block;
@@ -200,42 +204,55 @@ main #inicio .btn {
     margin-top: 20px;
     max-height: 40px;
   }
-  #nossaMissao,
-  #missao {
+  main #nossaMissao,
+  main #missao {
     padding-top: 10px;
+  }
+  main #fale-conosco form {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
   }
 }
 .btn {
-  padding: 10px 20px 10px 20px;
+  padding: 10px 30px 10px 30px;
   border-radius: 25px;
   font-weight: bold;
+  width: auto;
   font-size: 16px;
   transition: all 1s;
+  outline: none;
+  border: none;
 }
 .btn-contrast {
   border: 2px solid #f5f5f5;
   color: #f5f5f5;
 }
 .btn-contrast:hover {
-  border: 2px solid #d8157d;
   background-color: transparent;
   color: #d8157d;
 }
 .btn-contrast-full {
-  border: 2px solid #f5f5f5 !important;
+  border: 2px solid #f5f5f5;
   background-color: transparent;
   color: #f5f5f5;
 }
 .btn-contrast-full:hover {
   background-color: #f5f5f5;
-  color: #d8157d !important;
-  border: none;
+  color: #d8157d;
+}
+.btn-blue {
+  background-color: #101d48;
+  color: #f5f5f5;
+}
+.btn-blue:hover {
+  background-color: #2acfc1;
 }
 .title {
   margin-top: 3%;
 }
 .title:before {
-  content: "//";
+  content: "// ";
 }
 .circle {
   border-radius: 50%;
@@ -243,27 +260,22 @@ main #inicio .btn {
   background-color: transparent;
 }
 #equipe {
-  overflow: hidden;
+  background-image: url("../images/equipe/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f5f5f5;
 }
-#equipe .circle {
-  border: 3px solid #2acfc1;
-  width: 65%;
-  position: absolute;
-  height: 120vh;
-  top: -10vh;
-  display: flex;
-  justify-content: center;
+#equipe .title {
+  color: #743ad0;
 }
-#circleGround {
-  border-radius: 50%;
-  height: 140vh;
-  position: absolute;
-  width: 70%;
-  border: solid 1px #2acfc1;
-  z-index: -1;
-  left: -10vw;
-  top: -20vh;
-  opacity: 0.5;
+#equipe .title:before {
+  color: #2acfc1;
+}
+#nossaMissao {
+  background-image: url("../images/missao/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f5f5f5;
 }
 #nossaMissao #missao {
   display: flex;
@@ -273,7 +285,7 @@ main #inicio .btn {
   justify-content: center;
 }
 #nossaMissao #missao #missaoL {
-  width: 45%;
+  width: 45% 1;
 }
 #nossaMissao #missao #missaoL img {
   width: 80%;
@@ -302,7 +314,7 @@ main #inicio .btn {
   margin-bottom: 3%;
 }
 #nossaMissao #missao #missaoR p {
-  color: #7f7f7f;
+  color: #999;
   font-size: 20px;
 }
 #nossaMissao #missao #missaoR .passCircles {
@@ -439,29 +451,19 @@ main #inicio .btn {
 .viewing-page-4 #top,
 .viewing-page-5 #top,
 .viewing-page-6 #top,
-.viewing-page-7 #top {
+.viewing-page-7 #top,
+.viewing-page-8 #top {
   background-color: #dd5632;
   padding: 5px 0px 0px 0px;
 }
-.viewing-page-2 .btn-contrast-full,
-.viewing-page-3 .btn-contrast-full,
-.viewing-page-4 .btn-contrast-full,
-.viewing-page-5 .btn-contrast-full,
-.viewing-page-6 .btn-contrast-full,
-.viewing-page-7 .btn-contrast-full {
-  border: 2px solid #f5f5f5 !important;
-  background-color: transparent;
-  color: #f5f5f5;
-}
-.viewing-page-2 .btn-contrast-full:hover,
-.viewing-page-3 .btn-contrast-full:hover,
-.viewing-page-4 .btn-contrast-full:hover,
-.viewing-page-5 .btn-contrast-full:hover,
-.viewing-page-6 .btn-contrast-full:hover,
-.viewing-page-7 .btn-contrast-full:hover {
-  background-color: #f5f5f5;
-  color: #dd5632 !important;
-  border: none;
+.viewing-page-2 #top .btn-contrast-full:hover,
+.viewing-page-3 #top .btn-contrast-full:hover,
+.viewing-page-4 #top .btn-contrast-full:hover,
+.viewing-page-5 #top .btn-contrast-full:hover,
+.viewing-page-6 #top .btn-contrast-full:hover,
+.viewing-page-7 #top .btn-contrast-full:hover,
+.viewing-page-8 #top .btn-contrast-full:hover {
+  color: #dd5632;
 }
 .arrowLeft {
   transform: rotate(90deg);
@@ -498,6 +500,84 @@ main #inicio .btn {
   border: 1px solid #d8157d;
   font-size: 25px;
   font-weight: bold;
+}
+textarea {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 20px;
+}
+input[type ='text'] {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #f5f5f5;
+  height: 40px;
+  padding-left: 1%;
+  font-size: 18px;
+  border-bottom: 2px solid #f5f5f5;
+}
+input[type ='text']::placeholder {
+  color: #f5f5f5;
+}
+input[type ='text']::placeholder:before {
+  content: "//";
+}
+#fale-conosco {
+  background-color: #dd5632;
+}
+#fale-conosco .title {
+  color: #f5f5f5;
+  margin-bottom: 5%;
+}
+#fale-conosco .title:before {
+  color: #101d48;
+}
+#fale-conosco form {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+#fale-conosco form input {
+  margin-bottom: 5%;
+}
+#fale-conosco form .btn {
+  padding: 15px 30px 15px 30px;
+  align-self: center;
+  top: -15px;
+  position: relative;
+}
+#grade {
+  background-image: url("../images/grade/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f5f5f5;
+}
+#grade h2 {
+  margin-top: 3%;
+  font-weight: normal;
+  color: #743ad0;
+}
+#grade .content {
+  height: 85%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#grade .content .grades {
+  cursor: pointer;
+  width: 90%;
+  text-align: center;
+}
+#grade .content .grades:hover img {
+  width: 90%;
+}
+#grade .content .grades img {
+  margin-bottom: 5%;
+  transition: all 1s;
+  width: 70%;
 }
 @-moz-keyframes lineGrowFX {
   from {
@@ -569,6 +649,54 @@ main #inicio .btn {
   to {
     margin-top: 0px;
     opacity: 1;
+  }
+}
+@-moz-keyframes pulse {
+  from {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  to {
+    height: 120vh;
+    width: 65%;
+    opacity: 0.7;
+  }
+}
+@-webkit-keyframes pulse {
+  from {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  to {
+    height: 120vh;
+    width: 65%;
+    opacity: 0.7;
+  }
+}
+@-o-keyframes pulse {
+  from {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  to {
+    height: 120vh;
+    width: 65%;
+    opacity: 0.7;
+  }
+}
+@keyframes pulse {
+  from {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  to {
+    height: 120vh;
+    width: 65%;
+    opacity: 0.7;
   }
 }
 @-moz-keyframes appear-out {

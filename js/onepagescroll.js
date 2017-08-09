@@ -117,10 +117,14 @@ function onePageScroll(element, options) {
     
   	if(settings.pagination == true)  {
   	  var pagination_links = document.querySelectorAll(".onepage-pagination li a");
+      var pagination_navs = document.querySelectorAll("#top a");
     
   	  for( var i = 0; i < pagination_links.length; i++){
     	  pagination_links[i].addEventListener('click', _paginationHandler);
       }
+        for( var i = 0; i < pagination_navs.length; i++){
+            pagination_navs[i].addEventListener('click', _paginationHandler);
+        }
   	}
     
   	_mouseWheelHandler = function(event) {

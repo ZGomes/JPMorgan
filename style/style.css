@@ -131,6 +131,7 @@ main #inicio .btn {
   section {
     height: 100vh;
     padding-top: 60px;
+    top: 0;
   }
   header {
     display: flex;

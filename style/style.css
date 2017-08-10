@@ -580,6 +580,30 @@ input[type ='text']::placeholder:before {
   transition: all 1s;
   width: 70%;
 }
+#equipe #equipe-list {
+  width: 80%;
+  list-style: none;
+  display: flex;
+}
+#equipe #equipe-list li {
+  margin: 20px;
+}
+#equipe #equipe-list li img {
+  filter: grayscale(100%);
+  border-radius: 50%;
+  height: 30%;
+  width: 30%;
+  min-height: 125px;
+  min-width: 125px;
+  border: 6px solid #fff;
+  box-shadow: 5px 5px 12px rgba(0,0,0,0.05), -5px -5px 12px rgba(0,0,0,0.05), -5px 5px 12px rgba(0,0,0,0.05), 5px -5px 12px rgba(0,0,0,0.05);
+}
+#equipe #equipe-list li .content span {
+  display: block;
+}
+#equipe #equipe-list li:hover img {
+  filter: grayscale(0%);
+}
 @-moz-keyframes lineGrowFX {
   from {
     width: 0px;

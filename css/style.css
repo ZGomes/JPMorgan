@@ -207,6 +207,9 @@ main #inicio .btn {
     margin: 10px;
     text-align: center;
   }
+  main section {
+    padding-top: 100px;
+  }
   main #inicio {
     background-size: auto auto;
   }
@@ -486,6 +489,7 @@ main #inicio .btn {
   flex-direction: column;
   width: 50%;
   height: 70%;
+  text-wrap: normal;
 }
 #inscricoes .content .divisor {
   margin-top: 2%;

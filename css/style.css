@@ -148,6 +148,7 @@ main #inicio .btn {
 }
 @media only screen and (max-width: 1000px) {
   header {
+    min-height: 70px;
     display: flex;
     justify-content: center;
   }
@@ -206,12 +207,6 @@ main #inicio .btn {
     padding: 5px;
     margin: 10px;
     text-align: center;
-  }
-  main section {
-    padding-top: 70px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
   }
   main #inicio {
     background-size: auto auto;

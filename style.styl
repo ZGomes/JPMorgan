@@ -10,48 +10,45 @@ color-5 = #e2e2e2
 color-6 = #999999
 contrast = #f5f5f5
 
-// KEYFRAMES
 @keyframes lineGrowFX {
   from {
-    width 0px;
+    width 0
   }
   to {
-    width 100px;
+    width 100px
   }
 }
 
 @keyframes appear {
   from {
-    margin-top 20px
+    transform translateY(20px)
     opacity 0
   }
   to {
-    margin-top 0px
+    transform translateY(0)
     opacity 1
-  }
-}
-
-@keyframes pulse {
-  from {
-    opacity 0
-    width 0
-    height 0
-  }
-  to {
-    height: 120vh;
-    width 65%
-    opacity .7
   }
 }
 
 @keyframes appear-out {
   from {
-    margin-top 0px
+    transform translateY(0)
     opacity 1
   }
   to {
-    margin-top 20px
+    transform translateY(20px)
     opacity 0
+  }
+}
+
+@keyframes pulse {
+  from {
+    opacity .9
+    transform scaleX(1.1)
+  }
+  to {
+    transform scaleX(0)
+    opacity 1
   }
 }
 
@@ -63,8 +60,8 @@ contrast = #f5f5f5
 
 @font-face
   font-family "Proxima Nova"
-  src url('../fonts/Proxima Nova Extrabold.ttf')
-  font-weight bolder
+  src url('../fonts/Proxima Nova Extrabold.otf')
+  font-weight 800
 
 @font-face
   font-family "Proxima Nova"
@@ -85,7 +82,6 @@ section
   height 100vh
   width 100%
   overflow hidden
-  padding-top 100px
   display flex
   align-items center
   flex-direction column
@@ -98,8 +94,8 @@ header
   justify-content center
   #top
     position fixed
-    padding 20px
-    padding-top 40px
+    background-color transparent
+    padding 5px 0px 0px 0px
     z-index 20
     transition all 1s ease
     .container
@@ -116,11 +112,25 @@ header
               font-weight bold
           a
             color contrast
-            transition border 1s color 1s
+            transition border 1s, color 1s
           .btn-contrast-full
+            border 2px solid contrast
             &:hover
               background-color contrast
-              color color-2
+              color color-3
+
+.fp-viewing-0
+  #top
+    padding 20px
+    padding-top 40px
+    background-color transparent
+  .btn-contrast-full
+    border 2px solid contrast
+    background-color transparent
+    color contrast
+    &:hover
+      background-color contrast
+      color color-2!important
 
 section
   .divisor
@@ -134,11 +144,12 @@ section
       border-radius 10px
       display inline-block
       height 5px
-  .appear
+      transform-origin left
+  .fp-tableCell
     opacity 0
     animation appear-out 0.6s ease forwards
   &.active
-    .appear
+    .fp-tableCell
       animation appear 1.3s ease forwards 0.4s
     .divisor
       .l2
@@ -176,17 +187,11 @@ main
       font-weight bold
 
 @media only screen and (max-width 1000px)
-  section
-    height 100vh
-    padding-top 60px
-    top 0
-
   header
     display flex
     justify-content center
     #top
       position fixed
-      max-height auto
       max-width 100%
       padding 5px 0px 0px 0px
       background-color color-3
@@ -232,6 +237,7 @@ main
             padding 5px;
             margin 10px;
             text-align center
+
   main
     #inicio
       background-size auto auto
@@ -260,42 +266,17 @@ main
   outline none
   border none
 
-.btn-contrast
-  border 2px solid contrast
-  color contrast
-  &:hover
-    background-color transparent
-    color color-2
-
-.btn-contrast-full
-  border 2px solid contrast
-  background-color transparent
-  color contrast
-  &:hover
-    background-color contrast
-    color color-2
-
-.btn-blue
-  background-color color-1
-  color contrast
-  &:hover
-    background-color color-4
-
 .title
-  margin-top 3%
+  margin-top 8% !important
   &:before
     content "// "
-
-.circle
-  border-radius 50%
-  z-index -1
-  background-color transparent
 
 #equipe
   background-image url('../images/equipe/background.png')
   background-repeat no-repeat
   background-size cover
   background-color contrast
+  margin-top 100px
   .title
     color contrastInside
     &:before
@@ -307,15 +288,14 @@ main
   background-size cover
   background-color contrast
   #missao
+    margin-top: 8%;
     display flex
     flex-direction row
     align-content center
     padding-top 80px
     justify-content center
-    #missaoL
-      width 45%1
-      img
-        width 80%
+    img
+      width 60%
     #missaoR
       width 55%
       display block !important
@@ -365,17 +345,17 @@ main
   align-items center
   &:hover
     border none
-  img
+  svg
     width 3%
     margin-left 2%
-    &:hover
-      width 4%
     &:nth-child(2)
       margin-left 5%
+      rect
+        fill color-4
+
 // Curso
 #curso
   background-color contrastInside
-  display flex
   .title
     color contrast
     margin-bottom 5%
@@ -403,19 +383,19 @@ main
       display flex
       flex-direction column
       color contrast
-      font-weight bolder
-
+      font-weight 800
       &:hover
         padding 0
         border none
         color color-2
-      &:hover img
-        width 25px
-        height 35px
+        .arrowLeft
+          transform scale(1.3) rotate(90deg)
+        .arrowRight
+          transform scale(1.3) rotate(-90deg)
       &:nth-child(1)
-        img
+        svg
           align-self: flex-end;
-      img
+      svg
         margin-bottom 3%
         width 20px
         height 30px
@@ -434,7 +414,7 @@ main
           margin-bottom 10%
         h2
           font-size 24px
-          font-weight bolder
+          font-weight 800
           color contrast
         p
           text-align justify
@@ -442,7 +422,7 @@ main
           color contrast
           font-weight normal
 
-.viewing-page-2, .viewing-page-3, .viewing-page-4, .viewing-page-5, .viewing-page-6, .viewing-page-7, .viewing-page-8
+.fp-viewing-1, .fp-viewing-2, .fp-viewing-3, .fp-viewing-4, .fp-viewing-5, .fp-viewing-6
   #top
     background-color color-3
     padding 5px 0px 0px 0px
@@ -453,37 +433,60 @@ main
 //edit arrows
 .arrowLeft
   transform rotate(90deg)
+  &:hover
+    transform rotate(90deg) scale(1.5)
 
 .arrowRight
   transform rotate(-90deg)
+  &:hover
+    transform rotate(-90deg) scale(1.3)
 
 .arrow
-  transition all .4s
+  transition transform 1s
   cursor pointer
 
 //Inscricoes
 #inscricoes
+  background-image url('../images/inscricoes/pessoas.png')
+  background-repeat no-repeat
+  background-size cover
   .title
-    color contrastInside
+    color contrast
     &:before
-      color color-4
+      color contrastInside
   .content
+    margin-top: 5%;
     display flex
     align-items center
     flex-direction column
-    width 60%
+    width 50%
     height 70%
+    .divisor
+      margin-top 2%
+      margin-bottom 2%
+
+      .l1
+        background-color color-4
+      .l2
+        background-color contrast
     h3
+      text-align center
       font-size 65px
+      color color-4
     p
+      text-align center
       font-size 26px
-    .col
-      .btn
-        background-color transparent
-        color color-2
-        border 1px solid color-2
-        font-size 25px
-        font-weight bold
+      color contrast
+      margin-bottom 5%
+    .btn
+      background-color transparent
+      color contrast
+      border 1px solid contrast
+      font-size 25px
+      font-weight bold
+      &:hover
+        background-color contrast
+        color color-4
 
 textarea
   border-radius 5px
@@ -530,24 +533,35 @@ input[type ='text']
   background-repeat no-repeat
   background-size cover
   background-color contrast
+  .circleGround
+    display: flex;
+    justify-content: center;
+    width: 87%;
+    height: 180vh;
+    top: -35vh;
+    border: 1px solid #27c3b6;
+    .circleGround
+      width: 73%;
+      height: 130vh;
+      top: 25vh;
   h2
-    margin-top 3%
+    margin-top 8%
     font-weight normal
     color contrastInside
   .content
-    height 85%
+    height 75%
     width 50%
     display flex
     align-items center
     justify-content space-between
     .grades
       cursor pointer
-      width 90%
+      width: 24%;
       text-align center
       &:hover
-        img
-          width 90%
-      img
+        svg
+          transform scale(1)
+      svg
         margin-bottom 5%
         transition all 1s
         width 70%
@@ -567,10 +581,80 @@ input[type ='text']
         min-height 125px
         min-width 125px
         border 6px solid white
-        box-shadow 5px 5px 12px rgba(0,0,0,0.05), -5px -5px 12px rgba(0,0,0,0.05), -5px 5px 12px rgba(0,0,0,0.05), 5px -5px 12px rgba(0,0,0,0.05)
+        box-shadow 5px 5px 12px rgba(0, 0, 0, 0.05), -5px -5px 12px rgba(0, 0, 0, 0.05), -5px 5px 12px rgba(0, 0, 0, 0.05), 5px -5px 12px rgba(0, 0, 0, 0.05)
       .content
         span
           display block
       &:hover
         img
           filter grayscale(0%)
+
+#tempo
+  background-color color-4
+  .title
+    color contrast
+    &:before
+      color color-2
+  #timeline
+    margin-top 5%
+    ul
+      width 50vw
+      display flex
+      flex-direction column
+      align-items center
+      .mes
+        background-color contrastInside
+        color contrast
+
+      .gamb
+        background-color contrast
+        width 2px
+        height 10vh
+      li
+        height 10vh
+        min-width 200px
+        list-style none
+        &:nth-child(odd)
+          text-align end
+          padding-right: 40px;
+          margin-right: 196px;
+          border-right 2px solid contrast
+          .dia
+            &:before
+              right -45px
+          .importante.dia
+            &:before
+              right -52px
+        &:nth-child(even)
+          padding-left: 40px;
+          margin-left: 200px;
+          border-left 2px solid contrast
+          .dia
+            &:before
+              right 195px
+          .importante.dia
+            &:before
+              right 187px
+        &:nth-last-child(1)
+          border none!important
+        .importante.dia
+          &:before
+            border 6px solid contrast
+            width 13px
+            height 13px
+        .dia
+          font-size 19px
+          font-weight 800
+          position relative
+          color#fff
+          &:before
+            content ''
+            position absolute
+            width 9px
+            height 9px
+            background-color contrastInside
+            border-radius 100%
+            transform translateY(-50%)
+            z-index 1000
+            align-self center
+

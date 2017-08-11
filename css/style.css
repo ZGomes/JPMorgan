@@ -209,6 +209,9 @@ main #inicio .btn {
   }
   main section {
     padding-top: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
   }
   main #inicio {
     background-size: auto auto;
@@ -234,6 +237,15 @@ main #inicio .btn {
     display: flex;
     width: 90%;
     flex-direction: column;
+  }
+  main #inscricoes .content {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 70%;
+    text-wrap: normal;
   }
 }
 .btn {
@@ -303,6 +315,8 @@ main #inicio .btn {
   color: #2acfc1;
   font-size: 24px;
   margin-bottom: 3%;
+  width: 100%;
+  padding: 10px;
 }
 #nossaMissao #missao #missaoR p {
   color: #999;
@@ -505,6 +519,8 @@ main #inicio .btn {
   text-align: center;
   font-size: 65px;
   color: #2acfc1;
+  width: 100%;
+  padding: 10px;
 }
 #inscricoes .content p {
   text-align: center;

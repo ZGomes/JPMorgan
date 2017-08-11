@@ -148,7 +148,6 @@ main #inicio .btn {
 }
 @media only screen and (max-width: 1000px) {
   header {
-    min-height: 70px;
     display: flex;
     justify-content: center;
   }

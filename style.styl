@@ -165,6 +165,7 @@ main
     display flex
     justify-content center
     .container
+      width: 90%;
       display flex
       flex-direction column
       height calc(100vh - 100px)
@@ -202,15 +203,14 @@ main
         margin-bottom -20px
         margin-top 5px
       #menu-icon
-        padding 5px
-        width 40px
-        height 40px
-        border 2px solid contrast
-        margin-top 5px
-        float right
-        margin-right 20px
-        margin-bottom -20px
-        border-radius 10px
+        padding: 8px;
+        width: 50px;
+        height: 50px;
+        border: 2px solid #f5f5f5;
+        margin-top: 5px;
+        float: right;
+        margin-right: 20px;
+        margin-bottom: -20px;
         &.active
           background-color contrast
           .line
@@ -241,6 +241,11 @@ main
   main
     #inicio
       background-size auto auto
+      h2
+        font-size 50px
+      .container
+
+        justify-content: flex-end;
       p
         max-width 100%
       #senai-logo
@@ -593,10 +598,13 @@ input[type ='text']
   background-color color-4
   .title
     color contrast
+    margin-top 15% !important
+    text-align center
     &:before
       color color-2
   #timeline
     margin-top 5%
+    margin-bottom 3%
     ul
       width 50vw
       display flex
@@ -605,7 +613,6 @@ input[type ='text']
       .mes
         background-color contrastInside
         color contrast
-
       .gamb
         background-color contrast
         width 2px
@@ -657,4 +664,3 @@ input[type ='text']
             transform translateY(-50%)
             z-index 1000
             align-self center
-

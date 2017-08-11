@@ -92,7 +92,7 @@
     var iscrollOptions = {
         scrollbars: true,
         mouseWheel: true,
-        hideScrollbars: false,
+        hideScrollbars: true,
         fadeScrollbars: false,
         disableMouse: true,
         interactiveScrollbars: true
@@ -141,10 +141,10 @@
             dragAndMove: false,
             offsetSections: false,
             resetSliders: false,
-            fadingEffect: true,
+            fadingEffect: false,
             normalScrollElements: null,
             scrollOverflow: true,
-            scrollOverflowReset: true,
+            scrollOverflowReset: false,
             scrollOverflowHandler: iscrollHandler,
             scrollOverflowOptions: null,
             touchSensitivity: 5,

@@ -189,12 +189,13 @@ main
 @media only screen and (max-width 1000px)
   body
     background-size auto auto
+
   header
     display flex
     justify-content center
     #top
       max-width 100%
-      padding 5px 0px 0px 0px!important
+      padding 5px 0px 0px 0px !important
       background-color color-3!important
       img
         float left
@@ -447,6 +448,7 @@ main
           font-size 20px
           color contrast
           font-weight normal
+
 .fp-viewing-1, .fp-viewing-2, .fp-viewing-3, .fp-viewing-4, .fp-viewing-5, .fp-viewing-6, .fp-viewing-7
   #top
     background-color color-3
@@ -550,11 +552,14 @@ input[type ='text']
     flex-direction column
     input
       margin-bottom 5%
+    textarea
+      color color-2
     .btn
       padding 15px 30px 15px 30px
       align-self center
       top -15px
       position relative
+      background-color color-1
 
 #grade
   background-image url('../images/grade/background.png')
@@ -631,16 +636,14 @@ input[type ='text']
           display block
         .nome
           font-size 20px
-        .funcao
-          
-      &:hover
-        .content
-          opacity 1
-        img
-            filter grayscale(0%)
-            opacity 0.6
-            transform scale(1.6)
-
+funcao
+&:hover
+  .content
+    opacity 1
+  img
+    filter grayscale(0%)
+    opacity 0.6
+    transform scale(1.6)
 
 #tempo
   background-color color-4
@@ -690,7 +693,7 @@ input[type ='text']
             &:before
               right 187px
         &:nth-last-child(1)
-          border none!important
+          border none !important
         .importante.dia
           &:before
             border 6px solid contrast

@@ -22,6 +22,8 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: "Proxima Nova";
+  background: url("../images/top-bg.jpg") fixed no-repeat 0 0;
+  background-size: 100% 100%;
 }
 section {
   height: 100vh;
@@ -39,7 +41,6 @@ header {
   justify-content: center;
 }
 header #top {
-  position: fixed;
   background-color: transparent;
   padding: 5px 0px 0px 0px;
   z-index: 20;
@@ -112,8 +113,6 @@ section.active .divisor .l2 {
 main #inicio {
   align-content: center;
   align-items: center;
-  background: url("../images/top-bg.jpg") fixed no-repeat 0 0;
-  background-size: 100% 100%;
   color: #f5f5f5;
   display: flex;
   justify-content: center;
@@ -147,12 +146,14 @@ main #inicio .btn {
   font-weight: bold;
 }
 @media only screen and (max-width: 1000px) {
+  body {
+    background-size: auto auto;
+  }
   header {
     display: flex;
     justify-content: center;
   }
   header #top {
-    position: fixed;
     max-width: 100%;
     padding: 5px 0px 0px 0px !important;
     background-color: #dd5632 !important;
@@ -207,9 +208,6 @@ main #inicio .btn {
     margin: 10px;
     text-align: center;
   }
-  main #inicio {
-    background-size: auto auto;
-  }
   main #inicio h2 {
     font-size: 50px;
   }
@@ -240,6 +238,20 @@ main #inicio .btn {
     width: 90%;
     height: 70%;
     text-wrap: normal;
+  }
+  main #grade .content {
+    height: 75%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  main #grade .content .grades {
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
   }
 }
 .btn {

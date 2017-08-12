@@ -77,6 +77,8 @@ body
   margin 0px
   padding 0px
   font-family "Proxima Nova"
+  background url('../images/top-bg.jpg') fixed no-repeat 0 0
+  background-size 100% 100%
 
 section
   height 100vh
@@ -93,7 +95,6 @@ header
   display flex
   justify-content center
   #top
-    position fixed
     background-color transparent
     padding 5px 0px 0px 0px
     z-index 20
@@ -159,8 +160,6 @@ main
   #inicio
     align-content center
     align-items center
-    background url('../images/top-bg.jpg') fixed no-repeat 0 0
-    background-size 100% 100%
     color contrast
     display flex
     justify-content center
@@ -189,11 +188,12 @@ main
       font-weight bold
 
 @media only screen and (max-width 1000px)
+  body
+    background-size auto auto
   header
     display flex
     justify-content center
     #top
-      position fixed
       max-width 100%
       padding 5px 0px 0px 0px!important
       background-color color-3!important
@@ -241,7 +241,6 @@ main
 
   main
     #inicio
-      background-size auto auto
       h2
         font-size 50px
       .container
@@ -269,6 +268,19 @@ main
         width 90%
         height 70%
         text-wrap normal
+    #grade
+      .content
+        height 75%
+        width 100%
+        padding 20px
+        display flex
+        align-items center
+        justify-content space-between
+        flex-wrap wrap
+        .grades
+          cursor pointer
+          width: 50%;
+          text-align center
 
 //  BOTÕES
 .btn
@@ -437,7 +449,6 @@ main
           font-size 20px
           color contrast
           font-weight normal
-
 .fp-viewing-1, .fp-viewing-2, .fp-viewing-3, .fp-viewing-4, .fp-viewing-5, .fp-viewing-6
   #top
     background-color color-3

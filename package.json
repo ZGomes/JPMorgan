@@ -22,10 +22,10 @@
     "url": "https://github.com/BlackLawzin/JPMorgan/issues"
   },
   "homepage": "https://github.com/BlackLawzin/JPMorgan#readme",
-  "description": "",
   "dependencies": {
     "fullpage.js": "^2.9.4",
     "jquery": "^3.2.1",
     "jquery-albe-timeline": "^3.0.0"
-  }
+  },
+  "description": ""
 }

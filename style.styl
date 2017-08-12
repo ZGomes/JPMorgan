@@ -195,23 +195,28 @@ main
     justify-content center
     #top
       max-width 100%
+<<<<<<< HEAD
       padding 5px 0px 0px 0px !important
+=======
+      padding 0!important
+>>>>>>> e1426de37b9bdff021972d317d717c246cb8c4f3
       background-color color-3!important
+      .container
+        margin-bottom -10px
+        padding 0!important
+      .col-3
+        margin-top 10px
+        margin-left 9px
       img
         float left
-        margin-left 20px
         max-width 100px
-        margin-bottom -20px
-        margin-top 5px
       #menu-icon
-        padding: 8px;
-        width: 50px;
-        height: 50px;
-        border: 2px solid #f5f5f5;
-        margin-top: 5px;
-        float: right;
-        margin-right: 20px;
-        margin-bottom: -20px;
+        padding 8px
+        width 40px
+        height 40px
+        border 2px solid #f5f5f5
+        float right
+        margin-right 20px
         &.active
           background-color contrast
           .line
@@ -223,8 +228,7 @@ main
           display block
           margin-top 20%
       nav
-        padding 10px
-        margin-top 20px
+        padding 5px
         display none
         &.active
           display block
@@ -233,26 +237,64 @@ main
           list-style none
           justify-content space-between
           flex-direction column
-          padding-top 20px
           li
-            padding 5px;
-            margin 10px;
+            padding 5px
+            margin 10px
             text-align center
+          li:nth-child(8)
+            margin-top 10%
+            margin-bottom 10%
 
   main
     #inicio
+      .btn
+        font-size 4vw
+        display none
       h2
-        font-size 50px
+        font-size 13vw
       .container
         justify-content: flex-end;
+        .row:nth-child(1)
+          margin-bottom 15%
       p
+        margin-top 10px
         max-width 100%
-      #senai-logo
-        margin-top 20px
-        max-height 40px
+      img
+        max-height 23px
+      .col-4
+        &:nth-child(3)
+          display flex
+          justify-content  space-between
+          margin-bottom 23px
     #nossaMissao
-    #missao
-      padding-top 10px
+      #missao
+        margin-top 0
+        padding-top 0
+        img
+          display none
+        #missaoR
+          width 80%
+          display: flex !important;
+          flex-direction: column;
+          align-items: center;
+          .divisor
+            align-self: flex-start
+          #passArrowMissao
+            display flex
+            justify-content space-between
+          .passCircles
+              width 65%
+              margin-top 15%
+            svg
+              width 10%
+
+          h1
+            font-size: 10vw;
+          h3
+            padding 0
+            font-size 5vw
+          p
+            font-size 4vw
     #fale-conosco
       form
         display flex

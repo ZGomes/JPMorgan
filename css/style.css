@@ -676,6 +676,9 @@ input[type ='text']::placeholder:before {
 #equipe #equipe-list li .content span {
   display: block;
 }
+#equipe #equipe-list li .content .nome {
+  font-size: 20px;
+}
 #equipe #equipe-list li:hover .content {
   opacity: 1;
 }

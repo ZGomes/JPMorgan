@@ -92,7 +92,7 @@
     var iscrollOptions = {
         scrollbars: true,
         mouseWheel: true,
-        hideScrollbars: true,
+        hideScrollbars: false,
         fadeScrollbars: false,
         disableMouse: true,
         interactiveScrollbars: true

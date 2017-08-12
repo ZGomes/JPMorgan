@@ -154,6 +154,7 @@ main #inicio .btn {
   }
   header #top {
     max-width: 100%;
+    padding: 5px 0px 0px 0px !important;
     padding: 0 !important;
     background-color: #dd5632 !important;
   }
@@ -637,11 +638,17 @@ input[type ='text']::placeholder:before {
 #fale-conosco form input {
   margin-bottom: 5%;
 }
+#fale-conosco form textarea {
+  color: #dd5632;
+}
 #fale-conosco form .btn {
   padding: 15px 30px 15px 30px;
   align-self: center;
   top: -15px;
   position: relative;
+  background-color: #101d48;
+  color: #fff;
+  box-shadow: 5px 5px 12px rgba(0,0,0,0.05), -5px -5px 12px rgba(0,0,0,0.05), -5px 5px 12px rgba(0,0,0,0.05), 5px -5px 12px rgba(0,0,0,0.05);
 }
 #grade {
   background-image: url("../images/grade/background.png");
@@ -697,7 +704,6 @@ input[type ='text']::placeholder:before {
 #equipe #equipe-list li {
   margin: 20px;
   border: 10px solid #fff;
-  box-shadow: 5px 5px 12px rgba(0,0,0,0.05), -5px -5px 12px rgba(0,0,0,0.05), -5px 5px 12px rgba(0,0,0,0.05), 5px -5px 12px rgba(0,0,0,0.05);
   border-radius: 50%;
   overflow: hidden;
   min-width: 20%;
@@ -708,6 +714,7 @@ input[type ='text']::placeholder:before {
   justify-content: center;
   align-content: center;
   background-color: #2acfc1;
+  box-shadow: 5px 5px 12px rgba(0,0,0,0.05), -5px -5px 12px rgba(0,0,0,0.05), -5px 5px 12px rgba(0,0,0,0.05), 5px -5px 12px rgba(0,0,0,0.05);
 }
 #equipe #equipe-list li img {
   filter: grayscale(100%);

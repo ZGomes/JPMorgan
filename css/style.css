@@ -86,6 +86,9 @@ header #top nav ul li .btn-contrast-full:hover {
   background-color: #f5f5f5;
   color: #d8157d !important;
 }
+section {
+  padding-bottom: 60px;
+}
 section .divisor {
   display: block;
 }
@@ -569,6 +572,18 @@ main #inicio .btn {
 .fp-viewing-2 #top {
   background-color: #743ad0;
 }
+.fp-viewing-3 #top {
+  background-color: #743ad0;
+}
+.fp-viewing-4 #top {
+  background-color: #2acfc1;
+}
+.fp-viewing-5 #top {
+  background-color: #2acfc1;
+}
+.fp-viewing-6 #top {
+  background-color: #743ad0;
+}
 .arrowLeft {
   transform: rotate(90deg);
 }
@@ -850,6 +865,9 @@ input[type ='text']::placeholder:before {
   min-width: 200px;
   list-style: none;
 }
+#tempo #timeline ul li .atividade {
+  color: #fff;
+}
 #tempo #timeline ul li:nth-child(odd) {
   text-align: end;
   padding-right: 40px;
@@ -866,6 +884,9 @@ input[type ='text']::placeholder:before {
   padding-left: 40px;
   margin-left: 200px;
   border-left: 2px solid #f5f5f5;
+}
+#tempo #timeline ul li:nth-child(even) .dia {
+  color: #fff;
 }
 #tempo #timeline ul li:nth-child(even) .dia:before {
   right: 195px;
@@ -898,6 +919,9 @@ input[type ='text']::placeholder:before {
   z-index: 1000;
   align-self: center;
 }
+#tempo #timeline ul .importante {
+  color: #743ad0 !important;
+}
 @media only screen and (max-width: 1000px) {
   body {
     background-size: auto auto;
@@ -910,7 +934,6 @@ input[type ='text']::placeholder:before {
     max-width: 100%;
     padding: 5px 0px 0px 0px !important;
     padding: 0 !important;
-    background-color: #ef4e2e !important;
   }
   header #top .container {
     margin-bottom: -10px;

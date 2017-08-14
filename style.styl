@@ -135,6 +135,7 @@ header
       color color-2!important
 
 section
+  padding-bottom 60px
   .divisor
     display block
     .l1
@@ -513,6 +514,7 @@ main
           color contrast
           font-weight normal
 
+//           MENU COLOR STYLES
 .fp-viewing-1, .fp-viewing-2, .fp-viewing-3, .fp-viewing-4, .fp-viewing-5, .fp-viewing-6, .fp-viewing-7
   #top
     background-color color-3
@@ -528,6 +530,23 @@ main
 .fp-viewing-2
   #top
     background-color contrastInside
+
+.fp-viewing-3
+  #top
+    background-color contrastInside
+
+.fp-viewing-4
+  #top
+    background-color color-4
+
+.fp-viewing-5
+  #top
+    background-color color-4
+
+.fp-viewing-6
+  #top
+    background-color contrastInside
+
 
 //edit arrows
 .arrowLeft
@@ -768,6 +787,8 @@ input[type ='text']
         height 10vh
         min-width 200px
         list-style none
+        .atividade
+          color white
         &:nth-child(odd)
           text-align end
           padding-right: 40px
@@ -784,6 +805,7 @@ input[type ='text']
           margin-left: 200px
           border-left 2px solid contrast
           .dia
+            color white
             &:before
               right 195px
           .importante.dia
@@ -811,6 +833,8 @@ input[type ='text']
             transform translateY(-50%)
             z-index 1000
             align-self center
+      .importante
+        color contrastInside !important
 
 @media only screen and (max-width 1000px)
   body
@@ -823,7 +847,7 @@ input[type ='text']
       max-width 100%
       padding 5px 0px 0px 0px !important
       padding 0 !important
-      background-color color-3!important
+      //background-color color-3!important
       .container
         margin-bottom -10px
         padding 0 !important

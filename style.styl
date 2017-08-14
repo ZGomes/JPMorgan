@@ -243,7 +243,7 @@ main
             margin 10px
             text-align center
           li:nth-child(8)
-            margin-top 10%
+            margin-top 5%
             margin-bottom 10%
 
   main
@@ -268,6 +268,46 @@ main
           display flex
           justify-content space-between
           margin-bottom 23px
+    #tempo
+      #timeline
+        margin-top 15%
+        margin-bottom 15%
+        ul
+          width 100vw
+          display flex
+          flex-direction column
+          align-items center
+          .mes
+            background-color contrastInside
+            color contrast
+
+          .gamb
+            background-color transparent
+            width 200px
+            height: 20vh;
+            top: -8vh;
+            border-left 2px solid contrast
+            z-index -1
+            position relative
+            margin-bottom -6vh
+          li
+            height 15vh
+            min-width 200px
+            list-style none
+            padding-left 40px
+            padding-right 0!important
+            margin 0!important
+            border-right 0!important
+            border-left 2px solid contrast
+            text-align start!important
+            .dia
+              color white
+              &:before
+                right 195px!important
+            .importante.dia
+              &:before
+                right 187px!important
+
     #nossaMissao
       #missao
         margin-top 0
@@ -291,7 +331,7 @@ main
 
           h1
             font-size 10vw
-            margin-top 15%
+            margin-top 10%
           h3
             padding 0
             font-size: 5vw;
@@ -329,7 +369,6 @@ main
         flex-direction column
         width 90%
         height 70%
-        text-wrap normal
     #grade
       .content
         height 75%
@@ -343,7 +382,12 @@ main
           cursor pointer
           width: 50%;
           text-align center
-
+    #equipe
+      #equipe-list
+        width 100%
+        li
+          max-width 35%
+          max-height 35%
 //  BOTÕES
 .btn
   padding 10px 30px 10px 30px
@@ -422,7 +466,7 @@ main
   display flex
   height 15px
   flex-direction row
-  justify-content space-between
+  justify-content space-evenly
   float right
   position relative
   .passCircle
@@ -608,7 +652,6 @@ main
     flex-direction column
     width 50%
     height 70%
-    text-wrap normal
     .divisor
       margin-top 2%
       margin-bottom 2%
@@ -916,8 +959,8 @@ input[type ='text']
             padding 5px
             margin 10px
             text-align center
-          li:nth-child(8)
-            margin-top 10%
+          li:nth-child(7)
+            margin-top 6%
             margin-bottom 10%
 
   main
@@ -955,8 +998,7 @@ input[type ='text']
           .divisor
             align-self: flex-start
           #passArrowMissao
-            display flex
-            justify-content space-between
+            display none
           .passCircles
             width 65%
             margin-top 15%
@@ -983,7 +1025,6 @@ input[type ='text']
         flex-direction column
         width 90%
         height 70%
-        text-wrap normal
     #grade
       .content
         height 75%
@@ -997,7 +1038,15 @@ input[type ='text']
           cursor pointer
           width: 50%;
           text-align center
-
+  #inscricoes
+    .content
+      width 85%!important
+      h3
+        font-size 8vw
+      p
+        font-size 5vw
+      .btn
+        margin-top 4vh
   #fale-conosco
   background-color color-3
   .content

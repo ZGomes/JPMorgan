@@ -86,9 +86,6 @@ header #top nav ul li .btn-contrast-full:hover {
   background-color: #f5f5f5;
   color: #d8157d !important;
 }
-section {
-  padding-bottom: 60px;
-}
 section .divisor {
   display: block;
 }
@@ -165,7 +162,7 @@ main #inicio .btn {
   header #top {
     max-width: 100%;
     padding: 0 !important;
-    background-color: #ef4e2e !important;
+    background-color: #ef4e2e;
   }
   header #top .container {
     margin-bottom: -10px;
@@ -569,19 +566,55 @@ main #inicio .btn {
 .fp-viewing-1 #top {
   background-color: #2acfc1;
 }
+.fp-viewing-1 #top #menu-icon.active {
+  background-color: #f5f5f5;
+}
+.fp-viewing-1 #top #menu-icon.active .line {
+  background-color: #2acfc1;
+}
 .fp-viewing-2 #top {
+  background-color: #743ad0;
+}
+.fp-viewing-2 #top #menu-icon.active {
+  background-color: #f5f5f5;
+}
+.fp-viewing-2 #top #menu-icon.active .line {
   background-color: #743ad0;
 }
 .fp-viewing-3 #top {
   background-color: #743ad0;
 }
+.fp-viewing-3 #top #menu-icon.active {
+  background-color: #f5f5f5;
+}
+.fp-viewing-3 #top #menu-icon.active .line {
+  background-color: #743ad0;
+}
 .fp-viewing-4 #top {
+  background-color: #2acfc1;
+}
+.fp-viewing-4 #top #menu-icon.active {
+  background-color: #f5f5f5;
+}
+.fp-viewing-4 #top #menu-icon.active .line {
   background-color: #2acfc1;
 }
 .fp-viewing-5 #top {
   background-color: #2acfc1;
 }
+.fp-viewing-5 #top #menu-icon.active {
+  background-color: #f5f5f5;
+}
+.fp-viewing-5 #top #menu-icon.active .line {
+  background-color: #2acfc1;
+}
 .fp-viewing-6 #top {
+  background-color: #743ad0;
+}
+.fp-viewing-6 #top #menu-icon.active {
+  background-color: #f5f5f5;
+}
+.fp-viewing-6 #top #menu-icon.active .line {
   background-color: #743ad0;
 }
 .arrowLeft {
@@ -959,7 +992,7 @@ input[type ='text']::placeholder:before {
     background-color: #f5f5f5;
   }
   header #top #menu-icon.active .line {
-    background-color: #ef4e2e;
+    background-color: #2acfc1;
   }
   header #top #menu-icon .line {
     width: 100%;

@@ -1,10 +1,16 @@
 var map;
 var marker;
 var position;
+var place;
+var infoWindow;
+var placeId;
 
 function initMap(){
+    placeId = 'ChIJJZC53kNYzpQRPubHi4UZNrI'
     position = {lat: -23.5365517, lng: -46.6463026}
+    infoWindow = new google.maps.InfoWindow()
     placeMap()
+    placeLocation()
     placeMarker()
 }
 
@@ -227,11 +233,25 @@ function placeMarker(){
     marker.setMap(map)
 }
 
+function placeLocation(){
+    let service = new google.maps.places.PlacesService(map)
+    service.getDetails({
+        placeId: placeId
+    },function (result, status) {
+        if(status === google.maps.places.PlacesServiceStatus.OK){
+            place = result
+            position = place.geometry.location
+        }
+    })
+}
 
 function toggleBounce() {
     if (marker.getAnimation() !== null) {
         marker.setAnimation(null);
     } else {
         marker.setAnimation(google.maps.Animation.BOUNCE);
+        infoWindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+            place.formatted_address + '</div>');
+        infoWindow.open(map, this);
     }
 }

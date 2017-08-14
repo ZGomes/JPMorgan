@@ -15,6 +15,7 @@ function initMap(){
 }
 
 function placeMap() {
+    // THE MAP STYLE
     let style = new google.maps.StyledMapType(
         [
             {
@@ -220,6 +221,7 @@ function placeMap() {
 
 }
 
+// CREATE THE MARKER AND PLACE IT
 function placeMarker(){
     marker = new google.maps.Marker(
         {
@@ -229,10 +231,11 @@ function placeMarker(){
             icon: 'images/marker.png'
         }
     )
-    marker.addListener('click',toggleBounce)
+    marker.addListener('click', markerOnClick)
     marker.setMap(map)
 }
 
+// SET THE LOCATION BY THE PLACE ID
 function placeLocation(){
     let service = new google.maps.places.PlacesService(map)
     service.getDetails({
@@ -245,7 +248,8 @@ function placeLocation(){
     })
 }
 
-function toggleBounce() {
+// CREATE THE BOUNCE STYLE AND SET THE INFO WINDOW
+function markerOnClick() {
     if (marker.getAnimation() !== null) {
         marker.setAnimation(null);
     } else {

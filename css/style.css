@@ -22,7 +22,7 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: "Proxima Nova";
-  background: url("../images/top-bg.jpg") fixed no-repeat 0 0;
+  background: url("../images/top-bg.jpg") no-repeat 0 0;
   background-size: 100% 100%;
 }
 section {
@@ -35,6 +35,7 @@ section {
 }
 a {
   text-decoration: none;
+  color: #fff;
 }
 header {
   display: flex;
@@ -69,7 +70,7 @@ header #top nav ul li .btn-contrast-full {
 }
 header #top nav ul li .btn-contrast-full:hover {
   background-color: #f5f5f5;
-  color: #dd5632;
+  color: #ef4e2e;
 }
 .fp-viewing-0 #top {
   padding: 20px;
@@ -161,7 +162,7 @@ main #inicio .btn {
   header #top {
     max-width: 100%;
     padding: 0 !important;
-    background-color: #dd5632 !important;
+    background-color: #ef4e2e !important;
   }
   header #top .container {
     margin-bottom: -10px;
@@ -187,7 +188,7 @@ main #inicio .btn {
     background-color: #f5f5f5;
   }
   header #top #menu-icon.active .line {
-    background-color: #dd5632;
+    background-color: #ef4e2e;
   }
   header #top #menu-icon .line {
     width: 100%;
@@ -400,7 +401,7 @@ main #inicio .btn {
   background-color: #2acfc1;
 }
 #nossaMissao #missao #missaoR .divisor .l2 {
-  background-color: #dd5632;
+  background-color: #ef4e2e;
 }
 #nossaMissao #missao #missaoR h3 {
   color: #2acfc1;
@@ -550,7 +551,7 @@ main #inicio .btn {
 .fp-viewing-5 #top,
 .fp-viewing-6 #top,
 .fp-viewing-7 #top {
-  background-color: #dd5632;
+  background-color: #ef4e2e;
   padding: 5px 0px 0px 0px;
 }
 .fp-viewing-1 #top .btn-contrast-full:hover,
@@ -560,7 +561,13 @@ main #inicio .btn {
 .fp-viewing-5 #top .btn-contrast-full:hover,
 .fp-viewing-6 #top .btn-contrast-full:hover,
 .fp-viewing-7 #top .btn-contrast-full:hover {
-  color: #dd5632;
+  color: #ef4e2e;
+}
+.fp-viewing-1 #top {
+  background-color: #2acfc1;
+}
+.fp-viewing-2 #top {
+  background-color: #743ad0;
 }
 .arrowLeft {
   transform: rotate(90deg);
@@ -656,7 +663,8 @@ input[type ='text']::placeholder:before {
   content: "//";
 }
 #fale-conosco {
-  background-color: #dd5632;
+  background-image: url("../images/contato/bg.png");
+  background-size: 100% 100%;
 }
 #fale-conosco .content {
   display: flex;
@@ -676,13 +684,14 @@ input[type ='text']::placeholder:before {
   padding-top: -50px;
 }
 #fale-conosco .content #contato {
-  padding: 10%;
+  padding: 5%;
   width: 50%;
 }
 #fale-conosco .content #contato .title {
-  text-align: center;
+  text-align: left;
   color: #f5f5f5;
   margin-bottom: 5%;
+  font-size: 28px;
 }
 #fale-conosco .content #contato .title:before {
   color: #743ad0;
@@ -691,12 +700,13 @@ input[type ='text']::placeholder:before {
   display: flex;
   width: 100%;
   flex-direction: column;
+  padding-right: 25%;
 }
 #fale-conosco .content #contato form input {
   margin-bottom: 5%;
 }
 #fale-conosco .content #contato form textarea {
-  color: #dd5632;
+  color: #ef4e2e;
   border-radius: 0px;
 }
 #fale-conosco .content #contato form .btn {
@@ -900,7 +910,7 @@ input[type ='text']::placeholder:before {
     max-width: 100%;
     padding: 5px 0px 0px 0px !important;
     padding: 0 !important;
-    background-color: #dd5632 !important;
+    background-color: #ef4e2e !important;
   }
   header #top .container {
     margin-bottom: -10px;
@@ -926,7 +936,7 @@ input[type ='text']::placeholder:before {
     background-color: #f5f5f5;
   }
   header #top #menu-icon.active .line {
-    background-color: #dd5632;
+    background-color: #ef4e2e;
   }
   header #top #menu-icon .line {
     width: 100%;

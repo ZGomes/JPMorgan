@@ -3,7 +3,7 @@
 // PADRÕES
 color-1 = #101d48
 color-2 = #d8157d
-color-3 = #dd5632
+color-3 = #ef4e2e
 color-4 = #2acfc1
 contrastInside = #743ad0
 color-5 = #e2e2e2
@@ -77,7 +77,7 @@ body
   margin 0px
   padding 0px
   font-family "Proxima Nova"
-  background url('../images/top-bg.jpg') fixed no-repeat 0 0
+  background url('../images/top-bg.jpg') no-repeat 0 0
   background-size 100% 100%
 
 section
@@ -90,6 +90,7 @@ section
 
 a
   text-decoration none
+  color white
 
 header
   display flex
@@ -520,6 +521,14 @@ main
       &:hover
         color color-3
 
+.fp-viewing-1
+  #top
+    background-color color-4
+
+.fp-viewing-2
+  #top
+    background-color contrastInside
+
 //edit arrows
 .arrowLeft
   transform rotate(90deg)
@@ -603,7 +612,8 @@ input[type ='text']
       content "//"
 
 #fale-conosco
-  background-color color-3
+  background-image url('../images/contato/bg.png')
+  background-size 100% 100%
   .content
     display flex
     width 100%
@@ -618,18 +628,20 @@ input[type ='text']
         font-size 22px
         padding-top -50px
     #contato
-      padding 10%
+      padding 5%
       width 50%
       .title
-        text-align center
+        text-align left
         color contrast
         margin-bottom 5%
+        font-size 28px
         &:before
           color contrastInside
       form
         display flex
         width 100%
         flex-direction column
+        padding-right 25%
         input
           margin-bottom 5%
         textarea

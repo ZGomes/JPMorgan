@@ -303,6 +303,30 @@ main #inicio .btn {
     width: 50%;
     text-align: center;
   }
+  #fale-conosco,
+  background-color color-3,
+  .content {
+    display: flex;
+    width: 100%;
+  }
+  #fale-conosco #mapa,
+  background-color color-3 #mapa,
+  .content #mapa {
+    width: 100%;
+  }
+  #fale-conosco #mapa #local,
+  background-color color-3 #mapa #local,
+  .content #mapa #local {
+    background-color: #743ad0;
+    color: #fff;
+    font-size: 22px;
+    padding-top: -50px;
+  }
+  #fale-conosco #contato,
+  background-color color-3 #contato,
+  .content #contato {
+    width: 100%;
+  }
 }
 .btn {
   padding: 10px 30px 10px 30px;
@@ -623,32 +647,55 @@ input[type ='text']::placeholder:before {
 #fale-conosco {
   background-color: #dd5632;
 }
-#fale-conosco .title {
+#fale-conosco .content {
+  display: flex;
+  width: 100%;
+}
+#fale-conosco .content #mapa {
+  width: 50%;
+}
+#fale-conosco .content #mapa #local {
+  background-color: #743ad0;
+  color: #fff;
+  font-size: 22px;
+  padding-top: -50px;
+}
+#fale-conosco .content #contato {
+  padding: 10%;
+  width: 50%;
+}
+#fale-conosco .content #contato .title {
+  text-align: center;
   color: #f5f5f5;
   margin-bottom: 5%;
 }
-#fale-conosco .title:before {
-  color: #101d48;
+#fale-conosco .content #contato .title:before {
+  color: #743ad0;
 }
-#fale-conosco form {
+#fale-conosco .content #contato form {
   display: flex;
-  width: 50%;
+  width: 100%;
   flex-direction: column;
 }
-#fale-conosco form input {
+#fale-conosco .content #contato form input {
   margin-bottom: 5%;
 }
-#fale-conosco form textarea {
+#fale-conosco .content #contato form textarea {
   color: #dd5632;
+  border-radius: 0px;
 }
-#fale-conosco form .btn {
+#fale-conosco .content #contato form .btn {
   padding: 15px 30px 15px 30px;
   align-self: center;
   top: -15px;
   position: relative;
-  background-color: #101d48;
+  background-color: #743ad0;
   color: #fff;
-  box-shadow: 5px 5px 12px rgba(0,0,0,0.05), -5px -5px 12px rgba(0,0,0,0.05), -5px 5px 12px rgba(0,0,0,0.05), 5px -5px 12px rgba(0,0,0,0.05);
+  box-shadow: 5px 5px 12px rgba(0,0,0,0.1), -5px -5px 12px rgba(0,0,0,0.1), -5px 5px 12px rgba(0,0,0,0.1), 5px -5px 12px rgba(0,0,0,0.1);
+}
+#fale-conosco .content #contato form .btn:hover {
+  background-color: #2acfc1;
+  box-shadow: 0px 0px 7px rgba(0,0,0,0.05), 0px 0px 7px rgba(0,0,0,0.05), 0px 0px 7px rgba(0,0,0,0.05), 0px 0px 7px rgba(0,0,0,0.05);
 }
 #grade {
   background-image: url("../images/grade/background.png");

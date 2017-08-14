@@ -186,140 +186,6 @@ main
       margin-top 50px
       font-weight bold
 
-@media only screen and (max-width 1000px)
-  body
-    background-size auto auto
-
-  header
-    display flex
-    justify-content center
-    #top
-      max-width 100%
-      padding 5px 0px 0px 0px !important
-      padding 0!important
-      background-color color-3!important
-      .container
-        margin-bottom -10px
-        padding 0!important
-      .col-3
-        margin-top 10px
-        margin-left 9px
-      img
-        float left
-        max-width 100px
-      #menu-icon
-        padding 8px
-        width 40px
-        height 40px
-        border 2px solid #f5f5f5
-        float right
-        margin-right 20px
-        &.active
-          background-color contrast
-          .line
-            background-color color-3
-        .line
-          width 100%
-          height 2px
-          background-color contrast
-          display block
-          margin-top 20%
-      nav
-        padding 5px
-        display none
-        &.active
-          display block
-        ul
-          display flex
-          list-style none
-          justify-content space-between
-          flex-direction column
-          li
-            padding 5px
-            margin 10px
-            text-align center
-          li:nth-child(8)
-            margin-top 10%
-            margin-bottom 10%
-
-  main
-    #inicio
-      .btn
-        font-size 4vw
-        display none
-      h2
-        font-size 13vw
-      .container
-        justify-content: flex-end;
-        .row:nth-child(1)
-          margin-bottom 15%
-      p
-        margin-top 10px
-        max-width 100%
-      img
-        max-height 23px
-      .col-4
-        &:nth-child(3)
-          display flex
-          justify-content  space-between
-          margin-bottom 23px
-    #nossaMissao
-      #missao
-        margin-top 0
-        padding-top 0
-        img
-          display none
-        #missaoR
-          width 80%
-          display: flex !important;
-          flex-direction: column;
-          align-items: center;
-          .divisor
-            align-self: flex-start
-          #passArrowMissao
-            display flex
-            justify-content space-between
-          .passCircles
-              width 65%
-              margin-top 15%
-            svg
-              width 10%
-
-          h1
-            font-size: 10vw;
-          h3
-            padding 0
-            font-size 5vw
-          p
-            font-size 4vw
-    #fale-conosco
-      form
-        display flex
-        width 90%
-        flex-direction column
-    #inscricoes
-      .content
-        margin-top: 5%;
-        display flex
-        align-items center
-        flex-direction column
-        width 90%
-        height 70%
-        text-wrap normal
-    #grade
-      .content
-        height 75%
-        width 100%
-        padding 20px
-        display flex
-        align-items center
-        justify-content space-between
-        flex-wrap wrap
-        .grades
-          cursor pointer
-          width: 50%;
-          text-align center
-
 //  BOTÕES
 .btn
   padding 10px 30px 10px 30px
@@ -580,27 +446,45 @@ input[type ='text']
 
 #fale-conosco
   background-color color-3
-  .title
-    color contrast
-    margin-bottom 5%
-    &:before
-      color color-1
-  form
+  .content
     display flex
-    width 50%
-    flex-direction column
-    input
-      margin-bottom 5%
-    textarea
-      color color-3
-    .btn
-      padding 15px 30px 15px 30px
-      align-self center
-      top -15px
-      position relative
-      background-color color-1
-      color white
-      box-shadow 5px 5px 12px rgba(0, 0, 0, 0.05), -5px -5px 12px rgba(0, 0, 0, 0.05), -5px 5px 12px rgba(0, 0, 0, 0.05), 5px -5px 12px rgba(0, 0, 0, 0.05)
+    width 100%
+    #mapa
+      width 50%
+      #local
+        background-color contrastInside
+        color white
+        font-size 22px
+        padding-top -50px
+    #contato
+      padding 10%
+      width 50%
+      .title
+        text-align center
+        color contrast
+        margin-bottom 5%
+        &:before
+          color contrastInside
+      form
+        display flex
+        width 100%
+        flex-direction column
+        input
+          margin-bottom 5%
+        textarea
+          color color-3
+          border-radius 0px
+        .btn
+          padding 15px 30px 15px 30px
+          align-self center
+          top -15px
+          position relative
+          background-color contrastInside
+          color white
+          box-shadow 5px 5px 12px rgba(0, 0, 0, 0.1), -5px -5px 12px rgba(0, 0, 0, 0.1), -5px 5px 12px rgba(0, 0, 0, 0.1), 5px -5px 12px rgba(0, 0, 0, 0.1)
+        .btn:hover
+          background-color color-4
+          box-shadow 0px 0px 7px rgba(0, 0, 0, 0.05), -0px -0px 7px rgba(0, 0, 0, 0.05), -0px 0px 7px rgba(0, 0, 0, 0.05), 0px -0px 7px rgba(0, 0, 0, 0.05)
 
 #grade
   background-image url('../images/grade/background.png')
@@ -680,10 +564,10 @@ input[type ='text']
       &:hover
         .content
           opacity 1
-         img
-           filter grayscale(0%)
-           opacity 0.6
-           transform scale(1.6)
+        img
+          filter grayscale(0%)
+          opacity 0.6
+          transform scale(1.6)
 
 #tempo
   background-color color-4
@@ -754,3 +638,151 @@ input[type ='text']
             transform translateY(-50%)
             z-index 1000
             align-self center
+
+            @media only screen and (max-width 1000px)
+  body
+    background-size auto auto
+
+  header
+    display flex
+    justify-content center
+    #top
+      max-width 100%
+      padding 5px 0px 0px 0px !important
+      padding 0 !important
+      background-color color-3!important
+      .container
+        margin-bottom -10px
+        padding 0 !important
+      .col-3
+        margin-top 10px
+        margin-left 9px
+      img
+        float left
+        max-width 100px
+      #menu-icon
+        padding 8px
+        width 40px
+        height 40px
+        border 2px solid #f5f5f5
+        float right
+        margin-right 20px
+        &.active
+          background-color contrast
+          .line
+            background-color color-3
+        .line
+          width 100%
+          height 2px
+          background-color contrast
+          display block
+          margin-top 20%
+      nav
+        padding 5px
+        display none
+        &.active
+          display block
+        ul
+          display flex
+          list-style none
+          justify-content space-between
+          flex-direction column
+          li
+            padding 5px
+            margin 10px
+            text-align center
+          li:nth-child(8)
+            margin-top 10%
+            margin-bottom 10%
+
+  main
+    #inicio
+      .btn
+        font-size 4vw
+        display none
+      h2
+        font-size 13vw
+      .container
+        justify-content: flex-end;
+        .row:nth-child(1)
+          margin-bottom 15%
+      p
+        margin-top 10px
+        max-width 100%
+      img
+        max-height 23px
+      .col-4
+        &:nth-child(3)
+          display flex
+          justify-content space-between
+          margin-bottom 23px
+    #nossaMissao
+      #missao
+        margin-top 0
+        padding-top 0
+        img
+          display none
+        #missaoR
+          width 80%
+          display: flex !important;
+          flex-direction: column;
+          align-items: center;
+          .divisor
+            align-self: flex-start
+          #passArrowMissao
+            display flex
+            justify-content space-between
+          .passCircles
+            width 65%
+            margin-top 15%
+          svg
+            width 10%
+
+          h1
+            font-size: 10vw;
+          h3
+            padding 0
+            font-size 5vw
+          p
+            font-size 4vw
+    #fale-conosco
+      form
+        display flex
+        width 90%
+        flex-direction column
+    #inscricoes
+      .content
+        margin-top: 5%;
+        display flex
+        align-items center
+        flex-direction column
+        width 90%
+        height 70%
+        text-wrap normal
+    #grade
+      .content
+        height 75%
+        width 100%
+        padding 20px
+        display flex
+        align-items center
+        justify-content space-between
+        flex-wrap wrap
+        .grades
+          cursor pointer
+          width: 50%;
+          text-align center
+  #fale-conosco
+  background-color color-3
+  .content
+    display flex
+    width 100%
+    #mapa
+      width 100%
+      #local
+        background-color contrastInside
+        color white
+        font-size 22px
+        padding-top -50px
+    #contato
+      width 100%

@@ -429,7 +429,7 @@ main #inicio .btn {
   display: flex;
   flex-direction: row;
   align-content: center;
-  padding-top: 80px;
+  padding: 0;
   justify-content: center;
 }
 #nossaMissao #missao img {
@@ -520,10 +520,10 @@ main #inicio .btn {
   color: #d8157d;
 }
 #curso .passCircles {
-  width: 7%;
+  width: 15%;
   position: absolute;
   bottom: 0;
-  margin-bottom: 2%;
+  margin-bottom: 7%;
 }
 #curso .passCircles .passCircle {
   background-color: #f5f5f5;
@@ -825,6 +825,9 @@ input[type ='text']::placeholder:before {
   background-size: cover;
   background-color: #f5f5f5;
 }
+#grade .curso {
+  opacity: 0;
+}
 #grade .circleGround {
   display: flex;
   justify-content: center;
@@ -854,6 +857,9 @@ input[type ='text']::placeholder:before {
   cursor: pointer;
   width: 24%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #grade .content .grades:hover svg {
   transform: scale(1);
@@ -862,6 +868,10 @@ input[type ='text']::placeholder:before {
   margin-bottom: 5%;
   transition: all 1s;
   width: 70%;
+}
+#grade .content .grades p {
+  width: 80%;
+  height: 50px;
 }
 #equipe #equipe-list {
   width: 80%;
@@ -1007,6 +1017,7 @@ input[type ='text']::placeholder:before {
 @media only screen and (max-width: 1000px) {
   body {
     background-size: auto auto;
+    background-position: center center;
   }
   header {
     display: flex;

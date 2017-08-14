@@ -425,7 +425,7 @@ main
     display flex
     flex-direction row
     align-content center
-    padding-top 80px
+    padding 0
     justify-content center
     img
       width 60%
@@ -497,10 +497,10 @@ main
     &:before
       color color-2
   .passCircles
-    width: 7%;
+    width: 15%;
     position absolute
     bottom 0
-    margin-bottom 2%
+    margin-bottom 7%
     .passCircle
       background-color contrast
       &:hover
@@ -755,6 +755,8 @@ input[type ='text']
   background-repeat no-repeat
   background-size cover
   background-color contrast
+  .curso
+    opacity 0
   .circleGround
     display: flex;
     justify-content: center;
@@ -780,6 +782,9 @@ input[type ='text']
       cursor pointer
       width: 24%;
       text-align center
+      display flex
+      flex-direction column
+      align-items center
       &:hover
         svg
           transform scale(1)
@@ -787,6 +792,9 @@ input[type ='text']
         margin-bottom 5%
         transition all 1s
         width 70%
+      p
+        width: 80%;
+        height: 50px;
 
 #equipe
   #equipe-list
@@ -911,7 +919,7 @@ input[type ='text']
 @media only screen and (max-width 1000px)
   body
     background-size auto auto
-
+    background-position:center center;
   header
     display flex
     justify-content center

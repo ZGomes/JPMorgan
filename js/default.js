@@ -18,7 +18,11 @@ function scroll() {
     });
 }
 function menu() {
-    $('#menu-icon').on('click', function (click) {
+    $('#menu-icon').on('click', function () {
+        $('#menu-icon').toggleClass('active');
+        $('#menu').toggleClass('active');
+    });
+    $('#menu ul li a').on('click',function () {
         $('#menu-icon').toggleClass('active');
         $('#menu').toggleClass('active');
     });
@@ -26,7 +30,7 @@ function menu() {
 
 function curso() {
     $(".grades").on("click",function(){
-
-        console.log($(this).data("grade"));
+        $(".curso").css('opacity','0');
+        $("#" + $(this).data("grade") + "View").css('opacity','1');
     })
 }

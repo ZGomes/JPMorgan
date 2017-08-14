@@ -667,7 +667,6 @@ IScroll.prototype = {
             this.scrollTo(newX, newY, time, easing);
             return;
         }
-
         this._execEvent('scrollEnd');
     },
 

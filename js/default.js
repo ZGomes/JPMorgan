@@ -4,7 +4,13 @@ $(function () {
 
 
 function init() {
-    $("main").fullpage();
+    $("main").fullpage({
+        onLeave: function (anchorIndex, index) {
+            if (index === 5) {
+                $(".fp-scrollable").data('iscrollInstance').scrollTo(0, 0);
+            }
+        }
+    });
     menu();
 }
 

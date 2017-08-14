@@ -2985,7 +2985,7 @@
 
         // Turns off iScroll for the leaving section
         beforeLeave: function(){
-            iscrollHandler.onLeave()
+            iscrollHandler.onLeave();
         },
 
         // Turns on iScroll on section load
@@ -3017,7 +3017,6 @@
 
                 //off by default until the section gets active
                 iScrollInstance.wheelOff();
-
                 $this.data('iscrollInstance', iScrollInstance);
             });
         },

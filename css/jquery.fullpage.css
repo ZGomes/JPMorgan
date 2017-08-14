@@ -96,7 +96,7 @@ html.fp-enabled,
 }
 .iScrollIndicator{
     border: 0 !important;
-
+    display: none!important;
 }
 .fp-notransition {
     -webkit-transition: none !important;

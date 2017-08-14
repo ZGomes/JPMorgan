@@ -160,7 +160,6 @@ main #inicio .btn {
   }
   header #top {
     max-width: 100%;
-    padding: 5px 0px 0px 0px !important;
     padding: 0 !important;
     background-color: #dd5632 !important;
   }
@@ -337,30 +336,6 @@ main #inicio .btn {
     cursor: pointer;
     width: 50%;
     text-align: center;
-  }
-  #fale-conosco,
-  background-color color-3,
-  .content {
-    display: flex;
-    width: 100%;
-  }
-  #fale-conosco #mapa,
-  background-color color-3 #mapa,
-  .content #mapa {
-    width: 100%;
-  }
-  #fale-conosco #mapa #local,
-  background-color color-3 #mapa #local,
-  .content #mapa #local {
-    background-color: #743ad0;
-    color: #fff;
-    font-size: 22px;
-    padding-top: -50px;
-  }
-  #fale-conosco #contato,
-  background-color color-3 #contato,
-  .content #contato {
-    width: 100%;
   }
 }
 .btn {
@@ -690,6 +665,10 @@ input[type ='text']::placeholder:before {
 #fale-conosco .content #mapa {
   width: 50%;
 }
+#fale-conosco .content #mapa #mapCustom {
+  width: 100%;
+  height: 100%;
+}
 #fale-conosco .content #mapa #local {
   background-color: #743ad0;
   color: #fff;
@@ -908,6 +887,196 @@ input[type ='text']::placeholder:before {
   transform: translateY(-50%);
   z-index: 1000;
   align-self: center;
+}
+@media only screen and (max-width: 1000px) {
+  body {
+    background-size: auto auto;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+  }
+  header #top {
+    max-width: 100%;
+    padding: 5px 0px 0px 0px !important;
+    padding: 0 !important;
+    background-color: #dd5632 !important;
+  }
+  header #top .container {
+    margin-bottom: -10px;
+    padding: 0 !important;
+  }
+  header #top .col-3 {
+    margin-top: 10px;
+    margin-left: 9px;
+  }
+  header #top img {
+    float: left;
+    max-width: 100px;
+  }
+  header #top #menu-icon {
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #f5f5f5;
+    float: right;
+    margin-right: 20px;
+  }
+  header #top #menu-icon.active {
+    background-color: #f5f5f5;
+  }
+  header #top #menu-icon.active .line {
+    background-color: #dd5632;
+  }
+  header #top #menu-icon .line {
+    width: 100%;
+    height: 2px;
+    background-color: #f5f5f5;
+    display: block;
+    margin-top: 20%;
+  }
+  header #top nav {
+    padding: 5px;
+    display: none;
+  }
+  header #top nav.active {
+    display: block;
+  }
+  header #top nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  header #top nav ul li {
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+  }
+  header #top nav ul li:nth-child(8) {
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  main #inicio .btn {
+    font-size: 4vw;
+    display: none;
+  }
+  main #inicio h2 {
+    font-size: 13vw;
+  }
+  main #inicio .container {
+    justify-content: flex-end;
+  }
+  main #inicio .container .row:nth-child(1) {
+    margin-bottom: 15%;
+  }
+  main #inicio p {
+    margin-top: 10px;
+    max-width: 100%;
+  }
+  main #inicio img {
+    max-height: 23px;
+  }
+  main #inicio .col-4:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+  }
+  main #nossaMissao #missao {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  main #nossaMissao #missao img {
+    display: none;
+  }
+  main #nossaMissao #missao #missaoR {
+    width: 80%;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+  main #nossaMissao #missao #missaoR .divisor {
+    align-self: flex-start;
+  }
+  main #nossaMissao #missao #missaoR #passArrowMissao {
+    display: flex;
+    justify-content: space-between;
+  }
+  main #nossaMissao #missao #missaoR .passCircles {
+    width: 65%;
+    margin-top: 15%;
+  }
+  main #nossaMissao #missao #missaoR svg {
+    width: 10%;
+  }
+  main #nossaMissao #missao #missaoR h1 {
+    font-size: 10vw;
+  }
+  main #nossaMissao #missao #missaoR h3 {
+    padding: 0;
+    font-size: 5vw;
+  }
+  main #nossaMissao #missao #missaoR p {
+    font-size: 4vw;
+  }
+  main #fale-conosco form {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+  }
+  main #inscricoes .content {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 70%;
+    text-wrap: normal;
+  }
+  main #grade .content {
+    height: 75%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  main #grade .content .grades {
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+  }
+  #fale-conosco,
+  background-color color-3,
+  .content {
+    display: flex;
+    width: 100%;
+  }
+  #fale-conosco #mapa,
+  background-color color-3 #mapa,
+  .content #mapa {
+    width: 100%;
+  }
+  #fale-conosco #mapa #mapCustom,
+  background-color color-3 #mapa #mapCustom,
+  .content #mapa #mapCustom {
+    width: 100%;
+    height: 100%;
+  }
+  #fale-conosco #mapa #local,
+  background-color color-3 #mapa #local,
+  .content #mapa #local {
+    background-color: #743ad0;
+    color: #fff;
+    font-size: 22px;
+    padding-top: -50px;
+  }
+  #fale-conosco #contato,
+  background-color color-3 #contato,
+  .content #contato {
+    width: 100%;
+  }
 }
 @-moz-keyframes lineGrowFX {
   from {

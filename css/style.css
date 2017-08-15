@@ -627,13 +627,19 @@ main #inicio .btn {
 .fp-viewing-a-iniciativa #top #menu-icon.active .line {
   background-color: #2acfc1;
 }
-.fp-viewing-o-curso #top {
+.fp-viewing-o-curso #top,
+.fp-viewing-o-curso-0 #top,
+.fp-viewing-o-curso-1 #top {
   background-color: #743ad0;
 }
-.fp-viewing-o-curso #top #menu-icon.active {
+.fp-viewing-o-curso #top #menu-icon.active,
+.fp-viewing-o-curso-0 #top #menu-icon.active,
+.fp-viewing-o-curso-1 #top #menu-icon.active {
   background-color: #f5f5f5;
 }
-.fp-viewing-o-curso #top #menu-icon.active .line {
+.fp-viewing-o-curso #top #menu-icon.active .line,
+.fp-viewing-o-curso-0 #top #menu-icon.active .line,
+.fp-viewing-o-curso-1 #top #menu-icon.active .line {
   background-color: #743ad0;
 }
 .fp-viewing-grade-curricular #top {

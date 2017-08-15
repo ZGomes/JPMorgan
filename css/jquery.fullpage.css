@@ -52,7 +52,6 @@ html.fp-enabled,
     display: flex;
     flex-direction: inherit;
     width: 100vw;
-    height: 100vh;
     align-items: center;
 }
 .fp-slidesContainer {
@@ -78,14 +77,17 @@ html.fp-enabled,
 }
 .fp-controlArrow.fp-prev {
     left: 15px;
-    width: 0;
-    border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #fff transparent transparent;
+    width: 41px;
+    height: 26px;
+    background: url('../images/left.png');
+    border: none;
 }
 .fp-controlArrow.fp-next {
+    border: none;
     right: 15px;
-    border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #fff;
+    width: 41px;
+    height: 26px;
+    background: url('../images/right.png');
 }
 .fp-scrollable {
     overflow: hidden;
@@ -225,5 +227,10 @@ html.fp-enabled,
 .fp-responsive .fp-auto-height-responsive.fp-section,
 .fp-responsive .fp-auto-height-responsive .fp-slide,
 .fp-responsive .fp-auto-height-responsive .fp-tableCell {
+    height: auto !important;
+}
+
+.fp-slide,
+.fp-tableCell{
     height: auto !important;
 }

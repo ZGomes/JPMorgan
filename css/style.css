@@ -525,9 +525,6 @@ main #inicio .btn {
   flex-direction: column;
   color: #f5f5f5;
   font-weight: 800;
-/*&:nth-child(1)
-        svg
-          align-self: flex-end;*/
 }
 #curso .content .passArrow:hover {
   padding: 0;
@@ -840,8 +837,17 @@ input[type ='text']::placeholder:before {
   background-size: cover;
   background-color: #f5f5f5;
 }
+#grade .fp-tableCell {
+  height: 100vh !important;
+}
 #grade .curso {
-  opacity: 0;
+  display: none;
+  width: 50%;
+  height: 60%;
+/*TIRAR ISSO DEPOIS*/
+}
+#grade .curso img {
+  margin-left: -10%;
 }
 #grade .circleGround {
   display: flex;

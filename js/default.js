@@ -12,10 +12,10 @@ function init() {
 
 function load() {
     $("#curso .passCircles span.passCircle:nth-child(1)").addClass('active');
-    $("#curso .fp-controlArrow.fp-prev").css('display','none');
+    $("#curso .fp-controlArrow.fp-prev").css('display', 'none');
     $("#curso .fp-controlArrow.fp-prev .passArrow").append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.77 28.43" class="arrow arrowRight"><defs><style>.faa45763-1a5b-4df9-a16d-f6483a126e3f{fill:#e2e2e2;}</style></defs><title>arrow</title><g id="b989d351-0c07-4193-9862-0194240d6ba1" data-name="Layer 2"><g id="2e1cc3ac-5c50-40af-a2a0-dcd9f43c9701" data-name="Layer 1"><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="14.21" y="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="10.66" y="3.55" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" y="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="3.55" y="3.55" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="7.11" y="7.11" width="3.55" height="21.32"/></g></g></svg>Passos Anteriores');
     $("#curso .fp-controlArrow.fp-next .passArrow").append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.77 28.43" class="arrow arrowLeft"><defs><style>.faa45763-1a5b-4df9-a16d-f6483a126e3f{fill:#e2e2e2;}</style></defs><title>arrow</title><g id="b989d351-0c07-4193-9862-0194240d6ba1" data-name="Layer 2"><g id="2e1cc3ac-5c50-40af-a2a0-dcd9f43c9701" data-name="Layer 1"><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="14.21" y="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="10.66" y="3.55" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" y="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="3.55" y="3.55" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="7.11" y="7.11" width="3.55" height="21.32"/></g></g></svg>Próximos Passos');
-    $("#curso .passCircles span.passCircle").on('click',function () {
+    $("#curso .passCircles span.passCircle").on('click', function () {
         $.fn.fullpage.moveTo('o-curso', $(this).data('pass'));
     });
 }
@@ -26,14 +26,14 @@ function scroll() {
         afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
             if (anchorLink == 'o-curso') {
                 curso(slideIndex);
-                if(slideIndex === 0){
-                    $("#curso .fp-controlArrow.fp-prev").css('display','none');
-                    $("#curso .fp-controlArrow.fp-next").css('display','block');
-                }else if(slideIndex === 3){
-                    $("#curso .fp-controlArrow.fp-prev").css('display','block');
-                    $("#curso .fp-controlArrow.fp-next").css('display','none');
-                }else{
-                    $("#curso .fp-controlArrow.fp-prev,#curso .fp-controlArrow.fp-next").css('display','block');
+                if (slideIndex === 0) {
+                    $("#curso .fp-controlArrow.fp-prev").css('display', 'none');
+                    $("#curso .fp-controlArrow.fp-next").css('display', 'block');
+                } else if (slideIndex === 3) {
+                    $("#curso .fp-controlArrow.fp-prev").css('display', 'block');
+                    $("#curso .fp-controlArrow.fp-next").css('display', 'none');
+                } else {
+                    $("#curso .fp-controlArrow.fp-prev,#curso .fp-controlArrow.fp-next").css('display', 'block');
                 }
             }
         },
@@ -41,6 +41,7 @@ function scroll() {
             if (index === 5) {
                 $(".fp-scrollable").data('iscrollInstance').scrollTo(0, 0);
             }
+
         }
     });
 }
@@ -57,6 +58,19 @@ function menu() {
 
 function grade() {
     $(".grades").on("click", function () {
+        $("#grade h2").css({
+            "margin-right": "30%",
+            "font-weight": "bold",
+            "font-size": "15px"
+        });
+        $("#grade .content").css({
+            "margin-top": "1%",
+            "margin-right": "15%",
+            "height": "auto",
+            "width": "25%",
+            "align-items": "normal"
+        });
+        $(".grades p").css({"display":"none"});
         $(".grades svg line,.grades svg path,.grades svg circle,.grades svg polyline").removeAttr('style');
         $(".grades svg line,.grades svg path,.grades svg circle,.grades svg polyline").css({
             "will-change": "fill,stroke",
@@ -95,12 +109,12 @@ function grade() {
                 });
                 break;
         }
-        $(".curso").css('opacity', '0');
-        $("#" + $(this).data("grade") + "View").css('opacity', '1');
+        $(".curso").css('display', 'none');
+        $("#" + $(this).data("grade") + "View").css('display', 'flex');
     })
 }
 
 function curso(value) {
     $("#curso .passCircles span.passCircle").removeClass('active');
-    $("#curso .passCircles span.passCircle:nth-child("+ (value+1) +")").addClass('active');
+    $("#curso .passCircles span.passCircle:nth-child(" + (value + 1) + ")").addClass('active');
 }

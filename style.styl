@@ -511,9 +511,6 @@ main
           transform scale(1.3) rotate(90deg)
         .arrowRight
           transform scale(1.3) rotate(-90deg)
-      /*&:nth-child(1)
-        svg
-          align-self: flex-end;*/
       svg
         margin-bottom 3%
         width 20px
@@ -760,8 +757,15 @@ input[type ='text']
   background-repeat no-repeat
   background-size cover
   background-color contrast
+  .fp-tableCell
+    height 100vh!important
   .curso
-    opacity 0
+    display none
+    width: 50%;
+    height: 60%;
+    /*TIRAR ISSO DEPOIS*/
+    img
+      margin-left -10%
   .circleGround
     display: flex;
     justify-content: center;

@@ -761,7 +761,10 @@ input[type ='text']::placeholder:before {
 }
 #fale-conosco {
   background-image: url("../images/contato/bg.png");
-  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: bottom;
+  background-color: #ef4e2e;
 }
 #fale-conosco .content {
   display: flex;
@@ -769,6 +772,7 @@ input[type ='text']::placeholder:before {
 }
 #fale-conosco .content #mapa {
   width: 50%;
+  height: 100vh;
 }
 #fale-conosco .content #mapa #mapCustom {
   width: 100%;
@@ -783,6 +787,15 @@ input[type ='text']::placeholder:before {
 #fale-conosco .content #contato {
   padding: 5%;
   width: 50%;
+}
+#fale-conosco .content #contato #footer a {
+  padding: 10px;
+}
+#fale-conosco .content #contato #footer a:hover {
+  color: #101d48;
+}
+#fale-conosco .content #contato #footer #social-media {
+  padding-top: 20px;
 }
 #fale-conosco .content #contato .title {
   text-align: left;
@@ -1208,6 +1221,19 @@ input[type ='text']::placeholder:before {
   #fale-conosco .content #contato {
     width: 100%;
     text-align: center;
+  }
+  #fale-conosco .content #contato #footer,
+  #fale-conosco .content #contato a {
+    padding: 10px;
+  }
+  #fale-conosco .content #contato #footer:hover,
+  #fale-conosco .content #contato a:hover {
+    color: #101d48;
+  }
+  #fale-conosco .content #contato #social-media {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
   }
   #fale-conosco .content #contato form {
     justify-content: center;

@@ -1183,35 +1183,37 @@ input[type ='text']::placeholder:before {
   #inscricoes .content .btn {
     margin-top: 4vh;
   }
-  #fale-conosco,
-  background-color color-3,
-  .content {
+  #fale-conosco {
+    background-color: #ef4e2e;
+  }
+  #fale-conosco .content {
     display: flex;
     width: 100%;
+    flex-direction: column;
   }
-  #fale-conosco #mapa,
-  background-color color-3 #mapa,
-  .content #mapa {
+  #fale-conosco .content #mapa {
     width: 100%;
+    height: 20vh;
   }
-  #fale-conosco #mapa #mapCustom,
-  background-color color-3 #mapa #mapCustom,
-  .content #mapa #mapCustom {
+  #fale-conosco .content #mapa #mapCustom {
     width: 100%;
     height: 100%;
   }
-  #fale-conosco #mapa #local,
-  background-color color-3 #mapa #local,
-  .content #mapa #local {
+  #fale-conosco .content #mapa #local {
     background-color: #743ad0;
     color: #fff;
     font-size: 22px;
     padding-top: -50px;
   }
-  #fale-conosco #contato,
-  background-color color-3 #contato,
-  .content #contato {
+  #fale-conosco .content #contato {
     width: 100%;
+    text-align: center;
+  }
+  #fale-conosco .content #contato form {
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
   }
 }
 @-moz-keyframes lineGrowFX {

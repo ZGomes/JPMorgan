@@ -331,32 +331,6 @@ main #inicio .btn {
   main #nossaMissao #missao #missaoR p {
     font-size: 4vw;
   }
-  main #curso .content {
-    width: 100%;
-  }
-  main #curso .content a {
-    display: none;
-  }
-  main #curso .content #passos {
-    width: 80%;
-  }
-  main #curso .content #passos .passo {
-    width: 100% !important;
-  }
-  main #curso .content #passos .passo h2 {
-    font-size: 5vw;
-  }
-  main #curso .content #passos .passo p {
-    font-size: 4vw;
-  }
-  main #curso .content #passos .passo:nth-child(2) {
-    display: none !important;
-  }
-  main #curso .passCircles {
-    width: 50%;
-    position: initial;
-    margin-top: 10%;
-  }
   main #fale-conosco form {
     display: flex;
     width: 90%;
@@ -570,28 +544,28 @@ main #inicio .btn {
   width: 20px;
   height: 30px;
 }
-#curso .content #passos {
+#curso .content .passos {
   width: 75%;
   display: flex;
   justify-content: space-around;
 }
-#curso .content #passos .passo {
+#curso .content .passos .passo {
   width: 40%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-#curso .content #passos .passo img {
+#curso .content .passos .passo img {
   width: 70%;
   margin-bottom: 10%;
 }
-#curso .content #passos .passo h2 {
+#curso .content .passos .passo h2 {
   font-size: 24px;
   font-weight: 800;
   color: #f5f5f5;
 }
-#curso .content #passos .passo p {
+#curso .content .passos .passo p {
   text-align: justify;
   font-size: 20px;
   color: #f5f5f5;
@@ -676,6 +650,15 @@ main #inicio .btn {
   background-color: #f5f5f5;
 }
 .fp-viewing-nossa-equipe #top #menu-icon.active .line {
+  background-color: #743ad0;
+}
+.fp-viewing-nossos-parceiros #top {
+  background-color: #743ad0;
+}
+.fp-viewing-nossos-parceiros #top #menu-icon.active {
+  background-color: #f5f5f5;
+}
+.fp-viewing-nossos-parceiros #top #menu-icon.active .line {
   background-color: #743ad0;
 }
 .arrowLeft {
@@ -1038,6 +1021,16 @@ input[type ='text']::placeholder:before {
 #tempo #timeline ul .importante {
   color: #743ad0 !important;
 }
+#parceiros {
+  background-color: #f5f5f5;
+}
+#parceiros .title {
+  color: #743ad0;
+  text-align: center;
+}
+#parceiros .title:before {
+  color: #2acfc1;
+}
 @media only screen and (max-width: 1000px) {
   body {
     background-size: auto auto;
@@ -1251,6 +1244,34 @@ input[type ='text']::placeholder:before {
     text-align: center;
     padding: 0px;
     margin: 0px;
+  }
+  #curso .content {
+    width: 100%;
+  }
+  #curso .content a {
+    display: none;
+  }
+  #curso .content .passos {
+    width: calc(100% - 62px - 62px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #curso .content .passos .passo {
+    width: 100% !important;
+  }
+  #curso .content .passos .passo h2 {
+    font-size: 5vw;
+  }
+  #curso .content .passos .passo p {
+    font-size: 4vw;
+  }
+  #curso .content .passos .passo:nth-child(2) {
+    display: none !important;
+  }
+  #curso .passCircles {
+    width: 50%;
+    position: initial;
+    margin-top: 10%;
   }
 }
 @-moz-keyframes lineGrowFX {

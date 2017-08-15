@@ -74,6 +74,11 @@ html.fp-enabled,
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+    transition: all 0.6s ease;
+}
+.fp-controlArrow:hover{
+    opacity: 0.6;
+    transform: scale(1.2);
 }
 .fp-controlArrow.fp-prev {
     left: 15px;

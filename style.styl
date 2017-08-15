@@ -339,25 +339,6 @@ main
             font-size: 5vw;
           p
             font-size 4vw
-    #curso
-      .content
-        width 100%
-        a
-          display none
-        #passos
-          width 80%
-          .passo
-            h2
-              font-size 5vw
-            p
-              font-size: 4vw;
-            width 100% !important
-            &:nth-child(2)
-              display none !important
-      .passCircles
-        width 50%
-        position initial
-        margin-top 10%
     #fale-conosco
       form
         display flex
@@ -536,7 +517,7 @@ main
         margin-bottom 3%
         width 20px
         height 30px
-    #passos
+    .passos
       width 75%
       display flex
       justify-content space-around
@@ -614,6 +595,15 @@ main
           background-color color-4
 
 .fp-viewing-nossa-equipe
+  #top
+    background-color contrastInside
+    #menu-icon
+      &.active
+        background-color contrast
+        .line
+          background-color contrastInside
+
+.fp-viewing-nossos-parceiros
   #top
     background-color contrastInside
     #menu-icon
@@ -928,6 +918,14 @@ input[type ='text']
             align-self center
       .importante
         color contrastInside !important
+#parceiros
+  background-color contrast
+  .title
+    color contrastInside
+    text-align center
+    &:before
+      color color-4
+
 
 @media only screen and (max-width 1000px)
   body
@@ -1101,3 +1099,24 @@ input[type ='text']
           text-align center
           padding 0px
           margin 0px
+  #curso
+    .content
+      width 100%
+      a
+        display none
+      .passos
+        width calc(100% - 62px - 62px)
+        margin-left auto
+        margin-right auto
+        .passo
+          h2
+            font-size 5vw
+          p
+            font-size: 4vw;
+          width 100% !important
+          &:nth-child(2)
+            display none !important
+    .passCircles
+      width 50%
+      position initial
+      margin-top 10%

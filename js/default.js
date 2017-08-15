@@ -10,6 +10,8 @@ function init() {
 }
 function scroll() {
     $("main").fullpage({
+        anchors: ['bem-vindo','a-iniciativa','o-curso','grade-curricular','linha-do-tempo','inscreva-se','nossa-equipe','nossos-parceiros','contate-nos'],
+        menu: '#menu',
         onLeave: function (anchorIndex, index) {
             if (index === 5) {
                 $(".fp-scrollable").data('iscrollInstance').scrollTo(0, 0);

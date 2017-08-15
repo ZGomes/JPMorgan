@@ -65,6 +65,9 @@ header #top nav ul li a {
   color: #f5f5f5;
   transition: border 1s, color 1s;
 }
+header #top nav ul li a.active {
+  border-bottom: 2px solid #fff;
+}
 header #top nav ul li .btn-contrast-full {
   border: 2px solid #f5f5f5;
 }
@@ -72,17 +75,17 @@ header #top nav ul li .btn-contrast-full:hover {
   background-color: #f5f5f5;
   color: #ef4e2e;
 }
-.fp-viewing-0 #top {
+.fp-viewing-bem-vindo #top {
   padding: 20px;
   padding-top: 40px;
   background-color: transparent;
 }
-.fp-viewing-0 .btn-contrast-full {
+.fp-viewing-bem-vindo .btn-contrast-full {
   border: 2px solid #f5f5f5;
   background-color: transparent;
   color: #f5f5f5;
 }
-.fp-viewing-0 .btn-contrast-full:hover {
+.fp-viewing-bem-vindo .btn-contrast-full:hover {
   background-color: #f5f5f5;
   color: #d8157d !important;
 }
@@ -594,77 +597,79 @@ main #inicio .btn {
   color: #f5f5f5;
   font-weight: normal;
 }
-.fp-viewing-1 #top,
-.fp-viewing-2 #top,
-.fp-viewing-3 #top,
-.fp-viewing-4 #top,
-.fp-viewing-5 #top,
-.fp-viewing-6 #top,
-.fp-viewing-7 #top {
+.fp-viewing-a-iniciativa #top,
+.fp-viewing-o-curso #top,
+.fp-viewing-grade-curricular #top,
+.fp-viewing-linha-do-tempo #top,
+.fp-viewing-inscreva-se #top,
+.fp-viewing-nossa-equipe #top,
+.fp-viewing-nossos-parceiros #top,
+.fp-viewing-contate-nos #top {
   background-color: #ef4e2e;
   padding: 5px 0px 0px 0px;
 }
-.fp-viewing-1 #top .btn-contrast-full:hover,
-.fp-viewing-2 #top .btn-contrast-full:hover,
-.fp-viewing-3 #top .btn-contrast-full:hover,
-.fp-viewing-4 #top .btn-contrast-full:hover,
-.fp-viewing-5 #top .btn-contrast-full:hover,
-.fp-viewing-6 #top .btn-contrast-full:hover,
-.fp-viewing-7 #top .btn-contrast-full:hover {
+.fp-viewing-a-iniciativa #top .btn-contrast-full:hover,
+.fp-viewing-o-curso #top .btn-contrast-full:hover,
+.fp-viewing-grade-curricular #top .btn-contrast-full:hover,
+.fp-viewing-linha-do-tempo #top .btn-contrast-full:hover,
+.fp-viewing-inscreva-se #top .btn-contrast-full:hover,
+.fp-viewing-nossa-equipe #top .btn-contrast-full:hover,
+.fp-viewing-nossos-parceiros #top .btn-contrast-full:hover,
+.fp-viewing-contate-nos #top .btn-contrast-full:hover {
   color: #ef4e2e;
 }
-.fp-viewing-1 #top {
+.fp-viewing-a-iniciativa #top {
   background-color: #2acfc1;
 }
-.fp-viewing-1 #top #menu-icon.active {
+.fp-viewing-a-iniciativa #top #menu-icon.active {
   background-color: #f5f5f5;
 }
-.fp-viewing-1 #top #menu-icon.active .line {
+.fp-viewing-a-iniciativa #top #menu-icon.active .line {
   background-color: #2acfc1;
 }
-.fp-viewing-2 #top {
+.fp-viewing-o-curso #top {
   background-color: #743ad0;
 }
-.fp-viewing-2 #top #menu-icon.active {
+.fp-viewing-o-curso #top #menu-icon.active {
   background-color: #f5f5f5;
 }
-.fp-viewing-2 #top #menu-icon.active .line {
+.fp-viewing-o-curso #top #menu-icon.active .line {
   background-color: #743ad0;
 }
-.fp-viewing-3 #top {
+.fp-viewing-grade-curricular #top {
   background-color: #743ad0;
 }
-.fp-viewing-3 #top #menu-icon.active {
+.fp-viewing-grade-curricular #top #menu-icon.active {
   background-color: #f5f5f5;
 }
-.fp-viewing-3 #top #menu-icon.active .line {
+.fp-viewing-grade-curricular #top #menu-icon.active .line {
   background-color: #743ad0;
 }
-.fp-viewing-4 #top {
+.fp-viewing-linha-do-tempo #top {
   background-color: #2acfc1;
 }
-.fp-viewing-4 #top #menu-icon.active {
+.fp-viewing-linha-do-tempo #top #menu-icon.active {
   background-color: #f5f5f5;
 }
-.fp-viewing-4 #top #menu-icon.active .line {
+.fp-viewing-linha-do-tempo #top #menu-icon.active .line {
   background-color: #2acfc1;
 }
-.fp-viewing-5 #top {
+.fp-viewing-inscreva-se #top {
   background-color: #2acfc1;
 }
-.fp-viewing-5 #top #menu-icon.active {
+.fp-viewing-inscreva-se #top #menu-icon.active {
   background-color: #f5f5f5;
 }
-.fp-viewing-5 #top #menu-icon.active .line {
+.fp-viewing-inscreva-se #top #menu-icon.active .line {
   background-color: #2acfc1;
 }
-.fp-viewing-6 #top {
+.fp-viewing-nossa-equipe #top {
   background-color: #743ad0;
 }
-.fp-viewing-6 #top #menu-icon.active {
+.fp-viewing-nossa-equipe #top #menu-icon.active {
   background-color: #f5f5f5;
 }
-.fp-viewing-6 #top #menu-icon.active .line {
+.fp-viewing-nossa-equipe #top #menu-icon.active .line {
   background-color: #743ad0;
 }
 .arrowLeft {

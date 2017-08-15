@@ -689,7 +689,7 @@ main #inicio .btn {
   cursor: pointer;
 }
 #inscricoes {
-  background-image: url("../images/inscricoes/pessoas.png");
+  background-image: url("../images/inscricoes/pessoas.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }

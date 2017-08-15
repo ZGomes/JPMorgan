@@ -140,11 +140,11 @@
             interlockedSlides: false,
             dragAndMove: false,
             offsetSections: false,
-            resetSliders: false,
+            resetSliders: true,
             fadingEffect: false,
             normalScrollElements: null,
             scrollOverflow: true,
-            scrollOverflowReset: false,
+            scrollOverflowReset: true,
             scrollOverflowHandler: iscrollHandler,
             scrollOverflowOptions: null,
             touchSensitivity: 5,
@@ -168,7 +168,7 @@
             responsiveWidth: 0,
             responsiveHeight: 0,
             responsiveSlides: false,
-            parallax: false,
+            parallax: true,
             parallaxOptions: {
                 type: 'reveal',
                 percentage: 62,
@@ -189,7 +189,7 @@
             onSlideLeave: null,
             afterResponsive: null,
 
-            lazyLoading: true
+            lazyLoading: false
         }, options);
 
         //flag to avoid very fast sliding for landscape sliders

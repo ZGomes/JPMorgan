@@ -68,14 +68,14 @@ contrast = #f5f5f5
   src url('../fonts/Proxima Nova Light.otf')
 
 *
-  margin 0px
-  padding 0px
+  margin 0
+  padding 0
   box-sizing border-box
 
 body
   font-size 16px
-  margin 0px
-  padding 0px
+  margin 0
+  padding 0
   font-family "Proxima Nova"
   background url('../images/top-bg.jpg') no-repeat 0 0
   background-size 100% 100%
@@ -97,7 +97,7 @@ header
   justify-content center
   #top
     background-color transparent
-    padding 5px 0px 0px 0px
+    padding 5px 0 0 0
     z-index 20
     transition all 1s ease
     .container
@@ -109,14 +109,14 @@ header
         list-style none
         justify-content space-between
         li
-          &:hover
-            a
-              font-weight bold
           a
             color contrast
             transition border 1s, color 1s
-          a.active
-            border-bottom 2px solid white
+            &.active
+              border-bottom 2px solid white
+          &:hover
+            a
+              font-weight bold
           .btn-contrast-full
             border 2px solid contrast
             &:hover
@@ -167,7 +167,7 @@ main
     display flex
     justify-content center
     .container
-      width: 90%;
+      width 90%
       display flex
       flex-direction column
       height calc(100vh - 100px)
@@ -193,185 +193,6 @@ main
       margin-top 50px
       font-weight bold
 
-@media only screen and (max-width 1000px)
-  body
-    background-size auto auto
-
-  header
-    display flex
-    justify-content center
-    #top
-      max-width 100%
-      padding 0 !important
-      background-color color-3
-      .container
-        margin-bottom -10px
-        padding 0 !important
-      .col-3
-        margin-top 10px
-        margin-left 9px
-      img
-        float left
-        max-width 100px
-      #menu-icon
-        padding 8px
-        width 40px
-        height 40px
-        border 2px solid #f5f5f5
-        float right
-        margin-right 20px
-        &.active
-          background-color contrast
-          .line
-            background-color color-3
-        .line
-          width 100%
-          height 2px
-          background-color contrast
-          display block
-          margin-top 20%
-      nav
-        padding 5px
-        display none
-        &.active
-          display block
-        ul
-          display flex
-          list-style none
-          justify-content space-between
-          flex-direction column
-          li
-            padding 5px
-            margin 10px
-            text-align center
-          li:nth-child(8)
-            margin-top 5%
-            margin-bottom 10%
-
-  main
-    #inicio
-      padding-top 0 !important
-      .btn
-        font-size 4vw
-        display none
-      h2
-        font-size 13vw
-      .container
-        justify-content: flex-end;
-        .row:nth-child(1)
-          margin-bottom 5%
-      p
-        margin-top 10px
-        max-width 100%
-      img
-        max-height 23px
-      .col-4
-        &:nth-child(3)
-          display flex
-          justify-content space-between
-          margin-bottom 23px
-    #tempo
-      #timeline
-        margin-top 15%
-        margin-bottom 15%
-        ul
-          width 100vw
-          display flex
-          flex-direction column
-          align-items center
-          .mes
-            background-color contrastInside
-            color contrast
-
-          .gamb
-            background-color transparent
-            width 200px
-            height: 20vh;
-            top: -8vh;
-            border-left 2px solid contrast
-            z-index -1
-            position relative
-            margin-bottom -6vh
-          li
-            height 15vh
-            min-width 200px
-            list-style none
-            padding-left 40px
-            padding-right 0!important
-            margin 0!important
-            border-right 0!important
-            border-left 2px solid contrast
-            text-align start!important
-            .dia
-              color white
-              &:before
-                right 195px!important
-            .importante.dia
-              &:before
-                right 187px!important
-
-    #nossaMissao
-      #missao
-        margin-top 0
-        padding-top 0
-        height 100vh
-        img
-          display none
-        #missaoR
-          width 80%
-          display: flex !important;
-          flex-direction: column;
-          align-items: center;
-          .divisor
-            align-self: flex-start
-          #passArrowMissao
-            display: none;
-          .passCircles
-            width 65%
-            margin-top 15%
-          svg
-            width 10%
-
-          h1
-            font-size 10vw
-            margin-top 10%
-          h3
-            padding 0
-            font-size: 5vw;
-          p
-            font-size 4vw
-    #fale-conosco
-      form
-        display flex
-        width 90%
-        flex-direction column
-    #inscricoes
-      .content
-        margin-top: 5%;
-        display flex
-        align-items center
-        flex-direction column
-        width 90%
-        height 70%
-    #grade
-      .content
-        height 75%
-        width 100%
-        padding 20px
-        display flex
-        align-items center
-        justify-content space-between
-        flex-wrap wrap
-        .grades
-          cursor pointer
-          width: 50%;
-          text-align center
-    #equipe
-      #equipe-list
-        width 100%
-        li
-          max-width 35%
-          max-height 35%
 //  BOTÕES
 .btn
   padding 10px 30px 10px 30px
@@ -389,15 +210,6 @@ main
   &:before
     content "// "
 
-#equipe
-  background-image url('../images/equipe/background.png')
-  background-repeat no-repeat
-  background-size cover
-  background-color contrast
-  .title
-    color contrastInside
-    &:before
-      color color-4
 
 #nossaMissao
   background-image url('../images/missao/background.png')
@@ -405,7 +217,7 @@ main
   background-size cover
   background-color contrast
   #missao
-    margin-top: 8%;
+    margin-top 8%
     display flex
     flex-direction row
     align-content center
@@ -481,7 +293,7 @@ main
     &:before
       color color-2
   .passCircles
-    width: 15%;
+    width 15%
     position absolute
     bottom 0
     margin-bottom 7%
@@ -516,10 +328,10 @@ main
         width 20px
         height 30px
     .passos
-      width: 60%;
-      display: flex;
-      justify-content: space-around;
-      margin-left: calc(50% - 40%);
+      width 60%
+      display flex
+      justify-content space-around
+      margin-left calc(50% - 40%)
       .passo
         width 40%
         display flex
@@ -540,10 +352,10 @@ main
           font-weight normal
 
 //           MENU COLOR STYLES
-.fp-viewing-a-iniciativa, .fp-viewing-o-curso, .fp-viewing-grade-curricular, .fp-viewing-linha-do-tempo, .fp-viewing-inscreva-se, .fp-viewing-nossa-equipe, .fp-viewing-nossos-parceiros, .fp-viewing-contate-nos
+.fp-viewing-a-iniciativa, .fp-viewing-o-curso, .fp-viewing-grade-curricular, .fp-viewing-linha-do-tempo, .fp-viewing-inscreva-se, .fp-viewing-nossa-equipe-1, .fp-viewing-nossos-parceiros, .fp-viewing-contate-nos
   #top
     background-color color-3
-    padding 5px 0px 0px 0px
+    padding 5px 0 0 0
     .btn-contrast-full
       &:hover
         color color-3
@@ -593,7 +405,7 @@ main
         .line
           background-color color-4
 
-.fp-viewing-nossa-equipe
+.fp-viewing-nossa-equipe-1
   #top
     background-color contrastInside
     #menu-icon
@@ -637,7 +449,7 @@ main
     &:before
       color contrastInside
   .content
-    margin-top: 5%;
+    margin-top 5%
     display flex
     align-items center
     flex-direction column
@@ -646,7 +458,6 @@ main
     .divisor
       margin-top 2%
       margin-bottom 2%
-
       .l1
         background-color color-4
       .l2
@@ -739,7 +550,7 @@ input[type ='text']
           margin-bottom 5%
         textarea
           color color-3
-          border-radius 0px
+          border-radius 0
         .btn
           padding 15px 30px 15px 30px
           align-self center
@@ -748,9 +559,9 @@ input[type ='text']
           background-color contrastInside
           color white
           box-shadow 5px 5px 12px rgba(0, 0, 0, 0.1), -5px -5px 12px rgba(0, 0, 0, 0.1), -5px 5px 12px rgba(0, 0, 0, 0.1), 5px -5px 12px rgba(0, 0, 0, 0.1)
-        .btn:hover
-          background-color color-4
-          box-shadow 0px 0px 7px rgba(0, 0, 0, 0.05), -0px -0px 7px rgba(0, 0, 0, 0.05), -0px 0px 7px rgba(0, 0, 0, 0.05), 0px -0px 7px rgba(0, 0, 0, 0.05)
+          &:hover
+            background-color color-4
+            box-shadow 0 0 7px rgba(0, 0, 0, 0.05), -0px -0px 7px rgba(0, 0, 0, 0.05), -0px 0px 7px rgba(0, 0, 0, 0.05), 0px -0px 7px rgba(0, 0, 0, 0.05)
 
 #grade
   background-image url('../images/grade/background.png')
@@ -759,24 +570,29 @@ input[type ='text']
   background-color contrast
   .fp-tableCell
     height 100vh!important
+
   .curso
     display none
-    width: 50%;
-    height: 60%;
+    width 50%
+    height 60%
     /*TIRAR ISSO DEPOIS*/
     img
       margin-left -10%
+    .info
+      h2
+        margin 0
+
   .circleGround
-    display: flex;
-    justify-content: center;
-    width: 87%;
-    height: 180vh;
-    top: -35vh;
-    border: 1px solid #27c3b6;
+    display flex
+    justify-content center
+    width 87%
+    height 180vh
+    top -35vh
+    border 1px solid #27c3b6
     .circleGround
-      width: 73%;
-      height: 130vh;
-      top: 25vh;
+      width 73%
+      height 130vh
+      top 25vh
   h2
     margin-top 5%
     font-weight normal
@@ -789,7 +605,7 @@ input[type ='text']
     justify-content space-between
     .grades
       cursor pointer
-      width: 24%;
+      width 24%
       text-align center
       display flex
       flex-direction column
@@ -802,10 +618,19 @@ input[type ='text']
         transition all 1s
         width 70%
       p
-        width: 80%;
-        height: 50px;
-
+        width 80%
+        height 50px
 #equipe
+  background-image url('../images/equipe/background.png')
+  background-repeat no-repeat
+  background-size cover
+  background-color contrast
+  .title
+    color contrastInside
+    &:before
+      color color-4
+  .slide,.passCircles
+    display none
   #equipe-list
     width 80%
     list-style none
@@ -880,8 +705,8 @@ input[type ='text']
           color white
         &:nth-child(odd)
           text-align end
-          padding-right: 40px
-          margin-right: 196px
+          padding-right 40px
+          margin-right 196px
           border-right 2px solid contrast
           .dia
             &:before
@@ -890,8 +715,8 @@ input[type ='text']
             &:before
               right -52px
         &:nth-child(even)
-          padding-left: 40px
-          margin-left: 200px
+          padding-left 40px
+          margin-left 200px
           border-left 2px solid contrast
           .dia
             color white
@@ -942,7 +767,6 @@ input[type ='text']
     justify-content center
     #top
       max-width 100%
-      padding 5px 0px 0px 0px !important
       padding 0 !important
       .container
         margin-bottom -10px
@@ -984,11 +808,13 @@ input[type ='text']
             padding 5px
             margin 10px
             text-align center
-
+            &:nth-child(8)
+              margin-top 10%
+              margin-bottom 10%
   main
     #inicio
+      padding-top 0 !important
       .btn
-        font-size 4vw
         display none
       h2
         font-size 13vw
@@ -1000,7 +826,8 @@ input[type ='text']
         margin-top 10px
         max-width 100%
       img
-        max-height 23px
+        width 35vw!important;
+        height 10vw
       .col-4
         &:nth-child(3)
           display flex
@@ -1013,6 +840,7 @@ input[type ='text']
         img
           display none
         #missaoR
+          margin-top 10%
           width 80%
           display: flex !important;
           flex-direction: column;
@@ -1022,8 +850,11 @@ input[type ='text']
           #passArrowMissao
             display none
           .passCircles
+            display flex
+            justify-content space-around
+            position initial
             width 65%
-            margin-top 15%
+            margin-top 10%
           svg
             width 10%
 
@@ -1048,9 +879,11 @@ input[type ='text']
         width 90%
         height 70%
     #grade
+      h2
+        margin-right 0!important
       .content
-        height 75%
-        width 100%
+        width 100%!important
+        margin-right: 0!important;
         padding 20px
         display flex
         align-items center
@@ -1060,6 +893,54 @@ input[type ='text']
           cursor pointer
           width: 50%;
           text-align center
+          p
+            font-size 3vw
+            margin-right: 0!important;
+  #equipe
+    #equipe-list
+      display none
+    .slide,.passCircles
+      display block
+
+
+  #tempo
+    #timeline
+      margin-top 15%
+      margin-bottom 25%
+      ul
+        width 100vw
+        display flex
+        flex-direction column
+        align-items center
+        .mes
+          background-color contrastInside
+          color contrast
+        .gamb
+          background-color transparent
+          width 200px
+          height 20vh
+          top -8vh
+          border-left 2px solid contrast
+          z-index -1
+          position relative
+          margin-bottom -6vh
+        li
+          height 15vh
+          min-width 200px
+          list-style none
+          padding-left 40px
+          padding-right 0!important
+          margin 0!important
+          border-right 0!important
+          border-left 2px solid contrast
+          text-align start!important
+          .dia
+            color white
+            &:before
+              right 195px!important
+          .importante.dia
+            &:before
+              right 187px!important
   #inscricoes
     .content
       width 85%!important
@@ -1101,11 +982,13 @@ input[type ='text']
         form
           justify-content center
           text-align center
-          padding 0px
-          margin 0px
+          padding 0
+          margin 0
   #curso
     .content
       width 100%
+      .fp-controlArrow
+        display none!important
       a
         display none
       .passos
@@ -1113,14 +996,16 @@ input[type ='text']
         margin-left auto
         margin-right auto
         .passo
+          width 100% !important
           h2
             font-size 5vw
           p
-            font-size: 4vw;
-          width 100% !important
+            font-size 4vw
           &:nth-child(2)
             display none !important
     .passCircles
       width 50%
+      display flex
+      justify-content space-around
       position initial
       margin-top 10%

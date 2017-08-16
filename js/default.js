@@ -51,8 +51,8 @@ function menu() {
         $('#menu').toggleClass('active');
     });
     $('#menu ul li a').on('click', function () {
-        $('#menu-icon').toggleClass('active');
-        $('#menu').toggleClass('active');
+        $('#menu-icon').removeClass('active');
+        $('#menu').removeClass('active');
     });
 }
 
@@ -68,7 +68,8 @@ function grade() {
             "margin-right": "15%",
             "height": "auto",
             "width": "25%",
-            "align-items": "normal"
+            "align-items": "normal",
+            "flex-wrap": "nowrap"
         });
         $(".grades p").css({"display":"none"});
         $(".grades svg line,.grades svg path,.grades svg circle,.grades svg polyline").removeAttr('style');

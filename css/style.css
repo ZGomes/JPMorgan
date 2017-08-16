@@ -13,14 +13,14 @@
   src: url("../fonts/Proxima Nova Light.otf");
 }
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 body {
   font-size: 16px;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-family: "Proxima Nova";
   background: url("../images/top-bg.jpg") no-repeat 0 0;
   background-size: 100% 100%;
@@ -43,7 +43,7 @@ header {
 }
 header #top {
   background-color: transparent;
-  padding: 5px 0px 0px 0px;
+  padding: 5px 0 0 0;
   z-index: 20;
   transition: all 1s ease;
 }
@@ -58,15 +58,15 @@ header #top nav ul {
   list-style: none;
   justify-content: space-between;
 }
-header #top nav ul li:hover a {
-  font-weight: bold;
-}
 header #top nav ul li a {
   color: #f5f5f5;
   transition: border 1s, color 1s;
 }
 header #top nav ul li a.active {
   border-bottom: 2px solid #fff;
+}
+header #top nav ul li:hover a {
+  font-weight: bold;
 }
 header #top nav ul li .btn-contrast-full {
   border: 2px solid #f5f5f5;
@@ -154,219 +154,6 @@ main #inicio .btn {
   margin-top: 50px;
   font-weight: bold;
 }
-@media only screen and (max-width: 1000px) {
-  body {
-    background-size: auto auto;
-  }
-  header {
-    display: flex;
-    justify-content: center;
-  }
-  header #top {
-    max-width: 100%;
-    padding: 0 !important;
-    background-color: #ef4e2e;
-  }
-  header #top .container {
-    margin-bottom: -10px;
-    padding: 0 !important;
-  }
-  header #top .col-3 {
-    margin-top: 10px;
-    margin-left: 9px;
-  }
-  header #top img {
-    float: left;
-    max-width: 100px;
-  }
-  header #top #menu-icon {
-    padding: 8px;
-    width: 40px;
-    height: 40px;
-    border: 2px solid #f5f5f5;
-    float: right;
-    margin-right: 20px;
-  }
-  header #top #menu-icon.active {
-    background-color: #f5f5f5;
-  }
-  header #top #menu-icon.active .line {
-    background-color: #ef4e2e;
-  }
-  header #top #menu-icon .line {
-    width: 100%;
-    height: 2px;
-    background-color: #f5f5f5;
-    display: block;
-    margin-top: 20%;
-  }
-  header #top nav {
-    padding: 5px;
-    display: none;
-  }
-  header #top nav.active {
-    display: block;
-  }
-  header #top nav ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-  header #top nav ul li {
-    padding: 5px;
-    margin: 10px;
-    text-align: center;
-  }
-  header #top nav ul li:nth-child(8) {
-    margin-top: 5%;
-    margin-bottom: 10%;
-  }
-  main #inicio {
-    padding-top: 0 !important;
-  }
-  main #inicio .btn {
-    font-size: 4vw;
-    display: none;
-  }
-  main #inicio h2 {
-    font-size: 13vw;
-  }
-  main #inicio .container {
-    justify-content: flex-end;
-  }
-  main #inicio .container .row:nth-child(1) {
-    margin-bottom: 5%;
-  }
-  main #inicio p {
-    margin-top: 10px;
-    max-width: 100%;
-  }
-  main #inicio img {
-    max-height: 23px;
-  }
-  main #inicio .col-4:nth-child(3) {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 23px;
-  }
-  main #tempo #timeline {
-    margin-top: 15%;
-    margin-bottom: 15%;
-  }
-  main #tempo #timeline ul {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  main #tempo #timeline ul .mes {
-    background-color: #743ad0;
-    color: #f5f5f5;
-  }
-  main #tempo #timeline ul .gamb {
-    background-color: transparent;
-    width: 200px;
-    height: 20vh;
-    top: -8vh;
-    border-left: 2px solid #f5f5f5;
-    z-index: -1;
-    position: relative;
-    margin-bottom: -6vh;
-  }
-  main #tempo #timeline ul li {
-    height: 15vh;
-    min-width: 200px;
-    list-style: none;
-    padding-left: 40px;
-    padding-right: 0 !important;
-    margin: 0 !important;
-    border-right: 0 !important;
-    border-left: 2px solid #f5f5f5;
-    text-align: start !important;
-  }
-  main #tempo #timeline ul li .dia {
-    color: #fff;
-  }
-  main #tempo #timeline ul li .dia:before {
-    right: 195px !important;
-  }
-  main #tempo #timeline ul li .importante.dia:before {
-    right: 187px !important;
-  }
-  main #nossaMissao #missao {
-    margin-top: 0;
-    padding-top: 0;
-    height: 100vh;
-  }
-  main #nossaMissao #missao img {
-    display: none;
-  }
-  main #nossaMissao #missao #missaoR {
-    width: 80%;
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-  }
-  main #nossaMissao #missao #missaoR .divisor {
-    align-self: flex-start;
-  }
-  main #nossaMissao #missao #missaoR #passArrowMissao {
-    display: none;
-  }
-  main #nossaMissao #missao #missaoR .passCircles {
-    width: 65%;
-    margin-top: 15%;
-  }
-  main #nossaMissao #missao #missaoR svg {
-    width: 10%;
-  }
-  main #nossaMissao #missao #missaoR h1 {
-    font-size: 10vw;
-    margin-top: 10%;
-  }
-  main #nossaMissao #missao #missaoR h3 {
-    padding: 0;
-    font-size: 5vw;
-  }
-  main #nossaMissao #missao #missaoR p {
-    font-size: 4vw;
-  }
-  main #fale-conosco form {
-    display: flex;
-    width: 90%;
-    flex-direction: column;
-  }
-  main #inscricoes .content {
-    margin-top: 5%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 90%;
-    height: 70%;
-  }
-  main #grade .content {
-    height: 75%;
-    width: 100%;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  main #grade .content .grades {
-    cursor: pointer;
-    width: 50%;
-    text-align: center;
-  }
-  main #equipe #equipe-list {
-    width: 100%;
-  }
-  main #equipe #equipe-list li {
-    max-width: 35%;
-    max-height: 35%;
-  }
-}
 .btn {
   padding: 10px 30px 10px 30px;
   border-radius: 25px;
@@ -383,18 +170,6 @@ main #inicio .btn {
 }
 .title:before {
   content: "// ";
-}
-#equipe {
-  background-image: url("../images/equipe/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #f5f5f5;
-}
-#equipe .title {
-  color: #743ad0;
-}
-#equipe .title:before {
-  color: #2acfc1;
 }
 #nossaMissao {
   background-image: url("../images/missao/background.png");
@@ -575,18 +350,18 @@ main #inicio .btn {
 .fp-viewing-grade-curricular #top,
 .fp-viewing-linha-do-tempo #top,
 .fp-viewing-inscreva-se #top,
-.fp-viewing-nossa-equipe #top,
+.fp-viewing-nossa-equipe-1 #top,
 .fp-viewing-nossos-parceiros #top,
 .fp-viewing-contate-nos #top {
   background-color: #ef4e2e;
-  padding: 5px 0px 0px 0px;
+  padding: 5px 0 0 0;
 }
 .fp-viewing-a-iniciativa #top .btn-contrast-full:hover,
 .fp-viewing-o-curso #top .btn-contrast-full:hover,
 .fp-viewing-grade-curricular #top .btn-contrast-full:hover,
 .fp-viewing-linha-do-tempo #top .btn-contrast-full:hover,
 .fp-viewing-inscreva-se #top .btn-contrast-full:hover,
-.fp-viewing-nossa-equipe #top .btn-contrast-full:hover,
+.fp-viewing-nossa-equipe-1 #top .btn-contrast-full:hover,
 .fp-viewing-nossos-parceiros #top .btn-contrast-full:hover,
 .fp-viewing-contate-nos #top .btn-contrast-full:hover {
   color: #ef4e2e;
@@ -648,13 +423,13 @@ main #inicio .btn {
 .fp-viewing-inscreva-se #top #menu-icon.active .line {
   background-color: #2acfc1;
 }
-.fp-viewing-nossa-equipe #top {
+.fp-viewing-nossa-equipe-1 #top {
   background-color: #743ad0;
 }
-.fp-viewing-nossa-equipe #top #menu-icon.active {
+.fp-viewing-nossa-equipe-1 #top #menu-icon.active {
   background-color: #f5f5f5;
 }
-.fp-viewing-nossa-equipe #top #menu-icon.active .line {
+.fp-viewing-nossa-equipe-1 #top #menu-icon.active .line {
   background-color: #743ad0;
 }
 .fp-viewing-nossos-parceiros #top {
@@ -816,7 +591,7 @@ input[type ='text']::placeholder:before {
 }
 #fale-conosco .content #contato form textarea {
   color: #ef4e2e;
-  border-radius: 0px;
+  border-radius: 0;
 }
 #fale-conosco .content #contato form .btn {
   padding: 15px 30px 15px 30px;
@@ -829,7 +604,7 @@ input[type ='text']::placeholder:before {
 }
 #fale-conosco .content #contato form .btn:hover {
   background-color: #2acfc1;
-  box-shadow: 0px 0px 7px rgba(0,0,0,0.05), 0px 0px 7px rgba(0,0,0,0.05), 0px 0px 7px rgba(0,0,0,0.05), 0px 0px 7px rgba(0,0,0,0.05);
+  box-shadow: 0 0 7px rgba(0,0,0,0.05), 0px 0px 7px rgba(0,0,0,0.05), 0px 0px 7px rgba(0,0,0,0.05), 0px 0px 7px rgba(0,0,0,0.05);
 }
 #grade {
   background-image: url("../images/grade/background.png");
@@ -848,6 +623,9 @@ input[type ='text']::placeholder:before {
 }
 #grade .curso img {
   margin-left: -10%;
+}
+#grade .curso .info h2 {
+  margin: 0;
 }
 #grade .circleGround {
   display: flex;
@@ -893,6 +671,22 @@ input[type ='text']::placeholder:before {
 #grade .content .grades p {
   width: 80%;
   height: 50px;
+}
+#equipe {
+  background-image: url("../images/equipe/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f5f5f5;
+}
+#equipe .title {
+  color: #743ad0;
+}
+#equipe .title:before {
+  color: #2acfc1;
+}
+#equipe .slide,
+#equipe .passCircles {
+  display: none;
 }
 #equipe #equipe-list {
   width: 80%;
@@ -1056,7 +850,6 @@ input[type ='text']::placeholder:before {
   }
   header #top {
     max-width: 100%;
-    padding: 5px 0px 0px 0px !important;
     padding: 0 !important;
   }
   header #top .container {
@@ -1110,8 +903,14 @@ input[type ='text']::placeholder:before {
     margin: 10px;
     text-align: center;
   }
+  header #top nav ul li:nth-child(8) {
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  main #inicio {
+    padding-top: 0 !important;
+  }
   main #inicio .btn {
-    font-size: 4vw;
     display: none;
   }
   main #inicio h2 {
@@ -1128,7 +927,8 @@ input[type ='text']::placeholder:before {
     max-width: 100%;
   }
   main #inicio img {
-    max-height: 23px;
+    width: 35vw !important;
+    height: 10vw;
   }
   main #inicio .col-4:nth-child(3) {
     display: flex;
@@ -1143,6 +943,7 @@ input[type ='text']::placeholder:before {
     display: none;
   }
   main #nossaMissao #missao #missaoR {
+    margin-top: 10%;
     width: 80%;
     display: flex !important;
     flex-direction: column;
@@ -1155,8 +956,11 @@ input[type ='text']::placeholder:before {
     display: none;
   }
   main #nossaMissao #missao #missaoR .passCircles {
+    display: flex;
+    justify-content: space-around;
+    position: initial;
     width: 65%;
-    margin-top: 15%;
+    margin-top: 10%;
   }
   main #nossaMissao #missao #missaoR svg {
     width: 10%;
@@ -1184,9 +988,12 @@ input[type ='text']::placeholder:before {
     width: 90%;
     height: 70%;
   }
+  main #grade h2 {
+    margin-right: 0 !important;
+  }
   main #grade .content {
-    height: 75%;
-    width: 100%;
+    width: 100% !important;
+    margin-right: 0 !important;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -1197,6 +1004,61 @@ input[type ='text']::placeholder:before {
     cursor: pointer;
     width: 50%;
     text-align: center;
+  }
+  main #grade .content .grades p {
+    font-size: 3vw;
+    margin-right: 0 !important;
+  }
+  #equipe #equipe-list {
+    display: none;
+  }
+  #equipe .slide,
+  #equipe .passCircles {
+    display: block;
+  }
+  #tempo #timeline {
+    margin-top: 15%;
+    margin-bottom: 25%;
+  }
+  #tempo #timeline ul {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #tempo #timeline ul .mes {
+    background-color: #743ad0;
+    color: #f5f5f5;
+  }
+  #tempo #timeline ul .gamb {
+    background-color: transparent;
+    width: 200px;
+    height: 20vh;
+    top: -8vh;
+    border-left: 2px solid #f5f5f5;
+    z-index: -1;
+    position: relative;
+    margin-bottom: -6vh;
+  }
+  #tempo #timeline ul li {
+    height: 15vh;
+    min-width: 200px;
+    list-style: none;
+    padding-left: 40px;
+    padding-right: 0 !important;
+    margin: 0 !important;
+    border-right: 0 !important;
+    border-left: 2px solid #f5f5f5;
+    text-align: start !important;
+  }
+  #tempo #timeline ul li .dia {
+    color: #fff;
+  }
+  #tempo #timeline ul li .dia:before {
+    right: 195px !important;
+  }
+  #tempo #timeline ul li .importante.dia:before {
+    right: 187px !important;
   }
   #inscricoes .content {
     width: 85% !important;
@@ -1252,11 +1114,14 @@ input[type ='text']::placeholder:before {
   #fale-conosco .content #contato form {
     justify-content: center;
     text-align: center;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
   }
   #curso .content {
     width: 100%;
+  }
+  #curso .content .fp-controlArrow {
+    display: none !important;
   }
   #curso .content a {
     display: none;
@@ -1280,6 +1145,8 @@ input[type ='text']::placeholder:before {
   }
   #curso .passCircles {
     width: 50%;
+    display: flex;
+    justify-content: space-around;
     position: initial;
     margin-top: 10%;
   }

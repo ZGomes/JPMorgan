@@ -934,6 +934,7 @@ input[type ='text']::placeholder:before {
     margin-bottom: 10%;
   }
   main #inicio {
+    padding-bottom: 10px;
     padding-top: 0 !important;
   }
   main #inicio .btn {

@@ -625,6 +625,7 @@ input[type ='text']::placeholder:before {
   margin-left: -10%;
 }
 #grade .curso .info h2 {
+  font-size: 4vh !important;
   margin: 0;
 }
 #grade .circleGround {
@@ -838,6 +839,31 @@ input[type ='text']::placeholder:before {
 }
 #parceiros .title:before {
   color: #2acfc1;
+}
+#parceiros .content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  justify-content: space-around;
+  height: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#parceiros .content a {
+  min-height: 200px;
+  min-width: 200px;
+  text-align: center;
+  margin: 5%;
+}
+#parceiros .content a:hover img {
+  transform: scale(1.2);
+}
+#parceiros .content a img {
+  max-width: 200px;
+  max-height: 200px;
+  padding: 5%;
+  transition: all 0.6s ease;
 }
 @media only screen and (max-width: 1000px) {
   body {

@@ -103,6 +103,7 @@ section .divisor .l2 {
   display: inline-block;
   height: 5px;
   transform-origin: left;
+  margin-left: 3px;
 }
 section .fp-tableCell {
   opacity: 0;
@@ -163,6 +164,15 @@ main #inicio .btn {
   transition: all 1s;
   outline: none;
   border: none;
+}
+.btn.btn-contrast {
+  border: 3px solid #743ad0;
+  color: #743ad0;
+  transition: 0.3s ease;
+}
+.btn.btn-contrast:hover {
+  background-color: #743ad0;
+  color: #f5f5f5;
 }
 .title {
   text-align: center;
@@ -628,9 +638,61 @@ input[type ='text']::placeholder:before {
 #grade .curso img {
   margin-left: -10%;
 }
+#grade .curso .info ul {
+  list-style: none;
+  background-color: #fff;
+  border-left: 5px solid #743ad0;
+  margin: 15% 0%;
+  box-shadow: 5px 5px 12px rgba(0,0,0,0.05), -5px -5px 12px rgba(0,0,0,0.05), -5px 5px 12px rgba(0,0,0,0.05), 5px -5px 12px rgba(0,0,0,0.05);
+}
+#grade .curso .info ul .select {
+  display: flex;
+  align-items: center;
+  color: #808080;
+  padding: 10px 0px;
+}
+#grade .curso .info ul .select svg {
+  width: 24px;
+  height: 37px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+#grade .curso .info ul li {
+  padding: 12px;
+  display: none;
+  opacity: 0;
+  transition: all 1s ease;
+}
+#grade .curso .info ul:hover {
+  cursor: pointer;
+}
+#grade .curso .info ul:hover li {
+  opacity: 1;
+  color: #f5f5f5;
+  display: block;
+  background-color: #743ad0;
+}
+#grade .curso .info ul:hover li:before {
+  content: "• ";
+  color: #2acfc1;
+}
 #grade .curso .info h2 {
+  color: #000;
   font-size: 4vh !important;
   margin: 0;
+}
+#grade .curso .info p {
+  color: #743ad0;
+}
+#grade .curso .info .divisor {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+#grade .curso .info .divisor .l1 {
+  background-color: #2acfc1;
+}
+#grade .curso .info .divisor .l2 {
+  background-color: #ef4e2e;
 }
 #grade .circleGround {
   display: flex;
@@ -666,16 +728,18 @@ input[type ='text']::placeholder:before {
   align-items: center;
 }
 #grade .content .grades:hover svg {
-  transform: scale(1);
+  transform: scale(0.8);
 }
 #grade .content .grades svg {
   margin-bottom: 5%;
-  transition: all 1s;
+  transition: all 0.8s;
   width: 70%;
 }
 #grade .content .grades p {
   width: 80%;
   height: 50px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 #equipe {
   background-image: url("../images/equipe/background.png");
@@ -955,6 +1019,7 @@ input[type ='text']::placeholder:before {
     margin-bottom: 15%;
   }
   main #inicio p {
+    min-font-size: 16px;
     margin-top: 10px;
     max-width: 100%;
   }
@@ -1047,6 +1112,7 @@ input[type ='text']::placeholder:before {
   #equipe .slide,
   #equipe .passCircles {
     display: block;
+    list-style: none;
   }
   #tempo #timeline {
     margin-top: 15%;
@@ -1333,5 +1399,25 @@ input[type ='text']::placeholder:before {
   to {
     transform: scaleX(0);
     opacity: 1;
+  }
+}
+@-moz-keyframes grades {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes grades {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-o-keyframes grades {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes grades {
+  to {
+    stroke-dashoffset: 0;
   }
 }

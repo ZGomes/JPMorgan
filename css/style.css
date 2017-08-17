@@ -423,6 +423,10 @@ main #inicio .btn {
 .fp-viewing-inscreva-se #top #menu-icon.active .line {
   background-color: #2acfc1;
 }
+.fp-viewing-inscreva-se #top #menu .btn-contrast-full {
+  background-color: #f5f5f5;
+  color: #2acfc1;
+}
 .fp-viewing-nossa-equipe-1 #top {
   background-color: #743ad0;
 }
@@ -869,6 +873,7 @@ input[type ='text']::placeholder:before {
   body {
     background-size: auto auto;
     background-position: center center;
+    min-font-size: 18px;
   }
   header {
     display: flex;

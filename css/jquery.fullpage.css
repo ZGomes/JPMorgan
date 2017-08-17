@@ -74,7 +74,7 @@ html.fp-enabled,
     z-index: 4;
     top: 50%;
     cursor: pointer;
-    width: 200px;
+
     height: 0;
     margin-top: -38px;
     transform: translate3d(0,0,0);
@@ -97,6 +97,7 @@ html.fp-enabled,
 .fp-scrollable {
     overflow: hidden;
     position: relative;
+    width: 100%;
 }
 .fp-scroller{
     overflow: hidden;
@@ -244,5 +245,5 @@ html.fp-enabled,
 
 .fp-slide,
 .fp-tableCell{
-    height: auto !important;
+    height: auto;
 }

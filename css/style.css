@@ -12,15 +12,13 @@
   font-family: "Proxima Nova";
   src: url("../fonts/Proxima Nova Light.otf");
 }
-*,
-*:after,
-*:before {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  min-font-size: 1vmin;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   font-family: "Proxima Nova";
@@ -61,7 +59,6 @@ header #top nav ul {
   justify-content: space-between;
 }
 header #top nav ul li a {
-  font-size: 0.9vw;
   color: #f5f5f5;
   transition: border 1s, color 1s;
 }
@@ -115,11 +112,14 @@ section.active .fp-tableCell {
   animation: appear 1.3s ease forwards 0.4s;
 }
 section.active .divisor .l2 {
-  margin-left: 0.5vw !important;
   animation: lineGrowFX 1s ease forwards 0.8s;
 }
 main #inicio {
+  align-content: center;
+  align-items: center;
   color: #f5f5f5;
+  display: flex;
+  justify-content: center;
 }
 main #inicio .container {
   width: 90%;
@@ -130,19 +130,12 @@ main #inicio .container {
 }
 main #inicio .container img {
   width: 40%;
-  height: auto;
 }
-main #inicio .container .row:nth-child(2) {
-  height: auto;
-  display: flex;
-}
-main #inicio .container .row:nth-child(2) .col-4:nth-child(3) {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+main #inicio .container img + img {
+  margin-left: 5%;
 }
 main #inicio h2 {
-  font-size: 5vw;
+  font-size: 72px;
   font-weight: normal;
 }
 main #inicio .divisor .l1 {
@@ -155,7 +148,6 @@ main #inicio p {
   margin-top: 30px;
   margin-bottom: 30px;
   max-width: 50%;
-  font-size: 1.2vw;
 }
 main #inicio .btn {
   padding: 15px 17px 15px 17px;
@@ -174,7 +166,7 @@ main #inicio .btn {
 }
 .title {
   text-align: center;
-  margin-top: 7vh !important;
+  margin-top: 5% !important;
 }
 .title:before {
   content: "// ";
@@ -184,32 +176,29 @@ main #inicio .btn {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #f5f5f5;
-  justify-content: center;
-  display: flex;
-  margin-top: -3vh;
 }
 #nossaMissao #missao {
+  margin-top: 8%;
   display: flex;
   flex-direction: row;
   align-content: center;
-  margin: auto;
   padding: 0;
   justify-content: center;
 }
 #nossaMissao #missao img {
-  width: 40vw;
+  width: 60%;
 }
 #nossaMissao #missao #missaoR {
-  width: 45vw;
+  width: 55%;
   display: block !important;
 }
 #nossaMissao #missao #missaoR h1 {
   color: #101d48;
-  font-size: 4vw;
-  margin-bottom: 3vh;
+  font-size: 65px;
+  margin-bottom: 5%;
 }
 #nossaMissao #missao #missaoR .divisor {
-  margin-bottom: 3vh;
+  margin-bottom: 7%;
 }
 #nossaMissao #missao #missaoR .divisor .l1 {
   background-color: #2acfc1;
@@ -219,18 +208,18 @@ main #inicio .btn {
 }
 #nossaMissao #missao #missaoR h3 {
   color: #2acfc1;
-  font-size: 1.8vw;
+  font-size: 24px;
   margin-bottom: 3%;
   width: 100%;
-  padding: 1% 0;
+  padding: 10px;
 }
 #nossaMissao #missao #missaoR p {
   color: #999;
-  font-size: 1.3vw;
+  font-size: 20px;
 }
 #nossaMissao #missao #missaoR .passCircles {
   width: 20%;
-  margin-top: 8vh;
+  margin-top: 25%;
 }
 #nossaMissao #missao #missaoR .passCircles .passCircle {
   background-color: #e2e2e2;
@@ -278,16 +267,16 @@ main #inicio .btn {
 }
 #curso .title {
   color: #f5f5f5;
-  margin-bottom: 3vh;
+  margin-bottom: 5%;
 }
 #curso .title:before {
   color: #d8157d;
 }
 #curso .passCircles {
-  width: 20%;
+  width: 15%;
   position: absolute;
   bottom: 0;
-  margin-bottom: 15vh;
+  margin-bottom: 7%;
 }
 #curso .passCircles .passCircle {
   background-color: #f5f5f5;
@@ -299,9 +288,6 @@ main #inicio .btn {
   border: 2px solid #2acfc1;
   background-color: transparent;
 }
-#curso .fp-tableCell {
-  height: 70vh !important;
-}
 #curso .content {
   display: flex;
   align-items: baseline;
@@ -309,10 +295,11 @@ main #inicio .btn {
   width: 80%;
 }
 #curso .content .passArrow {
+  justify-content: flex-end;
   display: flex;
+  flex-direction: column;
   color: #f5f5f5;
   font-weight: 800;
-  width: auto;
 }
 #curso .content .passArrow:hover {
   padding: 0;
@@ -348,13 +335,13 @@ main #inicio .btn {
   margin-bottom: 10%;
 }
 #curso .content .passos .passo h2 {
-  font-size: 1.5vw;
+  font-size: 24px;
   font-weight: 800;
   color: #f5f5f5;
 }
 #curso .content .passos .passo p {
   text-align: justify;
-  font-size: 1.2vw;
+  font-size: 20px;
   color: #f5f5f5;
   font-weight: normal;
 }
@@ -436,30 +423,17 @@ main #inicio .btn {
 .fp-viewing-inscreva-se #top #menu-icon.active .line {
   background-color: #2acfc1;
 }
-<<<<<<< HEAD
 .fp-viewing-inscreva-se #top #menu .btn-contrast-full {
   background-color: #f5f5f5;
   color: #2acfc1;
 }
 .fp-viewing-nossa-equipe-1 #top {
-=======
-.fp-viewing-nossa-equipe-1 #top,
-.fp-viewing-nossa-equipe-2 #top,
-.fp-viewing-nossa-equipe-3 #top,
-.fp-viewing-nossa-equipe-4 #top {
->>>>>>> 80ec60799e0e00fe3829aa241ba27cec49c0962e
   background-color: #743ad0;
 }
-.fp-viewing-nossa-equipe-1 #top #menu-icon.active,
-.fp-viewing-nossa-equipe-2 #top #menu-icon.active,
-.fp-viewing-nossa-equipe-3 #top #menu-icon.active,
-.fp-viewing-nossa-equipe-4 #top #menu-icon.active {
+.fp-viewing-nossa-equipe-1 #top #menu-icon.active {
   background-color: #f5f5f5;
 }
-.fp-viewing-nossa-equipe-1 #top #menu-icon.active .line,
-.fp-viewing-nossa-equipe-2 #top #menu-icon.active .line,
-.fp-viewing-nossa-equipe-3 #top #menu-icon.active .line,
-.fp-viewing-nossa-equipe-4 #top #menu-icon.active .line {
+.fp-viewing-nossa-equipe-1 #top #menu-icon.active .line {
   background-color: #743ad0;
 }
 .fp-viewing-nossos-parceiros #top {
@@ -497,9 +471,6 @@ main #inicio .btn {
 }
 #inscricoes .title:before {
   color: #743ad0;
-}
-#inscricoes .fp-tableCell {
-  height: 100vh !important;
 }
 #inscricoes .content {
   margin-top: 5%;
@@ -819,7 +790,7 @@ input[type ='text']::placeholder:before {
   right: -45px;
 }
 #tempo #timeline ul li:nth-child(odd) .importante.dia:before {
-  right: -53px;
+  right: -52px;
 }
 #tempo #timeline ul li:nth-child(even) {
   padding-left: 40px;
@@ -827,7 +798,7 @@ input[type ='text']::placeholder:before {
   border-left: 2px solid #f5f5f5;
 }
 #tempo #timeline ul li:nth-child(even) .dia {
-  color: #f5f5f5;
+  color: #fff;
 }
 #tempo #timeline ul li:nth-child(even) .dia:before {
   right: 195px;
@@ -840,14 +811,14 @@ input[type ='text']::placeholder:before {
 }
 #tempo #timeline ul li .importante.dia:before {
   border: 6px solid #f5f5f5;
-  width: 25px;
-  height: 25px;
+  width: 13px;
+  height: 13px;
 }
 #tempo #timeline ul li .dia {
   font-size: 19px;
   font-weight: 800;
   position: relative;
-  color: #f5f5f5;
+  color: #fff;
 }
 #tempo #timeline ul li .dia:before {
   content: '';
@@ -879,12 +850,13 @@ input[type ='text']::placeholder:before {
   flex-grow: 0;
   justify-content: space-around;
   height: 100%;
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
 }
 #parceiros .content a {
-  min-height: 20vh;
-  min-width: 20vw;
+  min-height: 200px;
+  min-width: 200px;
   text-align: center;
   margin: 5%;
 }
@@ -892,12 +864,12 @@ input[type ='text']::placeholder:before {
   transform: scale(1.2);
 }
 #parceiros .content a img {
-  max-width: 20vw;
-  max-height: 20vh;
+  max-width: 200px;
+  max-height: 200px;
   padding: 5%;
   transition: all 0.6s ease;
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1000px) {
   body {
     background-size: auto auto;
     background-position: center center;
@@ -982,16 +954,13 @@ input[type ='text']::placeholder:before {
   main #inicio .container .row:nth-child(1) {
     margin-bottom: 15%;
   }
-  main #inicio .container .row:nth-child(2) .col-4:nth-child(1),
-  main #inicio .container .row:nth-child(2) .col-4:nth-child(2) {
-    display: none;
-  }
   main #inicio p {
     margin-top: 10px;
     max-width: 100%;
   }
   main #inicio img {
     width: 35vw !important;
+    height: 10vw;
   }
   main #inicio .col-4:nth-child(3) {
     display: flex;
@@ -1075,66 +1044,9 @@ input[type ='text']::placeholder:before {
   #equipe #equipe-list {
     display: none;
   }
+  #equipe .slide,
   #equipe .passCircles {
-    margin-top: 3%;
-    display: flex;
-    justify-content: space-around;
-    position: initial;
-    width: 65%;
-  }
-  #equipe .passCircles .passCircle {
-    background-color: #999;
-  }
-  #equipe .passCircles .passCircle.active {
-    background-color: #2acfc1;
-  }
-  #equipe .fp-slides {
-    height: 70vh;
-  }
-  #equipe .slide {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    height: 100%;
-    width: 90vw;
-  }
-  #equipe .slide .fp-tableCell {
-    height: 100% !important;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  #equipe .slide .fp-tableCell li {
-    list-style: none;
-    width: 40vw !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #equipe .slide .fp-tableCell li .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  #equipe .slide .fp-tableCell li .content .nome {
-    font-size: 4vw;
-    color: #101d48;
-  }
-  #equipe .slide .fp-tableCell li .content .nome .sobrenome {
-    font-weight: bolder;
-  }
-  #equipe .slide .fp-tableCell li .content .nome:before {
-    content: "</";
-    color: #999;
-  }
-  #equipe .slide .fp-tableCell li .content .nome:after {
-    color: #999;
-    content: ">";
-  }
-  #equipe .slide .fp-tableCell li .content .funcao {
-    font-size: 3vw;
-    color: #d8157d;
+    display: block;
   }
   #tempo #timeline {
     margin-top: 15%;
@@ -1276,7 +1188,7 @@ input[type ='text']::placeholder:before {
     width: 0;
   }
   to {
-    width: 4vw;
+    width: 100px;
   }
 }
 @-webkit-keyframes lineGrowFX {
@@ -1284,7 +1196,7 @@ input[type ='text']::placeholder:before {
     width: 0;
   }
   to {
-    width: 4vw;
+    width: 100px;
   }
 }
 @-o-keyframes lineGrowFX {
@@ -1292,7 +1204,7 @@ input[type ='text']::placeholder:before {
     width: 0;
   }
   to {
-    width: 4vw;
+    width: 100px;
   }
 }
 @keyframes lineGrowFX {
@@ -1300,7 +1212,7 @@ input[type ='text']::placeholder:before {
     width: 0;
   }
   to {
-    width: 4vw;
+    width: 100px;
   }
 }
 @-moz-keyframes appear {

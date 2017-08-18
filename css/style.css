@@ -59,6 +59,7 @@ header #top nav ul {
   justify-content: space-between;
 }
 header #top nav ul li a {
+  font-size: 13px;
   color: #f5f5f5;
   transition: border 1s, color 1s;
 }
@@ -132,8 +133,14 @@ main #inicio .container {
 main #inicio .container img {
   width: 40%;
 }
-main #inicio .container img + img {
-  margin-left: 5%;
+main #inicio .container .row:nth-child(2) {
+  height: auto;
+  display: flex;
+}
+main #inicio .container .row:nth-child(2) .col-4:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 main #inicio h2 {
   font-size: 72px;
@@ -146,6 +153,7 @@ main #inicio .divisor .l2 {
   background-color: #d8157d;
 }
 main #inicio p {
+  font-size: 18px;
   margin-top: 30px;
   margin-bottom: 30px;
   max-width: 50%;
@@ -186,29 +194,32 @@ main #inicio .btn {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #f5f5f5;
+  justify-content: center;
+  display: flex;
+  margin-top: -3vh;
 }
 #nossaMissao #missao {
-  margin-top: 8%;
   display: flex;
   flex-direction: row;
   align-content: center;
+  margin: auto;
   padding: 0;
   justify-content: center;
 }
 #nossaMissao #missao img {
-  width: 60%;
+  width: 40vw;
 }
 #nossaMissao #missao #missaoR {
-  width: 55%;
+  width: 45vw;
   display: block !important;
 }
 #nossaMissao #missao #missaoR h1 {
   color: #101d48;
-  font-size: 65px;
-  margin-bottom: 5%;
+  font-size: 4vw;
+  margin-bottom: 3vh;
 }
 #nossaMissao #missao #missaoR .divisor {
-  margin-bottom: 7%;
+  margin-bottom: 3vh;
 }
 #nossaMissao #missao #missaoR .divisor .l1 {
   background-color: #2acfc1;
@@ -218,18 +229,18 @@ main #inicio .btn {
 }
 #nossaMissao #missao #missaoR h3 {
   color: #2acfc1;
-  font-size: 24px;
+  font-size: 1.8vw;
   margin-bottom: 3%;
   width: 100%;
-  padding: 10px;
+  padding: 1% 0;
 }
 #nossaMissao #missao #missaoR p {
   color: #999;
-  font-size: 20px;
+  font-size: 1.3vw;
 }
 #nossaMissao #missao #missaoR .passCircles {
   width: 20%;
-  margin-top: 25%;
+  margin-top: 8vh;
 }
 #nossaMissao #missao #missaoR .passCircles .passCircle {
   background-color: #e2e2e2;
@@ -277,16 +288,16 @@ main #inicio .btn {
 }
 #curso .title {
   color: #f5f5f5;
-  margin-bottom: 5%;
+  margin-bottom: 3vh;
 }
 #curso .title:before {
   color: #d8157d;
 }
 #curso .passCircles {
-  width: 15%;
+  width: 20%;
   position: absolute;
   bottom: 0;
-  margin-bottom: 7%;
+  margin-bottom: 15vh;
 }
 #curso .passCircles .passCircle {
   background-color: #f5f5f5;
@@ -298,6 +309,9 @@ main #inicio .btn {
   border: 2px solid #2acfc1;
   background-color: transparent;
 }
+#curso .fp-tableCell {
+  height: 70vh !important;
+}
 #curso .content {
   display: flex;
   align-items: baseline;
@@ -305,11 +319,10 @@ main #inicio .btn {
   width: 80%;
 }
 #curso .content .passArrow {
-  justify-content: flex-end;
   display: flex;
-  flex-direction: column;
   color: #f5f5f5;
   font-weight: 800;
+  width: auto;
 }
 #curso .content .passArrow:hover {
   padding: 0;
@@ -345,13 +358,13 @@ main #inicio .btn {
   margin-bottom: 10%;
 }
 #curso .content .passos .passo h2 {
-  font-size: 24px;
+  font-size: 1.5vw;
   font-weight: 800;
   color: #f5f5f5;
 }
 #curso .content .passos .passo p {
   text-align: justify;
-  font-size: 20px;
+  font-size: 1.2vw;
   color: #f5f5f5;
   font-weight: normal;
 }
@@ -437,13 +450,22 @@ main #inicio .btn {
   background-color: #f5f5f5;
   color: #2acfc1;
 }
-.fp-viewing-nossa-equipe-1 #top {
+.fp-viewing-nossa-equipe-1 #top,
+.fp-viewing-nossa-equipe-2 #top,
+.fp-viewing-nossa-equipe-3 #top,
+.fp-viewing-nossa-equipe-4 #top {
   background-color: #743ad0;
 }
-.fp-viewing-nossa-equipe-1 #top #menu-icon.active {
+.fp-viewing-nossa-equipe-1 #top #menu-icon.active,
+.fp-viewing-nossa-equipe-2 #top #menu-icon.active,
+.fp-viewing-nossa-equipe-3 #top #menu-icon.active,
+.fp-viewing-nossa-equipe-4 #top #menu-icon.active {
   background-color: #f5f5f5;
 }
-.fp-viewing-nossa-equipe-1 #top #menu-icon.active .line {
+.fp-viewing-nossa-equipe-1 #top #menu-icon.active .line,
+.fp-viewing-nossa-equipe-2 #top #menu-icon.active .line,
+.fp-viewing-nossa-equipe-3 #top #menu-icon.active .line,
+.fp-viewing-nossa-equipe-4 #top #menu-icon.active .line {
   background-color: #743ad0;
 }
 .fp-viewing-nossos-parceiros #top {
@@ -482,7 +504,11 @@ main #inicio .btn {
 #inscricoes .title:before {
   color: #743ad0;
 }
+#inscricoes .fp-tableCell {
+  height: 100vh !important;
+}
 #inscricoes .content {
+  justify-content: space-evenly;
   margin-top: 5%;
   display: flex;
   align-items: center;
@@ -818,8 +844,8 @@ input[type ='text']::placeholder:before {
   color: #d8157d;
 }
 #tempo #timeline {
-  margin-top: 5%;
-  margin-bottom: 10%;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
 }
 #tempo #timeline ul {
   width: 100vw;
@@ -914,13 +940,12 @@ input[type ='text']::placeholder:before {
   flex-grow: 0;
   justify-content: space-around;
   height: 100%;
-  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
 }
 #parceiros .content a {
-  min-height: 200px;
-  min-width: 200px;
+  min-height: 20vh;
+  min-width: 20vw;
   text-align: center;
   margin: 5%;
 }
@@ -928,16 +953,15 @@ input[type ='text']::placeholder:before {
   transform: scale(1.2);
 }
 #parceiros .content a img {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 20vw;
+  max-height: 20vh;
   padding: 5%;
   transition: all 0.6s ease;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1023px) {
   body {
     background-size: auto auto;
     background-position: center center;
-    min-font-size: 1vmin;
   }
   header {
     display: flex;
@@ -1010,27 +1034,36 @@ input[type ='text']::placeholder:before {
     display: none;
   }
   main #inicio h2 {
-    font-size: 13vw;
+    font-size: 40px;
   }
   main #inicio .container {
     justify-content: flex-end;
   }
+  main #inicio .container img {
+    width: 45%;
+  }
   main #inicio .container .row:nth-child(1) {
     margin-bottom: 15%;
   }
-  main #inicio p {
-    min-font-size: 16px;
-    margin-top: 10px;
-    max-width: 100%;
+  main #inicio .container .row:nth-child(2) .col-4:nth-child(1),
+  main #inicio .container .row:nth-child(2) .col-4:nth-child(2) {
+    display: none;
   }
-  main #inicio img {
-    width: 35vw !important;
-    height: 10vw;
+  main #inicio p {
+    margin-top: 15px;
+    max-width: 100%;
   }
   main #inicio .col-4:nth-child(3) {
     display: flex;
     justify-content: space-between;
     margin-bottom: 23px;
+  }
+  main #parceiros .content a {
+    width: 35vw;
+    height: 35vh;
+  }
+  main #parceiros .content a img {
+    width: 45%;
   }
   main #nossaMissao #missao {
     margin-top: 0;
@@ -1109,10 +1142,66 @@ input[type ='text']::placeholder:before {
   #equipe #equipe-list {
     display: none;
   }
-  #equipe .slide,
   #equipe .passCircles {
-    display: block;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-around;
+    position: initial;
+    width: 65%;
+  }
+  #equipe .passCircles .passCircle {
+    background-color: #999;
+  }
+  #equipe .passCircles .passCircle.active {
+    background-color: #2acfc1;
+  }
+  #equipe .fp-slides {
+    height: 70vh;
+  }
+  #equipe .slide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100%;
+    width: 90vw;
+  }
+  #equipe .slide .fp-tableCell {
+    height: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #equipe .slide .fp-tableCell li {
     list-style: none;
+    width: 40vw !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #equipe .slide .fp-tableCell li .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #equipe .slide .fp-tableCell li .content .nome {
+    font-size: 4vw;
+    color: #101d48;
+  }
+  #equipe .slide .fp-tableCell li .content .nome .sobrenome {
+    font-weight: bolder;
+  }
+  #equipe .slide .fp-tableCell li .content .nome:before {
+    content: "</";
+    color: #999;
+  }
+  #equipe .slide .fp-tableCell li .content .nome:after {
+    color: #999;
+    content: ">";
+  }
+  #equipe .slide .fp-tableCell li .content .funcao {
+    font-size: 3vw;
+    color: #d8157d;
   }
   #tempo #timeline {
     margin-top: 15%;

@@ -116,6 +116,7 @@ header
         justify-content space-between
         li
           a
+            font-size max(13px,.9vw)
             color contrast
             transition border 1s, color 1s
             &.active
@@ -181,10 +182,17 @@ main
       justify-content space-around
       img
         width 40%
-      img + img
-        margin-left 5%
+      .row
+        &:nth-child(2)
+          height auto
+          display flex
+          .col-4
+            &:nth-child(3)
+              display flex
+              align-items center
+              justify-content: space-around;
     h2
-      font-size 72px
+      font-size max(5vw,72px)
       font-weight normal
     .divisor
       .l1
@@ -192,6 +200,7 @@ main
       .l2
         background-color color-2
     p
+      font-size max(2vw,18px)
       margin-top 30px
       margin-bottom 30px
       max-width 50%
@@ -231,40 +240,43 @@ main
   background-repeat no-repeat
   background-size cover
   background-color contrast
+  justify-content center
+  display flex
+  margin-top -3vh
   #missao
-    margin-top 8%
     display flex
     flex-direction row
     align-content center
+    margin auto
     padding 0
     justify-content center
     img
-      width 60%
+      width 40vw
     #missaoR
-      width 55%
+      width 45vw
       display block !important
       h1
         color color-1
-        font-size 65px
-        margin-bottom 5%
+        font-size 4vw
+        margin-bottom 3vh
       .divisor
-        margin-bottom 7%
+        margin-bottom 3vh
         .l1
           background-color color-4
         .l2
           background-color color-3
       h3
         color color-4
-        font-size 24px
+        font-size 1.8vw
         margin-bottom 3%
         width 100%
-        padding 10px
+        padding 1% 0
       p
         color color-6
-        font-size 20px
+        font-size 1.3vw
       .passCircles
         width 20%
-        margin-top 25%
+        margin-top 8vh
         .passCircle
           background-color color-5
           &:hover
@@ -304,32 +316,33 @@ main
   background-color contrastInside
   .title
     color contrast
-    margin-bottom 5%
+    margin-bottom 3vh
     &:before
       color color-2
   .passCircles
-    width 15%
+    width 20%
     position absolute
     bottom 0
-    margin-bottom 7%
+    margin-bottom 15vh
     .passCircle
       background-color contrast
       &:hover
         background-color color-4
     .passCircle.active
-        border 2px solid color-4
-        background-color transparent
+      border 2px solid color-4
+      background-color transparent
+  .fp-tableCell
+    height 70vh!important
   .content
     display flex
     align-items baseline
     justify-content center
     width 80%
     .passArrow
-      justify-content flex-end
       display flex
-      flex-direction column
       color contrast
       font-weight 800
+      width auto
       &:hover
         padding 0
         border none
@@ -357,12 +370,12 @@ main
           width 70%
           margin-bottom 10%
         h2
-          font-size 24px
+          font-size 1.5vw
           font-weight 800
           color contrast
         p
           text-align justify
-          font-size 20px
+          font-size 1.2vw
           color contrast
           font-weight normal
 
@@ -424,7 +437,7 @@ main
         background-color contrast
         color color-4
 
-.fp-viewing-nossa-equipe-1
+.fp-viewing-nossa-equipe-1,.fp-viewing-nossa-equipe-2,.fp-viewing-nossa-equipe-3,.fp-viewing-nossa-equipe-4
   #top
     background-color contrastInside
     #menu-icon
@@ -467,7 +480,10 @@ main
     color contrast
     &:before
       color contrastInside
+  .fp-tableCell
+    height 100vh!important
   .content
+    justify-content space-evenly
     margin-top 5%
     display flex
     align-items center
@@ -746,8 +762,8 @@ input[type ='text']
     &:before
       color color-2
   #timeline
-    margin-top 5%
-    margin-bottom 10%
+    margin-top 5vh
+    margin-bottom 10vh
     ul
       width 100vw
       display flex
@@ -824,30 +840,27 @@ input[type ='text']
     flex-wrap wrap
     flex-grow 0
     justify-content space-around
-    height: 100%;
-    max-width 1280px
+    height 100%
     margin-left auto
     margin-right auto
     a
-      min-height 200px
-      min-width 200px
+      min-height 20vh
+      min-width 20vw
       text-align center
       margin 5%
       &:hover
         img
           transform scale(1.2)
       img
-        max-width 200px
-        max-height 200px
+        max-width 20vw
+        max-height 20vh
         padding 5%
         transition all 0.6s ease
 
-
-@media only screen and (max-width 1000px)
+@media only screen and (max-width 1023px)
   body
     background-size auto auto
-    background-position:center center;
-    min-font-size 1vmin
+    background-position center center
   header
     display flex
     justify-content center
@@ -867,7 +880,7 @@ input[type ='text']
         padding 8px
         width 40px
         height 40px
-        border 2px solid #f5f5f5
+        border 2px solid contrast
         float right
         margin-right 20px
         &.active
@@ -904,23 +917,33 @@ input[type ='text']
       .btn
         display none
       h2
-        font-size 13vw
+        font-size max(10vw,40px)
       .container
-        justify-content: flex-end;
-        .row:nth-child(1)
-          margin-bottom 15%
+        justify-content flex-end
+        img
+          width 45%
+        .row
+          &:nth-child(1)
+            margin-bottom 15%
+          &:nth-child(2)
+            .col-4
+              &:nth-child(1),&:nth-child(2)
+                display none
       p
-        min-font-size 16px
-        margin-top 10px
+        margin-top max(5vw, 15px)
         max-width 100%
-      img
-        width 35vw!important;
-        height 10vw
       .col-4
         &:nth-child(3)
           display flex
           justify-content space-between
           margin-bottom 23px
+    #parceiros
+      .content
+        a
+          width 35vw
+          height 35vh
+          img
+            width 45%
     #nossaMissao
       #missao
         margin-top 0
@@ -930,11 +953,11 @@ input[type ='text']
         #missaoR
           margin-top 10%
           width 80%
-          display: flex !important;
-          flex-direction: column;
-          align-items: center;
+          display flex !important
+          flex-direction column
+          align-items center
           .divisor
-            align-self: flex-start
+            align-self flex-start
           #passArrowMissao
             display none
           .passCircles
@@ -947,7 +970,7 @@ input[type ='text']
             width 10%
 
           h1
-            font-size: 10vw;
+            font-size 10vw
           h3
             padding 0
             font-size 5vw
@@ -960,7 +983,7 @@ input[type ='text']
         flex-direction column
     #inscricoes
       .content
-        margin-top: 5%;
+        margin-top 5%
         display flex
         align-items center
         flex-direction column
@@ -971,7 +994,7 @@ input[type ='text']
         margin-right 0!important
       .content
         width 100%!important
-        margin-right: 0!important;
+        margin-right 0!important
         padding 20px
         display flex
         align-items center
@@ -979,18 +1002,62 @@ input[type ='text']
         flex-wrap wrap
         .grades
           cursor pointer
-          width: 50%;
+          width 50%
           text-align center
           p
             font-size 3vw
-            margin-right: 0!important;
+            margin-right 0!important
   #equipe
     #equipe-list
       display none
-    .slide,.passCircles
-      display block
-      list-style none
-
+    .passCircles
+      margin-top 3%
+      display flex
+      justify-content space-around
+      position initial
+      width 65%
+      .passCircle
+        background-color color-6
+        &.active
+          background-color color-4
+    .fp-slides
+      height 70vh
+    .slide
+      display flex
+      flex-wrap wrap
+      justify-content space-around
+      height 100%
+      width 90vw
+      .fp-tableCell
+        height 100%!important
+        display flex
+        flex-wrap wrap
+        justify-content space-around
+        li
+          list-style none
+          width 40vw!important
+          display flex
+          flex-direction column
+          align-items center
+          .content
+            display flex
+            flex-direction column
+            justify-content center
+            align-items center
+            .nome
+              font-size 4vw
+              color color-1
+              .sobrenome
+                font-weight bolder
+              &:before
+                content "</"
+                color color-6
+              &:after
+                color color-6
+                content ">"
+            .funcao
+              font-size 3vw
+              color color-2
 
   #tempo
     #timeline

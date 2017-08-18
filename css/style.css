@@ -64,7 +64,8 @@ header #top nav ul li a {
   transition: border 1s, color 1s;
 }
 header #top nav ul li a.active {
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #d8157d;
+  font-weight: bold;
 }
 header #top nav ul li:hover a {
   font-weight: bold;
@@ -76,10 +77,14 @@ header #top nav ul li .btn-contrast-full:hover {
   background-color: #f5f5f5;
   color: #ef4e2e;
 }
+header #top nav ul li .btn-contrast-full.active {
+  border: 2px solid #f5f5f5;
+}
 .fp-viewing-bem-vindo #top {
   padding: 20px;
   padding-top: 40px;
   background-color: transparent;
+  min-height: min-content;
 }
 .fp-viewing-bem-vindo .btn-contrast-full {
   border: 2px solid #f5f5f5;
@@ -398,6 +403,9 @@ main #inicio .btn {
 .fp-viewing-a-iniciativa #top #menu-icon.active .line {
   background-color: #2acfc1;
 }
+.fp-viewing-a-iniciativa #top #menu li a.active {
+  border-bottom-color: #ef4e2e;
+}
 .fp-viewing-o-curso #top,
 .fp-viewing-o-curso-4 #top,
 .fp-viewing-o-curso-1 #top,
@@ -437,6 +445,10 @@ main #inicio .btn {
 .fp-viewing-linha-do-tempo #top #menu-icon.active .line {
   background-color: #2acfc1;
 }
+.fp-viewing-linha-do-tempo #top #menu a.active,
+.fp-viewing-linha-do-tempo #top li a.active {
+  border-bottom-color: #743ad0;
+}
 .fp-viewing-inscreva-se #top {
   background-color: #2acfc1;
 }
@@ -468,6 +480,16 @@ main #inicio .btn {
 .fp-viewing-nossa-equipe-4 #top #menu-icon.active .line {
   background-color: #743ad0;
 }
+.fp-viewing-nossa-equipe-1 #top #menu a.active,
+.fp-viewing-nossa-equipe-2 #top #menu a.active,
+.fp-viewing-nossa-equipe-3 #top #menu a.active,
+.fp-viewing-nossa-equipe-4 #top #menu a.active,
+.fp-viewing-nossa-equipe-1 #top li a.active,
+.fp-viewing-nossa-equipe-2 #top li a.active,
+.fp-viewing-nossa-equipe-3 #top li a.active,
+.fp-viewing-nossa-equipe-4 #top li a.active {
+  border-bottom-color: #2acfc1;
+}
 .fp-viewing-nossos-parceiros #top {
   background-color: #743ad0;
 }
@@ -476,6 +498,13 @@ main #inicio .btn {
 }
 .fp-viewing-nossos-parceiros #top #menu-icon.active .line {
   background-color: #743ad0;
+}
+.fp-viewing-nossos-parceiros #top #menu a.active,
+.fp-viewing-nossos-parceiros #top li a.active {
+  border-bottom-color: #2acfc1;
+}
+.fp-viewing-contate-nos #menu li a.active {
+  border-bottom-color: #743ad0;
 }
 .arrowLeft {
   transform: rotate(90deg);
@@ -661,8 +690,17 @@ input[type ='text']::placeholder:before {
   height: 60%;
 /*TIRAR ISSO DEPOIS*/
 }
+#grade .curso .btn {
+  margin-bottom: 10px;
+}
 #grade .curso img {
   margin-left: -10%;
+  width: 90%;
+  flex: 1;
+}
+#grade .curso .info {
+  flex: 2;
+  width: 100%;
 }
 #grade .curso .info ul {
   list-style: none;
@@ -1063,7 +1101,9 @@ input[type ='text']::placeholder:before {
     height: 35vh;
   }
   main #parceiros .content a img {
-    width: 45%;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
   }
   main #nossaMissao #missao {
     margin-top: 0;
@@ -1305,7 +1345,7 @@ input[type ='text']::placeholder:before {
     margin: 0;
   }
   #curso .content {
-    width: 100%;
+    width: 90%;
   }
   #curso .content .fp-controlArrow {
     display: none !important;
@@ -1336,6 +1376,20 @@ input[type ='text']::placeholder:before {
     justify-content: space-around;
     position: initial;
     margin-top: 10%;
+  }
+  #grade .curso {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column-reverse;
+    height: auto;
+    min-height: min-content;
+  }
+  #grade .curso img {
+    width: 100%;
+  }
+  #grade .curso .info {
+    width: 100%;
   }
 }
 @-moz-keyframes lineGrowFX {

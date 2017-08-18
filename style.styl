@@ -120,7 +120,8 @@ header
             color contrast
             transition border 1s, color 1s
             &.active
-              border-bottom 2px solid white
+              border-bottom 2px solid color-2
+              font-weight bold
           &:hover
             a
               font-weight bold
@@ -129,12 +130,15 @@ header
             &:hover
               background-color contrast
               color color-3
+          .btn-contrast-full.active
+            border 2px solid contrast
 
 .fp-viewing-bem-vindo
   #top
     padding 20px
     padding-top 40px
     background-color transparent
+    min-height min-content
   .btn-contrast-full
     border 2px solid contrast
     background-color transparent
@@ -396,6 +400,10 @@ main
         background-color contrast
         .line
           background-color color-4
+    #menu
+      li
+        a.active
+          border-bottom-color color-3
 
 .fp-viewing-o-curso,.fp-viewing-o-curso-4,.fp-viewing-o-curso-1,.fp-viewing-o-curso-2,.fp-viewing-o-curso-3
   #top
@@ -423,6 +431,10 @@ main
         background-color contrast
         .line
           background-color color-4
+    #menu
+    li
+      a.active
+        border-bottom-color contrastInside
 
 .fp-viewing-inscreva-se
   #top
@@ -445,6 +457,10 @@ main
         background-color contrast
         .line
           background-color contrastInside
+    #menu
+    li
+      a.active
+        border-bottom-color color-4
 
 .fp-viewing-nossos-parceiros
   #top
@@ -454,6 +470,16 @@ main
         background-color contrast
         .line
           background-color contrastInside
+    #menu
+    li
+      a.active
+        border-bottom-color color-4
+
+.fp-viewing-contate-nos
+  #menu
+    li
+      a.active
+        border-bottom-color contrastInside
 
 
 //edit arrows
@@ -610,9 +636,15 @@ input[type ='text']
     width 50%
     height 60%
     /*TIRAR ISSO DEPOIS*/
+    .btn
+      margin-bottom 10px
     img
       margin-left -10%
+      width 90%
+      flex 1
     .info
+      flex 2
+      width 100%
       ul
         list-style none
         background-color white
@@ -943,7 +975,9 @@ input[type ='text']
           width 35vw
           height 35vh
           img
-            width 45%
+            width 100%
+            max-height 100%
+            max-width 100%
     #nossaMissao
       #missao
         margin-top 0
@@ -1142,7 +1176,7 @@ input[type ='text']
           margin 0
   #curso
     .content
-      width 100%
+      width 90%
       .fp-controlArrow
         display none!important
       a
@@ -1165,3 +1199,15 @@ input[type ='text']
       justify-content space-around
       position initial
       margin-top 10%
+  #grade
+    .curso
+      width 90%
+      margin-left auto
+      margin-right auto
+      flex-direction column-reverse
+      height auto
+      min-height min-content
+      img
+        width 100%
+      .info
+        width 100%

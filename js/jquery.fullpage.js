@@ -93,7 +93,7 @@
         scrollbars: true,
         mouseWheel: true,
         hideScrollbars: false,
-        fadeScrollbars: false,
+        fadeScrollbars: true,
         disableMouse: true,
         interactiveScrollbars: true
     };

@@ -14,6 +14,7 @@ function init() {
         typeSpeed: 50,
         loop: true,
         loopCount: 0,
+        backDelay: 2000
     }
 
     var typed = new Typed("#dev-area", options);

@@ -32,7 +32,7 @@ function load() {
 }
 function scroll() {
     $("main").fullpage({
-        anchors: ['bem-vindo', 'a-iniciativa', 'o-curso', 'grade-curricular', 'linha-do-tempo', 'inscreva-se', 'nossa-equipe', 'nossos-parceiros', 'contate-nos'],
+        anchors: ['bem-vindo', 'a-iniciativa', 'o-curso', 'grade-curricular', 'linha-do-tempo', 'nossa-equipe', 'nossos-parceiros', 'contate-nos'],
         menu: '#menu',
         afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
             if (anchorLink == 'o-curso') {

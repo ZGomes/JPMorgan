@@ -349,6 +349,12 @@ main #inicio .btn {
   flex-wrap: wrap;
   justify-content: center;
 }
+#curso .slide:nth-child(-n + 4) .passos .passo:nth-child(-n + 2) {
+  display: block;
+}
+#curso .slide:nth-child(-n + 4) .passos .passo:nth-child(3) {
+  display: none;
+}
 #curso .title {
   color: #f5f5f5;
 }
@@ -360,6 +366,9 @@ main #inicio .btn {
 }
 #curso .passCircles .passCircle {
   background-color: #f5f5f5;
+}
+#curso .passCircles .passCircle:nth-child(n + 5) {
+  display: none;
 }
 #curso .passCircles .passCircle:hover {
   background-color: #2acfc1;
@@ -1462,6 +1471,12 @@ input[type ='text']::placeholder:before {
   #curso .content {
     width: 90%;
   }
+  #curso .content .slide:nth-child(-n + 4) .passos .passo:nth-child(-n + 2) {
+    display: none;
+  }
+  #curso .content .slide:nth-child(-n + 4) .passos .passo:nth-child(3) {
+    display: block;
+  }
   #curso .content .fp-controlArrow {
     display: none !important;
   }
@@ -1491,6 +1506,9 @@ input[type ='text']::placeholder:before {
     justify-content: space-around;
     position: initial;
     margin-top: 10%;
+  }
+  #curso .passCircles .passCircle:nth-child(n + 5) {
+    display: block;
   }
   #grade .curso {
     width: 90%;

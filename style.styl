@@ -364,6 +364,14 @@ main
     display flex
     flex-wrap wrap
     justify-content center
+  .slide
+    &:nth-child(-n + 4)
+      .passos
+        .passo
+          &:nth-child(-n + 2)
+            display block
+          &:nth-child(3)
+            display none
   .title
     color contrast
     &:before
@@ -372,6 +380,8 @@ main
     width 25%
     .passCircle
       background-color contrast
+      &:nth-child(n + 5)
+        display none
       &:hover
         background-color color-4
     .passCircle.active
@@ -1253,6 +1263,15 @@ input[type ='text']
   #curso
     .content
       width 90%
+      .slide
+        &:nth-child(-n + 4)
+          .passos
+            .passo
+              &:nth-child(-n + 2)
+                display none
+              &:nth-child(3)
+                display block
+
       .fp-controlArrow
         display none!important
       a
@@ -1275,6 +1294,9 @@ input[type ='text']
       justify-content space-around
       position initial
       margin-top 10%
+      .passCircle
+        &:nth-child(n + 5)
+          display block
   #grade
     .curso
       width 90%

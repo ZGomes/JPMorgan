@@ -8,6 +8,15 @@ function init() {
     load();
     menu();
     grade();
+    var options = {
+        strings: ["front-end", "back-end", "iot", "mobile"],
+        smartBackspace: false,
+        typeSpeed: 50,
+        loop: true,
+        loopCount: 0,
+    }
+
+    var typed = new Typed("#dev-area", options);
 }
 
 function load() {

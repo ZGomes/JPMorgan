@@ -137,7 +137,8 @@ header
     background-color transparent
     min-height min-content
     .col-3
-      display none
+      img
+        display none
     .col-9
       width 100%
       li
@@ -963,10 +964,10 @@ input[type ='text']
     margin-left auto
     margin-right auto
     a
-      min-height 20vh
-      min-width 20vw
+      min-height 20%
+      min-width 20%
       text-align center
-      margin 5%
+      margin 4% 2%
       &:hover
         img
           transform scale(1.2)
@@ -1046,7 +1047,7 @@ input[type ='text']
       .container
         justify-content flex-end
         img
-          width 45%
+          width 100%
         .row
           &:nth-child(1)
             margin-bottom 15%
@@ -1055,7 +1056,7 @@ input[type ='text']
               &:nth-child(1),&:nth-child(2)
                 display none
       p
-        margin-top max(5vw, 15px)
+        font-size 5vmin
         max-width 100%
       .col-4
         &:nth-child(3)
@@ -1101,6 +1102,7 @@ input[type ='text']
             width 10%
 
           h1
+            margin-top 7vh
             font-size 10vw
           h3
             padding 0
@@ -1139,13 +1141,15 @@ input[type ='text']
             font-size 3vw
             margin-right 0!important
   #equipe
+    .container
+      display flex
+      flex-direction column
+      align-items center
     #equipe-list
       display none
     .passCircles
-      margin-top 3%
       display flex
       justify-content space-around
-      position initial
       width 65%
       .passCircle
         background-color color-6
@@ -1157,8 +1161,6 @@ input[type ='text']
       display flex
       flex-wrap wrap
       justify-content space-around
-      height 100%
-      width 90vw
       .fp-tableCell
         height 100%!important
         display flex

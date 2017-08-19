@@ -83,7 +83,7 @@ header #top nav ul li .btn-contrast-full.active {
   background-color: transparent;
   min-height: min-content;
 }
-.fp-viewing-bem-vindo #top .col-3 {
+.fp-viewing-bem-vindo #top .col-3 img {
   display: none;
 }
 .fp-viewing-bem-vindo #top .col-9 {
@@ -1118,10 +1118,10 @@ input[type ='text']::placeholder:before {
   margin-right: auto;
 }
 #parceiros .content a {
-  min-height: 20vh;
-  min-width: 20vw;
+  min-height: 20%;
+  min-width: 20%;
   text-align: center;
-  margin: 5%;
+  margin: 4% 2%;
 }
 #parceiros .content a:hover img {
   transform: scale(1.2);
@@ -1221,7 +1221,7 @@ input[type ='text']::placeholder:before {
     justify-content: flex-end;
   }
   main #inicio .container img {
-    width: 45%;
+    width: 100%;
   }
   main #inicio .container .row:nth-child(1) {
     margin-bottom: 15%;
@@ -1231,7 +1231,7 @@ input[type ='text']::placeholder:before {
     display: none;
   }
   main #inicio p {
-    margin-top: 15px;
+    font-size: 5vmin;
     max-width: 100%;
   }
   main #inicio .col-4:nth-child(3) {
@@ -1284,6 +1284,7 @@ input[type ='text']::placeholder:before {
     width: 10%;
   }
   main #nossaMissao #missao #missaoR h1 {
+    margin-top: 7vh;
     font-size: 10vw;
   }
   main #nossaMissao #missao #missaoR h3 {
@@ -1327,14 +1328,17 @@ input[type ='text']::placeholder:before {
     font-size: 3vw;
     margin-right: 0 !important;
   }
+  #equipe .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   #equipe #equipe-list {
     display: none;
   }
   #equipe .passCircles {
-    margin-top: 3%;
     display: flex;
     justify-content: space-around;
-    position: initial;
     width: 65%;
   }
   #equipe .passCircles .passCircle {
@@ -1350,8 +1354,6 @@ input[type ='text']::placeholder:before {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    height: 100%;
-    width: 90vw;
   }
   #equipe .slide .fp-tableCell {
     height: 100% !important;

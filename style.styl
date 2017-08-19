@@ -467,7 +467,8 @@ main
         a.active
           border-bottom-color color-3
 
-.fp-viewing-o-curso,.fp-viewing-o-curso-4,.fp-viewing-o-curso-1,.fp-viewing-o-curso-2,.fp-viewing-o-curso-3
+.fp-viewing-o-curso,.fp-viewing-o-curso-4,.fp-viewing-o-curso-1,.fp-viewing-o-curso-2,.fp-viewing-o-curso-3,
+.fp-viewing-o-curso-4,.fp-viewing-o-curso-5,.fp-viewing-o-curso-6,.fp-viewing-o-curso-7,.fp-viewing-o-curso-8
   #top
     background-color contrastInside
     #menu-icon
@@ -982,15 +983,18 @@ input[type ='text']
   header
     display flex
     justify-content center
+    margin-bottom -3%
     #top
       max-width 100%
       padding 0 !important
       .container
-        margin-bottom -10px
         padding 0 !important
       .col-3
-        margin-top 10px
-        margin-left 9px
+        display block!important
+        margin-top 3%
+        margin-left 3%
+      .col-9
+        width 100%!important
       img
         float left
         max-width 100px
@@ -1025,9 +1029,10 @@ input[type ='text']
             padding 5px
             margin 10px
             text-align center
-            &:nth-child(8)
+            &:last-child
               margin-top 10%
-              margin-bottom 10%
+              margin-bottom 5%
+              justify-content center!important
   main
     #inicio
       padding-bottom 10px
@@ -1068,6 +1073,8 @@ input[type ='text']
       #missao
         margin-top 0
         padding-top 0
+        display flex
+        justify-content center
         img
           display none
         #missaoR
@@ -1261,6 +1268,8 @@ input[type ='text']
           padding 0
           margin 0
   #curso
+    .fp-tableCell
+      height 60vh!important
     .content
       width 90%
       .slide
@@ -1277,9 +1286,6 @@ input[type ='text']
       a
         display none
       .passos
-        width calc(100% - 62px - 62px)
-        margin-left auto
-        margin-right auto
         .passo
           width 100% !important
           h2
@@ -1289,11 +1295,9 @@ input[type ='text']
           &:nth-child(2)
             display none !important
     .passCircles
-      width 50%
+      width 75%
       display flex
       justify-content space-around
-      position initial
-      margin-top 10%
       .passCircle
         &:nth-child(n + 5)
           display block

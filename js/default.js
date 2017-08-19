@@ -14,8 +14,8 @@ function load() {
     $("#curso .passCircles span.passCircle:nth-child(1)").addClass('active');
     $("#equipe .passCircles span.passCircle:nth-child(1)").addClass('active');
     $("#curso .fp-controlArrow.fp-prev").css('display', 'none');
-    $("#curso .fp-controlArrow.fp-prev .passArrow").append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.77 28.43" class="arrow arrowRight"><defs><style>.faa45763-1a5b-4df9-a16d-f6483a126e3f{fill:#e2e2e2;}</style></defs><title>arrow</title><g id="b989d351-0c07-4193-9862-0194240d6ba1" data-name="Layer 2"><g id="2e1cc3ac-5c50-40af-a2a0-dcd9f43c9701" data-name="Layer 1"><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="14.21" y="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="10.66" y="3.55" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" y="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="3.55" y="3.55" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="7.11" y="7.11" width="3.55" height="21.32"/></g></g></svg>Passos Anteriores');
-    $("#curso .fp-controlArrow.fp-next .passArrow").append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.77 28.43" class="arrow arrowLeft"><defs><style>.faa45763-1a5b-4df9-a16d-f6483a126e3f{fill:#e2e2e2;}</style></defs><title>arrow</title><g id="b989d351-0c07-4193-9862-0194240d6ba1" data-name="Layer 2"><g id="2e1cc3ac-5c50-40af-a2a0-dcd9f43c9701" data-name="Layer 1"><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="14.21" y="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="10.66" y="3.55" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" y="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="3.55" y="3.55" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="7.11" y="7.11" width="3.55" height="21.32"/></g></g></svg>Próximos Passos');
+    $("#curso .fp-controlArrow.fp-prev .passArrow").append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.77 28.43" class="arrow arrowRight"><defs><style>.faa45763-1a5b-4df9-a16d-f6483a126e3f{fill:#e2e2e2;}</style></defs><title>arrow</title><g id="b989d351-0c07-4193-9862-0194240d6ba1" data-name="Layer 2"><g id="2e1cc3ac-5c50-40af-a2a0-dcd9f43c9701" data-name="Layer 1"><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="14.21" y="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="10.66" y="3.55" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" y="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="3.55" y="3.55" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="7.11" y="7.11" width="3.55" height="21.32"/></g></g></svg>Anterior');
+    $("#curso .fp-controlArrow.fp-next .passArrow").append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.77 28.43" class="arrow arrowLeft"><defs><style>.faa45763-1a5b-4df9-a16d-f6483a126e3f{fill:#e2e2e2;}</style></defs><title>arrow</title><g id="b989d351-0c07-4193-9862-0194240d6ba1" data-name="Layer 2"><g id="2e1cc3ac-5c50-40af-a2a0-dcd9f43c9701" data-name="Layer 1"><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="14.21" y="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="10.66" y="3.55" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" y="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="3.55" y="3.55" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="7.11" y="7.11" width="3.55" height="21.32"/></g></g></svg>Próximo');
 
     actionPass("curso","o-curso");
     actionPass("equipe","nossa-equipe");
@@ -75,7 +75,13 @@ function grade() {
             "align-items": "normal",
             "flex-wrap": "nowrap"
         });
-        $(".grades p").css({"display":"none"});
+        $("#grade").css({
+            "background-size": "65%",
+            "background-position": "-17%"
+        });
+        $(".grades").css("align-items", "flex-start"),
+        $("#grade .container").css("align-items", "flex-start")
+        $(".grades p,#grade .container > p").css({"display":"none"});
         $(".grades svg line,.grades svg path,.grades svg circle,.grades svg polyline").removeAttr('style');
         $(".grades svg line,.grades svg path,.grades svg circle,.grades svg polyline").css({
             "will-change": "fill,stroke",

@@ -10,6 +10,11 @@
 }
 @font-face {
   font-family: "Proxima Nova";
+  src: url("../fonts/Proxima Nova Semibold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Proxima Nova";
   src: url("../fonts/Proxima Nova Light.otf");
 }
 * {
@@ -22,16 +27,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Proxima Nova";
-  background: url("../images/top-bg.jpg") no-repeat 0 0;
+  background: url("../images/inicio/top-bg.png") no-repeat 0 0;
   background-size: 100% 100%;
-}
-section {
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 a {
   text-decoration: none;
@@ -86,6 +83,26 @@ header #top nav ul li .btn-contrast-full.active {
   background-color: transparent;
   min-height: min-content;
 }
+.fp-viewing-bem-vindo #top .col-3 {
+  display: none;
+}
+.fp-viewing-bem-vindo #top .col-9 {
+  width: 100%;
+}
+.fp-viewing-bem-vindo #top .col-9 li {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fp-viewing-bem-vindo #top .col-9 li:last-child {
+  flex: 3;
+  justify-content: flex-end;
+}
+.fp-viewing-bem-vindo #top .col-9 li:last-child a {
+  display: inline;
+  white-space: nowrap;
+}
 .fp-viewing-bem-vindo .btn-contrast-full {
   border: 2px solid #f5f5f5;
   background-color: transparent;
@@ -95,19 +112,26 @@ header #top nav ul li .btn-contrast-full.active {
   background-color: #f5f5f5;
   color: #d8157d !important;
 }
+section {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 section .divisor {
   display: block;
 }
 section .divisor .l1 {
-  border-radius: 5px;
+  border-radius: 50%;
   display: inline-block;
-  height: 5px;
-  width: 5px;
+  height: 4px;
+  width: 4px;
 }
 section .divisor .l2 {
   border-radius: 10px;
   display: inline-block;
-  height: 5px;
+  height: 4px;
   transform-origin: left;
   margin-left: 3px;
 }
@@ -132,24 +156,49 @@ main #inicio .container {
   width: 90%;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 100px);
+  height: 75vh;
   justify-content: space-around;
 }
 main #inicio .container img {
-  width: 40%;
+  width: 50%;
+  margin-bottom: 5%;
 }
 main #inicio .container .row:nth-child(2) {
   height: auto;
   display: flex;
 }
-main #inicio .container .row:nth-child(2) .col-4:nth-child(3) {
+main #inicio .container .row:nth-child(2) .col-4:nth-child(1) {
+  font-size: 50px;
+  font-weight: 800;
+  color: #d8157d;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+}
+main #inicio .container .row:nth-child(2) .col-4:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+}
+main #inicio .container .row:nth-child(2) .col-4:nth-child(3) span {
+  margin-bottom: 3%;
+  color: #2acfc1;
+  font-weight: bold;
+  font-size: 15px;
+}
+main #inicio .container .row:nth-child(2) .col-4:nth-child(3) div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main #inicio .container .row:nth-child(2) .col-4:nth-child(3) div img {
+  width: 40%;
+  margin-bottom: 0;
+}
+main #inicio .container .row:nth-child(2) .col-4:nth-child(3) div img:nth-child(2) {
+  margin-top: 2%;
 }
 main #inicio h2 {
   font-size: 72px;
-  font-weight: normal;
+  font-weight: 700;
 }
 main #inicio .divisor .l1 {
   background-color: #2acfc1;
@@ -158,10 +207,14 @@ main #inicio .divisor .l2 {
   background-color: #d8157d;
 }
 main #inicio p {
-  font-size: 18px;
+  font-size: 25px;
   margin-top: 30px;
   margin-bottom: 30px;
-  max-width: 50%;
+  max-width: 40%;
+  font-weight: bold;
+}
+main #inicio p span {
+  color: #2acfc1;
 }
 main #inicio .btn {
   padding: 15px 17px 15px 17px;
@@ -209,13 +262,13 @@ main #inicio .btn {
   align-content: center;
   margin: auto;
   padding: 0;
-  justify-content: center;
+  justify-content: space-between;
 }
 #nossaMissao #missao img {
-  width: 40vw;
+  width: 40%;
 }
 #nossaMissao #missao #missaoR {
-  width: 45vw;
+  width: 55%;
   display: block !important;
 }
 #nossaMissao #missao #missaoR h1 {
@@ -234,14 +287,14 @@ main #inicio .btn {
 }
 #nossaMissao #missao #missaoR h3 {
   color: #2acfc1;
-  font-size: 1.8vw;
+  font-size: 24px;
   margin-bottom: 3%;
   width: 100%;
   padding: 1% 0;
 }
 #nossaMissao #missao #missaoR p {
   color: #999;
-  font-size: 1.3vw;
+  font-size: 20px;
 }
 #nossaMissao #missao #missaoR .passCircles {
   width: 20%;
@@ -291,18 +344,19 @@ main #inicio .btn {
 #curso {
   background-color: #743ad0;
 }
+#curso .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 #curso .title {
   color: #f5f5f5;
-  margin-bottom: 3vh;
 }
 #curso .title:before {
   color: #d8157d;
 }
 #curso .passCircles {
-  width: 20%;
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 15vh;
+  width: 25%;
 }
 #curso .passCircles .passCircle {
   background-color: #f5f5f5;
@@ -316,12 +370,14 @@ main #inicio .btn {
 }
 #curso .fp-tableCell {
   height: 70vh !important;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 #curso .content {
   display: flex;
   align-items: baseline;
   justify-content: center;
-  width: 80%;
 }
 #curso .content .passArrow {
   display: flex;
@@ -346,30 +402,31 @@ main #inicio .btn {
   height: 30px;
 }
 #curso .content .passos {
-  width: 60%;
+  width: 70%;
   display: flex;
-  justify-content: space-around;
-  margin-left: calc(50% - 40%);
+  justify-content: space-between;
+  align-items: flex-start;
 }
 #curso .content .passos .passo {
-  width: 40%;
+  width: 45%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 #curso .content .passos .passo img {
-  width: 70%;
+  width: 90%;
   margin-bottom: 10%;
 }
 #curso .content .passos .passo h2 {
-  font-size: 1.5vw;
+  width: 100%;
+  font-size: 24px;
   font-weight: 800;
   color: #f5f5f5;
+  margin-bottom: 4%;
 }
 #curso .content .passos .passo p {
-  text-align: justify;
-  font-size: 1.2vw;
+  font-size: 16px;
   color: #f5f5f5;
   font-weight: normal;
 }
@@ -383,6 +440,36 @@ main #inicio .btn {
 .fp-viewing-contate-nos #top {
   background-color: #ef4e2e;
   padding: 5px 0 0 0;
+}
+.fp-viewing-a-iniciativa #top .col-3,
+.fp-viewing-o-curso #top .col-3,
+.fp-viewing-grade-curricular #top .col-3,
+.fp-viewing-linha-do-tempo #top .col-3,
+.fp-viewing-inscreva-se #top .col-3,
+.fp-viewing-nossa-equipe-1 #top .col-3,
+.fp-viewing-nossos-parceiros #top .col-3,
+.fp-viewing-contate-nos #top .col-3 {
+  display: block;
+}
+.fp-viewing-a-iniciativa #top .col-9,
+.fp-viewing-o-curso #top .col-9,
+.fp-viewing-grade-curricular #top .col-9,
+.fp-viewing-linha-do-tempo #top .col-9,
+.fp-viewing-inscreva-se #top .col-9,
+.fp-viewing-nossa-equipe-1 #top .col-9,
+.fp-viewing-nossos-parceiros #top .col-9,
+.fp-viewing-contate-nos #top .col-9 {
+  width: 74.6%;
+}
+.fp-viewing-a-iniciativa #top .col-9 li:last-child,
+.fp-viewing-o-curso #top .col-9 li:last-child,
+.fp-viewing-grade-curricular #top .col-9 li:last-child,
+.fp-viewing-linha-do-tempo #top .col-9 li:last-child,
+.fp-viewing-inscreva-se #top .col-9 li:last-child,
+.fp-viewing-nossa-equipe-1 #top .col-9 li:last-child,
+.fp-viewing-nossos-parceiros #top .col-9 li:last-child,
+.fp-viewing-contate-nos #top .col-9 li:last-child {
+  padding-left: 0;
 }
 .fp-viewing-a-iniciativa #top .btn-contrast-full:hover,
 .fp-viewing-o-curso #top .btn-contrast-full:hover,
@@ -676,30 +763,42 @@ input[type ='text']::placeholder:before {
   box-shadow: 0 0 7px rgba(0,0,0,0.05), 0px 0px 7px rgba(0,0,0,0.05), 0px 0px 7px rgba(0,0,0,0.05), 0px 0px 7px rgba(0,0,0,0.05);
 }
 #grade {
-  background-image: url("../images/grade/background.png");
+  background-image: url("../images/grade/background.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 85%;
+  background-position: center;
   background-color: #f5f5f5;
 }
+#grade .container {
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#grade .container > p {
+  text-align: center;
+  color: #2acfc1;
+  width: 75%;
+}
 #grade .fp-tableCell {
-  height: 100vh !important;
+  height: 100% !important;
 }
 #grade .curso {
+  margin-top: 2%;
   display: none;
-  width: 50%;
-  height: 60%;
-/*TIRAR ISSO DEPOIS*/
+  width: 100%;
+  height: 62%;
 }
 #grade .curso .btn {
   margin-bottom: 10px;
 }
 #grade .curso img {
-  margin-left: -10%;
-  width: 90%;
   flex: 1;
+  width: 80%;
 }
 #grade .curso .info {
-  flex: 2;
+  flex: 1;
+  padding-left: 5%;
   width: 100%;
 }
 #grade .curso .info ul {
@@ -708,12 +807,13 @@ input[type ='text']::placeholder:before {
   border-left: 5px solid #743ad0;
   margin: 15% 0%;
   box-shadow: 5px 5px 12px rgba(0,0,0,0.05), -5px -5px 12px rgba(0,0,0,0.05), -5px 5px 12px rgba(0,0,0,0.05), 5px -5px 12px rgba(0,0,0,0.05);
+  width: 50%;
 }
 #grade .curso .info ul .select {
   display: flex;
   align-items: center;
   color: #808080;
-  padding: 10px 0px;
+  padding: 10px 0;
 }
 #grade .curso .info ul .select svg {
   width: 24px;
@@ -721,14 +821,29 @@ input[type ='text']::placeholder:before {
   margin-right: 20px;
   margin-left: 20px;
 }
+#grade .curso .info ul p {
+  display: none;
+  background-color: #743ad0;
+  color: #f5f5f5;
+  font-weight: bold;
+  padding: 2% 0 1% 3%;
+  font-size: 12px;
+}
 #grade .curso .info ul li {
   padding: 12px;
   display: none;
   opacity: 0;
   transition: all 1s ease;
+  font-size: 13px;
 }
 #grade .curso .info ul:hover {
+  position: relative;
+  margin-top: -25%;
   cursor: pointer;
+  margin-bottom: -5%;
+}
+#grade .curso .info ul:hover p {
+  display: block;
 }
 #grade .curso .info ul:hover li {
   opacity: 1;
@@ -741,7 +856,7 @@ input[type ='text']::placeholder:before {
   color: #2acfc1;
 }
 #grade .curso .info h2 {
-  color: #000;
+  color: #101d48;
   font-size: 4vh !important;
   margin: 0;
 }
@@ -778,7 +893,7 @@ input[type ='text']::placeholder:before {
 }
 #grade .content {
   height: 75%;
-  width: 50%;
+  width: 75%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -792,18 +907,19 @@ input[type ='text']::placeholder:before {
   align-items: center;
 }
 #grade .content .grades:hover svg {
-  transform: scale(0.8);
+  transform: scale(1.1);
 }
 #grade .content .grades svg {
   margin-bottom: 5%;
   transition: all 0.8s;
-  width: 70%;
+  width: 60%;
 }
 #grade .content .grades p {
   width: 80%;
   height: 50px;
   margin-top: 5%;
   margin-bottom: 5%;
+  color: #999;
 }
 #equipe {
   background-image: url("../images/equipe/background.png");
@@ -882,11 +998,10 @@ input[type ='text']::placeholder:before {
   color: #d8157d;
 }
 #tempo #timeline {
-  margin-top: 5vh;
+  margin-top: 10vh;
   margin-bottom: 10vh;
 }
 #tempo #timeline ul {
-  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;

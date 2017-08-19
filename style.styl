@@ -71,6 +71,11 @@ contrast = #f5f5f5
 
 @font-face
   font-family "Proxima Nova"
+  src url('../fonts/Proxima Nova Semibold.otf')
+  font-weight 700
+
+@font-face
+  font-family "Proxima Nova"
   src url('../fonts/Proxima Nova Light.otf')
 
 *
@@ -83,16 +88,8 @@ body
   margin 0
   padding 0
   font-family "Proxima Nova"
-  background url('../images/top-bg.jpg') no-repeat 0 0
+  background url('../images/inicio/top-bg.png') no-repeat 0 0
   background-size 100% 100%
-
-section
-  height 100vh
-  width 100%
-  overflow hidden
-  display flex
-  align-items center
-  flex-direction column
 
 a
   text-decoration none
@@ -139,6 +136,21 @@ header
     padding-top 40px
     background-color transparent
     min-height min-content
+    .col-3
+      display none
+    .col-9
+      width 100%
+      li
+        flex 1
+        display flex
+        justify-content center
+        align-items center
+        &:last-child
+          flex 3
+          justify-content flex-end
+          a
+            display inline
+            white-space nowrap
   .btn-contrast-full
     border 2px solid contrast
     background-color transparent
@@ -148,17 +160,22 @@ header
       color color-2!important
 
 section
+  width 100%
+  overflow hidden
+  display flex
+  align-items center
+  flex-direction column
   .divisor
     display block
     .l1
-      border-radius 5px
+      border-radius 50%
       display inline-block
-      height 5px
-      width 5px
+      height 4px
+      width 4px
     .l2
       border-radius 10px
       display inline-block
-      height 5px
+      height 4px
       transform-origin left
       margin-left 3px
   .fp-tableCell
@@ -182,32 +199,56 @@ main
       width 90%
       display flex
       flex-direction column
-      height calc(100vh - 100px)
+      height 75vh
       justify-content space-around
       img
-        width 40%
+        width 50%
+        margin-bottom 5%
       .row
         &:nth-child(2)
           height auto
           display flex
           .col-4
-            &:nth-child(3)
+            &:nth-child(1)
+              font-size max(4vw,50px)
+              font-weight 800
+              color color-2
               display flex
               align-items center
-              justify-content: space-around;
+            &:nth-child(3)
+              display flex
+              flex-direction column
+              span
+                margin-bottom 3%
+                color color-4
+                font-weight bold
+                font-size max(2vw,15px)
+              div
+                display flex
+                align-items center
+                justify-content space-between
+                img
+                  width 40%
+                  margin-bottom 0
+                  &:nth-child(2)
+                    margin-top 2%
     h2
       font-size max(5vw,72px)
-      font-weight normal
+      font-weight 700
     .divisor
       .l1
         background-color color-4
       .l2
         background-color color-2
     p
-      font-size max(2vw,18px)
+      font-size max(3vw,25px)
       margin-top 30px
       margin-bottom 30px
-      max-width 50%
+      max-width 40%
+      font-weight bold
+      span
+        color color-4
+
     .btn
       padding 15px 17px 15px 17px
       margin-top 50px
@@ -253,11 +294,11 @@ main
     align-content center
     margin auto
     padding 0
-    justify-content center
+    justify-content space-between
     img
-      width 40vw
+      width 40%
     #missaoR
-      width 45vw
+      width 55%
       display block !important
       h1
         color color-1
@@ -271,13 +312,14 @@ main
           background-color color-3
       h3
         color color-4
-        font-size 1.8vw
+        font-size max(1.5vw,24px)
         margin-bottom 3%
         width 100%
         padding 1% 0
       p
         color color-6
-        font-size 1.3vw
+
+        font-size max(1.1vw,20px)
       .passCircles
         width 20%
         margin-top 8vh
@@ -318,16 +360,16 @@ main
 // Curso
 #curso
   background-color contrastInside
+  .container
+    display flex
+    flex-wrap wrap
+    justify-content center
   .title
     color contrast
-    margin-bottom 3vh
     &:before
       color color-2
   .passCircles
-    width 20%
-    position absolute
-    bottom 0
-    margin-bottom 15vh
+    width 25%
     .passCircle
       background-color contrast
       &:hover
@@ -337,11 +379,13 @@ main
       background-color transparent
   .fp-tableCell
     height 70vh!important
+    display: flex;
+    justify-content: center;
+    width: 100%;
   .content
     display flex
     align-items baseline
     justify-content center
-    width 80%
     .passArrow
       display flex
       color contrast
@@ -360,26 +404,27 @@ main
         width 20px
         height 30px
     .passos
-      width 60%
+      width 70%
       display flex
-      justify-content space-around
-      margin-left calc(50% - 40%)
+      justify-content space-between
+      align-items flex-start
       .passo
-        width 40%
+        width 45%
         display flex
         justify-content center
         flex-direction column
         align-items center
         img
-          width 70%
+          width 90%
           margin-bottom 10%
         h2
-          font-size 1.5vw
+          width: 100%;
+          font-size max(1.5vw,24px)
           font-weight 800
           color contrast
+          margin-bottom 4%
         p
-          text-align justify
-          font-size 1.2vw
+          font-size max(16px,1.2vw)
           color contrast
           font-weight normal
 
@@ -388,6 +433,13 @@ main
   #top
     background-color color-3
     padding 5px 0 0 0
+    .col-3
+      display block
+    .col-9
+      width 74.6%
+      li
+        &:last-child
+          padding-left 0
     .btn-contrast-full
       &:hover
         color color-3
@@ -625,25 +677,35 @@ input[type ='text']
             box-shadow 0 0 7px rgba(0, 0, 0, 0.05), -0px -0px 7px rgba(0, 0, 0, 0.05), -0px 0px 7px rgba(0, 0, 0, 0.05), 0px -0px 7px rgba(0, 0, 0, 0.05)
 
 #grade
-  background-image url('../images/grade/background.png')
+  background-image url('../images/grade/background.svg')
   background-repeat no-repeat
-  background-size cover
+  background-size 85%
+  background-position center
   background-color contrast
+  .container
+    flex-direction column
+    height 100%
+    display flex
+    align-items center
+    > p
+      text-align center
+      color color-4
+      width 75%
   .fp-tableCell
-    height 100vh!important
+    height 100%!important
   .curso
+    margin-top 2%
     display none
-    width 50%
-    height 60%
-    /*TIRAR ISSO DEPOIS*/
+    width 100%
+    height 62%
     .btn
       margin-bottom 10px
     img
-      margin-left -10%
-      width 90%
       flex 1
+      width 80%
     .info
-      flex 2
+      flex 1
+      padding-left 5%
       width 100%
       ul
         list-style none
@@ -651,23 +713,37 @@ input[type ='text']
         border-left 5px solid contrastInside
         margin 15% 0%
         box-shadow 5px 5px 12px rgba(0, 0, 0, 0.05), -5px -5px 12px rgba(0, 0, 0, 0.05), -5px 5px 12px rgba(0, 0, 0, 0.05), 5px -5px 12px rgba(0, 0, 0, 0.05)
+        width 50%
         .select
           display flex
           align-items center
           color gray
-          padding 10px 0px
+          padding 10px 0
           svg
             width 24px
             height 37px
             margin-right 20px
             margin-left 20px
+        p
+          display none
+          background-color contrastInside
+          color contrast
+          font-weight bold
+          padding 2% 0 1% 3%
+          font-size max(12px, 1vw)
         li
           padding 12px
           display none
           opacity 0
           transition all 1s ease
+          font-size max(13px, 1vw)
         &:hover
+          position relative
+          margin-top  -25%
           cursor pointer
+          margin-bottom -5%
+          p
+            display block
           li
             opacity 1
             color contrast
@@ -677,7 +753,7 @@ input[type ='text']
               content "• "
               color color-4
       h2
-        color black
+        color color-1
         font-size 4vh!important
         margin 0
       p
@@ -706,7 +782,7 @@ input[type ='text']
     color contrastInside
   .content
     height 75%
-    width 50%
+    width 75%
     display flex
     align-items center
     justify-content space-between
@@ -719,17 +795,18 @@ input[type ='text']
       align-items center
       &:hover
         svg
-          transform scale(0.8)
+          transform scale(1.1)
 
       svg
         margin-bottom 5%
         transition all 0.8s
-        width 70%
+        width 60%
       p
         width 80%
         height 50px
         margin-top 5%
         margin-bottom 5%
+        color color-6
 
 #equipe
   background-image url('../images/equipe/background.png')
@@ -794,10 +871,9 @@ input[type ='text']
     &:before
       color color-2
   #timeline
-    margin-top 5vh
+    margin-top 10vh
     margin-bottom 10vh
     ul
-      width 100vw
       display flex
       flex-direction column
       align-items center

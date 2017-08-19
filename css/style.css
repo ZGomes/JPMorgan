@@ -1185,9 +1185,11 @@ input[type ='text']::placeholder:before {
   header #top nav {
     padding: 5px;
     display: none;
+    height: 0;
   }
   header #top nav.active {
     display: block;
+    height: 75vh;
   }
   header #top nav ul {
     display: flex;
@@ -1246,17 +1248,20 @@ input[type ='text']::placeholder:before {
     max-height: 100%;
     max-width: 100%;
   }
+  main #nossaMissao .fp-tableCell {
+    height: 100% !important;
+  }
   main #nossaMissao #missao {
     margin-top: 0;
-    padding-top: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
+    height: 100%;
   }
   main #nossaMissao #missao img {
     display: none;
   }
   main #nossaMissao #missao #missaoR {
-    margin-top: 10%;
     width: 80%;
     display: flex !important;
     flex-direction: column;

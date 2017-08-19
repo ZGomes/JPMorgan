@@ -1018,8 +1018,10 @@ input[type ='text']
       nav
         padding 5px
         display none
+        height  0
         &.active
           display block
+          height  75vh
         ul
           display flex
           list-style none
@@ -1070,15 +1072,17 @@ input[type ='text']
             max-height 100%
             max-width 100%
     #nossaMissao
+      .fp-tableCell
+        height 100%!important
       #missao
         margin-top 0
-        padding-top 0
+        padding 20px
         display flex
         justify-content center
+        height 100%
         img
           display none
         #missaoR
-          margin-top 10%
           width 80%
           display flex !important
           flex-direction column

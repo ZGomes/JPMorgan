@@ -345,7 +345,7 @@ main #inicio .btn {
   fill: #2acfc1;
 }
 #curso {
-  background-color: #743ad0;
+  background-color: #ef4e2e;
 }
 #curso .container {
   display: flex;
@@ -362,7 +362,7 @@ main #inicio .btn {
   color: #f5f5f5;
 }
 #curso .title:before {
-  color: #d8157d;
+  color: #743ad0;
 }
 #curso .passCircles {
   width: 25%;
@@ -400,7 +400,7 @@ main #inicio .btn {
 #curso .content .passArrow:hover {
   padding: 0;
   border: none;
-  color: #d8157d;
+  color: #743ad0;
 }
 #curso .content .passArrow:hover .arrowLeft {
   transform: scale(1.3) rotate(90deg);

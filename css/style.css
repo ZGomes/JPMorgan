@@ -514,7 +514,27 @@ main #inicio .btn {
 .fp-viewing-o-curso-6 #top,
 .fp-viewing-o-curso-7 #top,
 .fp-viewing-o-curso-8 #top {
-  background-color: #743ad0;
+  background-color: #ef4e2e;
+}
+.fp-viewing-o-curso #top #menu a.active,
+.fp-viewing-o-curso-4 #top #menu a.active,
+.fp-viewing-o-curso-1 #top #menu a.active,
+.fp-viewing-o-curso-2 #top #menu a.active,
+.fp-viewing-o-curso-3 #top #menu a.active,
+.fp-viewing-o-curso-5 #top #menu a.active,
+.fp-viewing-o-curso-6 #top #menu a.active,
+.fp-viewing-o-curso-7 #top #menu a.active,
+.fp-viewing-o-curso-8 #top #menu a.active,
+.fp-viewing-o-curso #top li a.active,
+.fp-viewing-o-curso-4 #top li a.active,
+.fp-viewing-o-curso-1 #top li a.active,
+.fp-viewing-o-curso-2 #top li a.active,
+.fp-viewing-o-curso-3 #top li a.active,
+.fp-viewing-o-curso-5 #top li a.active,
+.fp-viewing-o-curso-6 #top li a.active,
+.fp-viewing-o-curso-7 #top li a.active,
+.fp-viewing-o-curso-8 #top li a.active {
+  border-bottom-color: #743ad0;
 }
 .fp-viewing-o-curso #top #menu-icon.active,
 .fp-viewing-o-curso-4 #top #menu-icon.active,
@@ -525,7 +545,7 @@ main #inicio .btn {
 .fp-viewing-o-curso-6 #top #menu-icon.active,
 .fp-viewing-o-curso-7 #top #menu-icon.active,
 .fp-viewing-o-curso-8 #top #menu-icon.active {
-  background-color: #f5f5f5;
+  background-color: #743ad0;
 }
 .fp-viewing-o-curso #top #menu-icon.active .line,
 .fp-viewing-o-curso-4 #top #menu-icon.active .line,
@@ -536,7 +556,7 @@ main #inicio .btn {
 .fp-viewing-o-curso-6 #top #menu-icon.active .line,
 .fp-viewing-o-curso-7 #top #menu-icon.active .line,
 .fp-viewing-o-curso-8 #top #menu-icon.active .line {
-  background-color: #743ad0;
+  background-color: #ef4e2e;
 }
 .fp-viewing-grade-curricular #top {
   background-color: #743ad0;

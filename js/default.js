@@ -4,6 +4,7 @@ $(function () {
 
 
 function init() {
+    anim();
     scroll();
     load();
     menu();
@@ -15,11 +16,15 @@ function init() {
         loop: true,
         loopCount: 0,
         backDelay: 2000
-    }
-
+    };
     var typed = new Typed("#dev-area", options);
 }
-
+function anim() {
+   mobile = new Vivus('sMobile', {type: 'scenario-sync', duration: 20, forceRender: false});
+   web = new Vivus('sWeb', {type: 'scenario-sync', duration: 20, forceRender: false});
+   back = new Vivus('sBack', {type: 'scenario-sync', duration: 20, forceRender: false});
+   iot = new Vivus('sIOT', {type: 'scenario-sync', duration: 7, forceRender: false});
+}
 function load() {
     $("#curso .passCircles span.passCircle:nth-child(1)").addClass('active');
     $("#equipe .passCircles span.passCircle:nth-child(1)").addClass('active');
@@ -27,16 +32,17 @@ function load() {
     $("#curso .fp-controlArrow.fp-prev .passArrow").append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.77 28.43" class="arrow arrowRight"><defs><style>.faa45763-1a5b-4df9-a16d-f6483a126e3f{fill:#e2e2e2;}</style></defs><title>arrow</title><g id="b989d351-0c07-4193-9862-0194240d6ba1" data-name="Layer 2"><g id="2e1cc3ac-5c50-40af-a2a0-dcd9f43c9701" data-name="Layer 1"><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="14.21" y="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="10.66" y="3.55" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" y="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="3.55" y="3.55" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="7.11" y="7.11" width="3.55" height="21.32"/></g></g></svg>Anterior');
     $("#curso .fp-controlArrow.fp-next .passArrow").append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.77 28.43" class="arrow arrowLeft"><defs><style>.faa45763-1a5b-4df9-a16d-f6483a126e3f{fill:#e2e2e2;}</style></defs><title>arrow</title><g id="b989d351-0c07-4193-9862-0194240d6ba1" data-name="Layer 2"><g id="2e1cc3ac-5c50-40af-a2a0-dcd9f43c9701" data-name="Layer 1"><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="14.21" y="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="10.66" y="3.55" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" y="7.11" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="3.55" y="3.55" width="3.55" height="3.55"/><rect class="faa45763-1a5b-4df9-a16d-f6483a126e3f" x="7.11" y="7.11" width="3.55" height="21.32"/></g></g></svg>Próximo');
 
-    actionPass("curso","o-curso");
-    actionPass("equipe","nossa-equipe");
+    actionPass("curso", "o-curso");
+    actionPass("equipe", "nossa-equipe");
 }
 function scroll() {
     $("main").fullpage({
         anchors: ['bem-vindo', 'a-iniciativa', 'o-curso', 'grade-curricular', 'linha-do-tempo', 'nossa-equipe', 'nossos-parceiros', 'contate-nos'],
         menu: '#menu',
         afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
+
             if (anchorLink == 'o-curso') {
-                activePass("curso",slideIndex);
+                activePass("curso", slideIndex);
                 if (slideIndex === 0) {
                     $("#curso .fp-controlArrow.fp-prev").css('display', 'none');
                     $("#curso .fp-controlArrow.fp-next").css('display', 'block');
@@ -55,7 +61,12 @@ function scroll() {
             if (index === 5) {
                 $(".fp-scrollable").data('iscrollInstance').scrollTo(0, 0);
             }
-
+            if (index === 4) {
+                mobile.play();
+                web.play();
+                back.play();
+                iot.play();
+            }
         }
     });
 }
@@ -72,26 +83,29 @@ function menu() {
 
 function grade() {
     $(".grades").on("click", function () {
-        $("#grade h2").css({
+        $("#grade h2").animate({
             "margin-right": "30%",
             "font-weight": "bold",
             "font-size": "15px"
-        });
-        $("#grade .content").css({
+        }, 500, "linear");
+        $("#grade h2").css({
+            "font-weight": "bold"
+        }, 500, "linear");
+        $("#grade .content").animate({
             "margin-top": "1%",
-            "margin-right": "15%",
-            "height": "auto",
-            "width": "25%",
+            "height": "10%",
             "align-items": "normal",
-            "flex-wrap": "nowrap"
-        });
+            "flex-wrap": "nowrap",
+            "width": "25%"
+        }, 500, "linear");
+        $("li.grades svg").css("width","75%");
         $("#grade").css({
             "background-size": "65%",
             "background-position": "-17%"
         });
-        $(".grades").css("align-items", "flex-start"),
-        $("#grade .container").css("align-items", "flex-start")
-        $(".grades p,#grade .container > p").css({"display":"none"});
+        $(".grades").css("margin-left", "-3%"),
+            $("#grade .container").css("align-items", "flex-start")
+        $(".grades p,#grade .container > p").css({"display": "none"});
         $(".grades svg line,.grades svg path,.grades svg circle,.grades svg polyline").removeAttr('style');
         $(".grades svg line,.grades svg path,.grades svg circle,.grades svg polyline").css({
             "will-change": "fill,stroke",
@@ -131,15 +145,18 @@ function grade() {
                 break;
         }
         $(".curso").css('display', 'none');
+        $("#" + $(this).data("grade") + "View").fadeIn(1500);
         $("#" + $(this).data("grade") + "View").css('display', 'flex');
-    })
+})
 }
-function actionPass(id,pagina) {
-    $("#"+id+" .passCircles span.passCircle").on('click', function () {
+function actionPass(id, pagina) {
+    $("#" + id + " .passCircles span.passCircle").on('click', function () {
         $.fn.fullpage.moveTo(pagina, $(this).data('pass'));
     });
 }
-function activePass(type,value) {
-    $("#"+ type +" .passCircles span.passCircle").removeClass('active');
-    $("#"+ type +" .passCircles span.passCircle:nth-child(" + (value + 1) + ")").addClass('active');
+function activePass(type, value) {
+    $("#" + type + " .passCircles span.passCircle").removeClass('active');
+    $("#" + type + " .passCircles span.passCircle:nth-child(" + (value + 1) + ")").addClass('active');
 }
+
+

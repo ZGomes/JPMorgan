@@ -11,7 +11,7 @@
         }
     }
 	.st0{fill:none;stroke:#D8157D;stroke-miterlimit:10;}
-	.st1{fill:#D8157D;transform-origin: 200px 200px; animation: ballRotation 30s infinite linear}
+	.st1{fill:#D8157D;transform-origin: 200px 197px; animation: ballRotation 40s infinite linear}
 	.st2{fill:none;}
 	.st3{fill:#FFFFFF;}
 	.st4{clip-path:url(#SVGID_2_);}

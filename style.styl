@@ -42,18 +42,13 @@ contrast = #f5f5f5
 }
 
 @keyframes pulse {
-  from {
-    opacity .9
-    transform scaleX(1.1)
-  }
-  to {
-    transform scaleX(0)
-    opacity 1
+  to{
+    text-shadow 0px 0px 15px rgba(216, 21, 125, 0.75)
   }
 }
 
 @keyframes grades {
-  to{
+  to {
     stroke-dashoffset 0
   }
 }
@@ -117,7 +112,7 @@ header
         justify-content space-between
         li
           a
-            font-size max(13px,.9vw)
+            font-size max(13px, .9vw)
             color contrast
             transition border 1s, color 1s
             &.active
@@ -215,11 +210,14 @@ main
           display flex
           .col-4
             &:nth-child(1)
-              font-size max(4vw,50px)
+              font-size max(4vw, 50px)
               font-weight 800
               color color-2
               display flex
               align-items center
+              span
+                animation pulse 1s infinite cubic-bezier(0.66, 0, 0, 1)
+                text-shadow 0px 0px 0px rgba(216, 21, 125, 0.9)
             &:nth-child(3)
               display flex
               flex-direction column
@@ -227,7 +225,7 @@ main
                 margin-bottom 3%
                 color color-4
                 font-weight bold
-                font-size max(2vw,15px)
+                font-size max(2vw, 15px)
               div
                 display flex
                 align-items center
@@ -238,7 +236,7 @@ main
                   &:nth-child(2)
                     margin-top 2%
     h2
-      font-size max(5vw,72px)
+      font-size max(5vw, 72px)
       font-weight 700
     .divisor
       .l1
@@ -246,7 +244,7 @@ main
       .l2
         background-color color-2
     p
-      font-size max(3vw,25px)
+      font-size max(3vw, 25px)
       margin-top 30px
       margin-bottom 30px
       max-width 40%
@@ -284,11 +282,11 @@ main
   &:before
     content "// "
 
-
 #nossaMissao
-  background-image url('../images/missao/background.png')
+  background-image url('../images/missao/background.svg')
   background-repeat no-repeat
-  background-size cover
+  background-size 80%
+  background-position -120% 50%
   background-color contrast
   justify-content center
   display flex
@@ -317,14 +315,14 @@ main
           background-color color-3
       h3
         color color-4
-        font-size max(1.5vw,24px)
+        font-size max(1.5vw, 24px)
         margin-bottom 3%
         width 100%
         padding 1% 0
       p
         color color-6
 
-        font-size max(1.1vw,20px)
+        font-size max(1.1vw, 20px)
       .passCircles
         width 20%
         margin-top 8vh
@@ -393,7 +391,7 @@ main
       border 2px solid color-4
       background-color transparent
   .fp-tableCell
-    height 70vh!important
+    height 70vh !important
     display: flex;
     justify-content: center;
     width: 100%;
@@ -434,12 +432,12 @@ main
           margin-bottom 10%
         h2
           width: 100%;
-          font-size max(1.5vw,24px)
+          font-size max(1.5vw, 24px)
           font-weight 800
           color contrast
           margin-bottom 4%
         p
-          font-size max(16px,1.2vw)
+          font-size max(16px, 1.2vw)
           color contrast
           font-weight normal
 
@@ -472,8 +470,8 @@ main
         a.active
           border-bottom-color color-3
 
-.fp-viewing-o-curso,.fp-viewing-o-curso-4,.fp-viewing-o-curso-1,.fp-viewing-o-curso-2,.fp-viewing-o-curso-3,
-.fp-viewing-o-curso-4,.fp-viewing-o-curso-5,.fp-viewing-o-curso-6,.fp-viewing-o-curso-7,.fp-viewing-o-curso-8
+.fp-viewing-o-curso, .fp-viewing-o-curso-4, .fp-viewing-o-curso-1, .fp-viewing-o-curso-2, .fp-viewing-o-curso-3,
+.fp-viewing-o-curso-4, .fp-viewing-o-curso-5, .fp-viewing-o-curso-6, .fp-viewing-o-curso-7, .fp-viewing-o-curso-8
   #top
     background-color color-3
     #menu
@@ -521,7 +519,7 @@ main
         background-color contrast
         color color-4
 
-.fp-viewing-nossa-equipe-1,.fp-viewing-nossa-equipe-2,.fp-viewing-nossa-equipe-3,.fp-viewing-nossa-equipe-4
+.fp-viewing-nossa-equipe-1, .fp-viewing-nossa-equipe-2, .fp-viewing-nossa-equipe-3, .fp-viewing-nossa-equipe-4
   #top
     background-color contrastInside
     #menu-icon
@@ -553,7 +551,6 @@ main
       a.active
         border-bottom-color contrastInside
 
-
 //edit arrows
 .arrowLeft
   transform rotate(90deg)
@@ -579,7 +576,7 @@ main
     &:before
       color contrastInside
   .fp-tableCell
-    height 100vh!important
+    height 100vh !important
   .content
     justify-content space-evenly
     margin-top 5%
@@ -712,7 +709,7 @@ input[type ='text']
       color color-4
       width 75%
   .fp-tableCell
-    height 100%!important
+    height 100% !important
   .curso
     margin-top 2%
     display none
@@ -759,7 +756,7 @@ input[type ='text']
           font-size max(13px, 1vw)
         &:hover
           position relative
-          margin-top  -25%
+          margin-top -25%
           cursor pointer
           margin-bottom -5%
           p
@@ -774,7 +771,7 @@ input[type ='text']
               color color-4
       h2
         color color-1
-        font-size 4vh!important
+        font-size 4vh !important
         margin 0
       p
         color contrastInside
@@ -841,7 +838,7 @@ input[type ='text']
     color contrastInside
     &:before
       color color-4
-  .slide,.passCircles
+  .slide, .passCircles
     display none
   #equipe-list
     width 100%
@@ -918,7 +915,8 @@ input[type ='text']
         &:nth-child(odd)
           text-align end
           padding-right 40px
-          margin-right 196px
+          margin-right 296px
+          width 300px
           border-right 2px solid contrast
           .dia
             &:before
@@ -927,18 +925,22 @@ input[type ='text']
             &:before
               right -52px
         &:nth-child(even)
+          width 300px
           padding-left 40px
-          margin-left 200px
+          margin-left 300px
           border-left 2px solid contrast
           .dia
             color white
             &:before
-              right 195px
+              right 295px
           .importante.dia
             &:before
-              right 187px
+              right 287px
         &:nth-last-child(1)
           border none !important
+          .dia
+            &:before
+              background-color contrast
         .importante.dia
           &:before
             border 6px solid contrast
@@ -946,7 +948,7 @@ input[type ='text']
             height 13px
         .dia
           font-size 19px
-          font-weight 800
+          font-weight 700
           position relative
           color#fff
           &:before
@@ -961,6 +963,7 @@ input[type ='text']
             align-self center
       .importante
         color contrastInside !important
+
 #parceiros
   background-color contrast
   .title
@@ -994,6 +997,7 @@ input[type ='text']
   body
     background-size auto auto
     background-position center center
+
   header
     display flex
     justify-content center
@@ -1004,11 +1008,11 @@ input[type ='text']
       .container
         padding 0 !important
       .col-3
-        display block!important
+        display block !important
         margin-top 3%
         margin-left 3%
       .col-9
-        width 100%!important
+        width 100% !important
       img
         float left
         max-width 100px
@@ -1032,10 +1036,10 @@ input[type ='text']
       nav
         padding 5px
         display none
-        height  0
+        height 0
         &.active
           display block
-          height  75vh
+          height 75vh
         ul
           display flex
           list-style none
@@ -1048,7 +1052,8 @@ input[type ='text']
             &:last-child
               margin-top 10%
               margin-bottom 5%
-              justify-content center!important
+              justify-content center !important
+
   main
     #inicio
       padding-bottom 10px
@@ -1056,7 +1061,7 @@ input[type ='text']
       .btn
         display none
       h2
-        font-size max(10vw,40px)
+        font-size max(10vw, 40px)
       .container
         justify-content flex-end
         img
@@ -1066,7 +1071,7 @@ input[type ='text']
             margin-bottom 15%
           &:nth-child(2)
             .col-4
-              &:nth-child(1),&:nth-child(2)
+              &:nth-child(1), &:nth-child(2)
                 display none
       p
         font-size 5vmin
@@ -1087,7 +1092,7 @@ input[type ='text']
             max-width 100%
     #nossaMissao
       .fp-tableCell
-        height 100%!important
+        height 100% !important
       #missao
         margin-top 0
         padding 20px
@@ -1137,10 +1142,10 @@ input[type ='text']
         height 70%
     #grade
       h2
-        margin-right 0!important
+        margin-right 0 !important
       .content
-        width 100%!important
-        margin-right 0!important
+        width 100% !important
+        margin-right 0 !important
         padding 20px
         display flex
         align-items center
@@ -1152,7 +1157,8 @@ input[type ='text']
           text-align center
           p
             font-size 3vw
-            margin-right 0!important
+            margin-right 0 !important
+
   #equipe
     .container
       display flex
@@ -1175,13 +1181,13 @@ input[type ='text']
       flex-wrap wrap
       justify-content space-around
       .fp-tableCell
-        height 100%!important
+        height 100% !important
         display flex
         flex-wrap wrap
         justify-content space-around
         li
           list-style none
-          width 40vw!important
+          width 40vw !important
           display flex
           flex-direction column
           align-items center
@@ -1219,39 +1225,41 @@ input[type ='text']
           color contrast
         .gamb
           background-color transparent
-          width 200px
-          height 20vh
-          top -8vh
+          width 300px
+          height 155px
+          top -40px
           border-left 2px solid contrast
           z-index -1
           position relative
           margin-bottom -6vh
         li
           height 15vh
-          min-width 200px
+          min-width 250px
           list-style none
           padding-left 40px
-          padding-right 0!important
-          margin 0!important
-          border-right 0!important
+          padding-right 0 !important
+          margin 0 !important
+          border-right 0 !important
           border-left 2px solid contrast
-          text-align start!important
+          text-align start !important
           .dia
             color white
             &:before
-              right 195px!important
+              right 295px !important
           .importante.dia
             &:before
-              right 187px!important
+              right 287px !important
+
   #inscricoes
     .content
-      width 85%!important
+      width 85% !important
       h3
         font-size 8vw
       p
         font-size 5vw
       .btn
         margin-top 4vh
+
   #fale-conosco
     background-color color-3
     .content
@@ -1286,9 +1294,10 @@ input[type ='text']
           text-align center
           padding 0
           margin 0
+
   #curso
     .fp-tableCell
-      height 60vh!important
+      height 60vh !important
     .content
       width 90%
       .slide
@@ -1301,7 +1310,7 @@ input[type ='text']
                 display block
 
       .fp-controlArrow
-        display none!important
+        display none !important
       a
         display none
       .passos
@@ -1320,6 +1329,7 @@ input[type ='text']
       .passCircle
         &:nth-child(n + 5)
           display block
+
   #grade
     .curso
       width 90%

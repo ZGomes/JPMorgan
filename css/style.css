@@ -1033,6 +1033,9 @@ input[type ='text']::placeholder:before {
 #equipe #equipe-list li .content .nome {
   font-size: 20px;
 }
+#equipe #equipe-list li:hover {
+  cursor: pointer;
+}
 #equipe #equipe-list li:hover .content {
   opacity: 1;
 }
@@ -1049,7 +1052,7 @@ input[type ='text']::placeholder:before {
   text-align: center;
 }
 #tempo .title:before {
-  color: #d8157d;
+  color: #743ad0;
 }
 #tempo #timeline {
   margin-top: 10vh;
@@ -1085,6 +1088,9 @@ input[type ='text']::placeholder:before {
   width: 300px;
   border-right: 2px solid #f5f5f5;
 }
+#tempo #timeline ul li:nth-child(odd) .dia {
+  font-size: 16px;
+}
 #tempo #timeline ul li:nth-child(odd) .dia:before {
   right: -45px;
 }
@@ -1098,7 +1104,8 @@ input[type ='text']::placeholder:before {
   border-left: 2px solid #f5f5f5;
 }
 #tempo #timeline ul li:nth-child(even) .dia {
-  color: #fff;
+  color: #743ad0;
+  font-size: 16px;
 }
 #tempo #timeline ul li:nth-child(even) .dia:before {
   right: 295px;
@@ -1121,7 +1128,7 @@ input[type ='text']::placeholder:before {
   font-size: 19px;
   font-weight: 700;
   position: relative;
-  color: #fff;
+  color: #743ad0;
 }
 #tempo #timeline ul li .dia:before {
   content: '';
@@ -1449,12 +1456,12 @@ input[type ='text']::placeholder:before {
   #tempo #timeline ul .gamb {
     background-color: transparent;
     width: 300px;
-    height: 155px;
+    height: 100px;
     top: -40px;
     border-left: 2px solid #f5f5f5;
     z-index: -1;
     position: relative;
-    margin-bottom: -6vh;
+    margin: -6vh 0px;
   }
   #tempo #timeline ul li {
     height: 15vh;
@@ -1468,7 +1475,7 @@ input[type ='text']::placeholder:before {
     text-align: start !important;
   }
   #tempo #timeline ul li .dia {
-    color: #fff;
+    color: #743ad0;
   }
   #tempo #timeline ul li .dia:before {
     right: 295px !important;
@@ -1571,6 +1578,9 @@ input[type ='text']::placeholder:before {
   #curso .passCircles .passCircle:nth-child(n + 5) {
     display: block;
   }
+  #grade {
+    height: auto !important;
+  }
   #grade .curso {
     width: 90%;
     margin-left: auto;
@@ -1583,6 +1593,11 @@ input[type ='text']::placeholder:before {
     width: 100%;
   }
   #grade .curso .info {
+    width: 100%;
+    padding: 0%;
+  }
+  #grade .curso .info ul {
+    margin: 15% 0%;
     width: 100%;
   }
 }

@@ -877,6 +877,7 @@ input[type ='text']
         .nome
           font-size 20px
       &:hover
+        cursor pointer
         .content
           opacity 1
         img
@@ -890,7 +891,7 @@ input[type ='text']
     color contrast
     text-align center
     &:before
-      color color-2
+      color contrastInside
   #timeline
     margin-top 10vh
     margin-bottom 10vh
@@ -919,6 +920,7 @@ input[type ='text']
           width 300px
           border-right 2px solid contrast
           .dia
+            font-size 16px
             &:before
               right -45px
           .importante.dia
@@ -930,7 +932,8 @@ input[type ='text']
           margin-left 300px
           border-left 2px solid contrast
           .dia
-            color white
+            color contrastInside
+            font-size 16px
             &:before
               right 295px
           .importante.dia
@@ -950,7 +953,7 @@ input[type ='text']
           font-size 19px
           font-weight 700
           position relative
-          color#fff
+          color contrastInside
           &:before
             content ''
             position absolute
@@ -1226,12 +1229,12 @@ input[type ='text']
         .gamb
           background-color transparent
           width 300px
-          height 155px
+          height 100px
           top -40px
           border-left 2px solid contrast
           z-index -1
           position relative
-          margin-bottom -6vh
+          margin -6vh 0px
         li
           height 15vh
           min-width 250px
@@ -1243,7 +1246,7 @@ input[type ='text']
           border-left 2px solid contrast
           text-align start !important
           .dia
-            color white
+            color contrastInside
             &:before
               right 295px !important
           .importante.dia
@@ -1331,6 +1334,7 @@ input[type ='text']
           display block
 
   #grade
+    height auto !important
     .curso
       width 90%
       margin-left auto
@@ -1342,3 +1346,8 @@ input[type ='text']
         width 100%
       .info
         width 100%
+        padding 0%
+        ul
+          margin 15% 0%
+          width 100%
+

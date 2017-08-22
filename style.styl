@@ -41,11 +41,6 @@ contrast = #f5f5f5
   }
 }
 
-@keyframes pulse {
-  to{
-    text-shadow 0px 0px 15px rgba(216, 21, 125, 0.75)
-  }
-}
 
 @keyframes grades {
   to {
@@ -56,22 +51,22 @@ contrast = #f5f5f5
 // FONTS
 @font-face
   font-family "Proxima Nova"
-  src url('../fonts/Proxima Nova Bold.ttf')
+  src url('../fonts/pBold.ttf')
   font-weight bold
 
 @font-face
   font-family "Proxima Nova"
-  src url('../fonts/Proxima Nova Extrabold.otf')
+  src url('../fonts/pExtra.otf')
   font-weight 800
 
 @font-face
   font-family "Proxima Nova"
-  src url('../fonts/Proxima Nova Semibold.otf')
+  src url('../fonts/pSemibold.otf')
   font-weight 700
 
 @font-face
   font-family "Proxima Nova"
-  src url('../fonts/Proxima Nova Light.otf')
+  src url('../fonts/pLight.otf')
 
 *
   margin 0
@@ -180,10 +175,12 @@ section
       margin-left 3px
   .fp-tableCell
     opacity 0
-    animation appear-out 0.6s ease forwards
+    animation appear-out 0.6s ease-in forwards
+    will-change transform, opacity
   &.active
     .fp-tableCell
-      animation appear 1.3s ease forwards 0.4s
+      animation appear 1.3s ease-in forwards 0.4s
+      will-change transform, opacity
     .divisor
       .l2
         animation lineGrowFX 1s ease forwards 0.8s
@@ -215,9 +212,6 @@ main
               color color-2
               display flex
               align-items center
-              span
-                animation pulse 1s infinite cubic-bezier(0.66, 0, 0, 1)
-                text-shadow 0px 0px 0px rgba(216, 21, 125, 0.9)
             &:nth-child(3)
               display flex
               flex-direction column
@@ -566,53 +560,6 @@ main
   transition transform 1s
   cursor pointer
 
-//Inscricoes
-#inscricoes
-  background-image url('../images/inscricoes/pessoas.jpg')
-  background-repeat no-repeat
-  background-size cover
-  .title
-    color contrast
-    &:before
-      color contrastInside
-  .fp-tableCell
-    height 100vh !important
-  .content
-    justify-content space-evenly
-    margin-top 5%
-    display flex
-    align-items center
-    flex-direction column
-    width 50%
-    height 70%
-    .divisor
-      margin-top 2%
-      margin-bottom 2%
-      .l1
-        background-color color-4
-      .l2
-        background-color contrast
-    h3
-      text-align center
-      font-size 65px
-      color color-4
-      width 100%
-      padding 10px
-    p
-      text-align center
-      font-size 26px
-      color contrast
-      margin-bottom 5%
-    .btn
-      background-color transparent
-      color contrast
-      border 1px solid contrast
-      font-size 25px
-      font-weight bold
-      &:hover
-        background-color contrast
-        color color-4
-
 textarea
   border-radius 5px
   border none
@@ -724,25 +671,32 @@ input[type ='text']
       flex 1
       padding-left 5%
       width 100%
+      .select
+        background #fff
+        box-shadow 1px 2px 10px rgba(0,0,0,.2)
+        display flex
+        align-items center
+        color gray
+        padding 10px 0
+        &:hover
+          ~ ul
+            transform scaleY(1)
+        svg
+          width 24px
+          height 37px
+          margin-right 20px
+          margin-left 20px
       ul
+        transform scaleY(0)
+        transition 0.2s ease-in
+        transform-origin top
         list-style none
         background-color white
         border-left 5px solid contrastInside
         margin 15% 0%
         box-shadow 5px 5px 12px rgba(0, 0, 0, 0.05), -5px -5px 12px rgba(0, 0, 0, 0.05), -5px 5px 12px rgba(0, 0, 0, 0.05), 5px -5px 12px rgba(0, 0, 0, 0.05)
         width 50%
-        .select
-          display flex
-          align-items center
-          color gray
-          padding 10px 0
-          svg
-            width 24px
-            height 37px
-            margin-right 20px
-            margin-left 20px
-        p
-          display none
+        .title
           background-color contrastInside
           color contrast
           font-weight bold
@@ -750,25 +704,20 @@ input[type ='text']
           font-size max(12px, 1vw)
         li
           padding 12px
-          display none
-          opacity 0
           transition all 1s ease
           font-size max(13px, 1vw)
+          opacity 1
+          color contrast
+          display block
+          background-color contrastInside
+          &:before
+            content "• "
+            color color-4
         &:hover
           position relative
           margin-top -25%
           cursor pointer
           margin-bottom -5%
-          p
-            display block
-          li
-            opacity 1
-            color contrast
-            display block
-            background-color contrastInside
-            &:before
-              content "• "
-              color color-4
       h2
         color color-1
         font-size 4vh !important
@@ -826,10 +775,11 @@ input[type ='text']
         color color-6
 
 #equipe
-  background-image url('../images/equipe/background.png')
+  background-image url('../images/equipe/background.svg')
   background-repeat no-repeat
-  background-size cover
-  background-color contrast
+  background-size 75%
+  background-color #f5f5f5
+  background-position 50% 60%
   #equipe-canvas
     width 100%
     height 100%
@@ -896,18 +846,31 @@ input[type ='text']
     margin-top 10vh
     margin-bottom 10vh
     padding-bottom 1vh
+    .mes
+      background-color contrastInside
+      color contrast
+      width 145px
+      left calc(50% - 75px)
+      position fixed
+    .line
+      background-color: contrast;
+      width 2px
+      height 250px
+      left calc(50% - 1px)
+      margin-top -110px
+      position: fixed
+      z-index -1
     ul
       display flex
       flex-direction column
       align-items center
-      .mes
-        background-color contrastInside
-        color contrast
-      .gamb
-        background-color contrast
-        width 2px
-        height 10vh
+      &:not(:nth-child(1))
+        margin-top 10%
       li
+        &.fim
+          .dia
+            &:before
+              background-color contrast
         height 10vh
         min-width 200px
         list-style none
@@ -941,9 +904,6 @@ input[type ='text']
               right 287px
         &:nth-last-child(1)
           border none !important
-          .dia
-            &:before
-              background-color contrast
         .importante.dia
           &:before
             border 6px solid contrast
@@ -1135,14 +1095,6 @@ input[type ='text']
         display flex
         width 90%
         flex-direction column
-    #inscricoes
-      .content
-        margin-top 5%
-        display flex
-        align-items center
-        flex-direction column
-        width 90%
-        height 70%
     #grade
       h2
         margin-right 0 !important
@@ -1253,16 +1205,6 @@ input[type ='text']
             &:before
               right 287px !important
 
-  #inscricoes
-    .content
-      width 85% !important
-      h3
-        font-size 8vw
-      p
-        font-size 5vw
-      .btn
-        margin-top 4vh
-
   #fale-conosco
     background-color color-3
     .content
@@ -1346,8 +1288,8 @@ input[type ='text']
         width 100%
       .info
         width 100%
-        padding 0%
+        padding 0
         ul
-          margin 15% 0%
+          margin 15% 0
           width 100%
 

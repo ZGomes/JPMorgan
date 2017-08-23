@@ -58,7 +58,7 @@ function scroll() {
             }
         },
         onLeave: function (anchorIndex, index) {
-            if (index === 5) {
+            if (index !== 5) {
                 $(".fp-scrollable").data('iscrollInstance').scrollTo(0, 0);
             }
             if (index === 4) {

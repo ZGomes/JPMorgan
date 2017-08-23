@@ -780,7 +780,8 @@ input[type ='text']::placeholder:before {
   height: 62%;
 }
 #grade .curso .btn {
-  margin-bottom: 10px;
+  position: absolute;
+  margin-top: 2%;
 }
 #grade .curso img {
   flex: 1;
@@ -797,7 +798,10 @@ input[type ='text']::placeholder:before {
   display: flex;
   align-items: center;
   color: #808080;
+  width: 75%;
+  margin-top: 5%;
   padding: 10px 0;
+  cursor: pointer;
 }
 #grade .curso .info .select:hover ~ ul {
   transform: scaleY(1);
@@ -815,16 +819,20 @@ input[type ='text']::placeholder:before {
   list-style: none;
   background-color: #fff;
   border-left: 5px solid #743ad0;
-  margin: 15% 0%;
   box-shadow: 5px 5px 12px rgba(0,0,0,0.05), -5px -5px 12px rgba(0,0,0,0.05), -5px 5px 12px rgba(0,0,0,0.05), 5px -5px 12px rgba(0,0,0,0.05);
-  width: 50%;
+  width: 75%;
+  height: 1px;
 }
 #grade .curso .info ul .title {
   background-color: #743ad0;
   color: #f5f5f5;
   font-weight: bold;
-  padding: 2% 0 1% 3%;
+  padding: 3% 0 1% 3%;
   font-size: 12px;
+  margin-top: 0 !important;
+}
+#grade .curso .info ul .title:before {
+  content: "";
 }
 #grade .curso .info ul li {
   padding: 12px;
@@ -841,9 +849,6 @@ input[type ='text']::placeholder:before {
 }
 #grade .curso .info ul:hover {
   position: relative;
-  margin-top: -25%;
-  cursor: pointer;
-  margin-bottom: -5%;
 }
 #grade .curso .info h2 {
   color: #101d48;
@@ -854,8 +859,8 @@ input[type ='text']::placeholder:before {
   color: #743ad0;
 }
 #grade .curso .info .divisor {
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 #grade .curso .info .divisor .l1 {
   background-color: #2acfc1;
@@ -1005,30 +1010,22 @@ input[type ='text']::placeholder:before {
   background-color: #743ad0;
   color: #f5f5f5;
   width: 145px;
+  margin-top: -14vmin;
   left: calc(50% - 75px);
   position: fixed;
-}
-#tempo #timeline .line {
-  background-color: #f5f5f5;
-  width: 2px;
-  height: 250px;
-  left: calc(50% - 1px);
-  margin-top: -110px;
-  position: fixed;
-  z-index: -1;
 }
 #tempo #timeline ul {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#tempo #timeline ul:not(:nth-child(1)) {
-  margin-top: 10%;
-}
 #tempo #timeline ul li {
   height: 10vh;
   min-width: 200px;
   list-style: none;
+}
+#tempo #timeline ul li.fim {
+  border: 0 !important;
 }
 #tempo #timeline ul li.fim .dia:before {
   background-color: #f5f5f5;
@@ -1069,7 +1066,7 @@ input[type ='text']::placeholder:before {
   right: 287px;
 }
 #tempo #timeline ul li:nth-last-child(1) {
-  border: none !important;
+  height: 25vh;
 }
 #tempo #timeline ul li .importante.dia:before {
   border: 6px solid #f5f5f5;
@@ -1165,7 +1162,7 @@ input[type ='text']::placeholder:before {
     height: 40px;
     border: 2px solid #f5f5f5;
     float: right;
-    margin-right: 20px;
+    margin-right: 6%;
   }
   header #top #menu-icon.active {
     background-color: #f5f5f5;

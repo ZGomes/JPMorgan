@@ -837,6 +837,10 @@ input[type ='text']::placeholder:before {
   padding: 10px 0;
   cursor: pointer;
   z-index: 90;
+  border-left: 4px solid #fff;
+}
+#grade .curso .info .select:hover {
+  border-left: 4px solid #743ad0;
 }
 #grade .curso .info .select:hover ~ ul {
   transform: scaleY(1);

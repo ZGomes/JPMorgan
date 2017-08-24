@@ -235,6 +235,7 @@ main #inicio .btn {
   transition: all 1s;
   outline: none;
   border: none;
+  z-index: 0;
 }
 .btn.btn-contrast {
   border: 3px solid #743ad0;
@@ -822,8 +823,8 @@ input[type ='text']::placeholder:before {
 }
 #grade .curso .info {
   flex: 1;
-  padding-left: 5%;
-  width: 100%;
+  padding: 0% 8%;
+  width: 50%;
 }
 #grade .curso .info .select {
   background: #fff;
@@ -835,6 +836,7 @@ input[type ='text']::placeholder:before {
   margin-top: 5%;
   padding: 10px 0;
   cursor: pointer;
+  z-index: 90;
 }
 #grade .curso .info .select:hover ~ ul {
   transform: scaleY(1);
@@ -846,6 +848,7 @@ input[type ='text']::placeholder:before {
   margin-left: 20px;
 }
 #grade .curso .info ul {
+  z-index: 89;
   transform: scaleY(0);
   transition: 0.2s ease-in;
   transform-origin: top;
@@ -868,6 +871,7 @@ input[type ='text']::placeholder:before {
   content: "";
 }
 #grade .curso .info ul li {
+  z-index: 89;
   padding: 12px;
   transition: all 1s ease;
   font-size: 13px;
@@ -900,6 +904,9 @@ input[type ='text']::placeholder:before {
 }
 #grade .curso .info .divisor .l2 {
   background-color: #ef4e2e;
+}
+#grade .curso .info .btn {
+  z-index: -1;
 }
 #grade .circleGround {
   display: flex;

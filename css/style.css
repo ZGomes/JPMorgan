@@ -262,6 +262,9 @@ main #inicio .btn {
   display: flex;
   margin-top: -3vh;
 }
+#nossaMissao.active img {
+  transform: scale(1.4);
+}
 #nossaMissao #missao {
   display: flex;
   flex-direction: row;
@@ -271,10 +274,11 @@ main #inicio .btn {
   justify-content: space-between;
 }
 #nossaMissao #missao img {
-  width: 40%;
+  transition: 1s 0.4s ease;
+  width: 55%;
 }
 #nossaMissao #missao #missaoR {
-  width: 55%;
+  width: 45%;
   display: block !important;
 }
 #nossaMissao #missao #missaoR h1 {
@@ -1158,6 +1162,9 @@ input[type ='text']::placeholder:before {
   transition: all 0.6s ease;
 }
 @media only screen and (max-width: 1023px) {
+  .fp-viewing-bem-vindo #top .col-9 li:last-child {
+    justify-content: center;
+  }
   body {
     background-size: auto auto;
     background-position: center center;

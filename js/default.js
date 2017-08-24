@@ -20,10 +20,10 @@ function init() {
     var typed = new Typed("#dev-area", options);
 }
 function anim() {
-   mobile = new Vivus('sMobile', {type: 'scenario-sync', duration: 20, forceRender: false});
-   web = new Vivus('sWeb', {type: 'scenario-sync', duration: 20, forceRender: false});
-   back = new Vivus('sBack', {type: 'scenario-sync', duration: 20, forceRender: false});
-   iot = new Vivus('sIOT', {type: 'scenario-sync', duration: 7, forceRender: false});
+    mobile = new Vivus('sMobile', {type: 'scenario-sync', duration: 20, forceRender: false});
+    web = new Vivus('sWeb', {type: 'scenario-sync', duration: 20, forceRender: false});
+    back = new Vivus('sBack', {type: 'scenario-sync', duration: 20, forceRender: false});
+    iot = new Vivus('sIOT', {type: 'scenario-sync', duration: 7, forceRender: false});
 }
 function load() {
     $("#curso .passCircles span.passCircle:nth-child(1)").addClass('active');
@@ -37,7 +37,7 @@ function load() {
 }
 function scroll() {
     $("main").fullpage({
-        anchors: ['bem-vindo', 'a-iniciativa', 'o-curso', 'grade-curricular', 'linha-do-tempo', 'nossa-equipe', 'nossos-parceiros', 'contate-nos'],
+        anchors: ['bem-vindo', 'a-iniciativa', 'o-curso', 'grade-curricular', 'agenda', 'nossa-equipe', 'nossos-parceiros', 'contate-nos'],
         menu: '#menu',
         afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
 
@@ -83,29 +83,12 @@ function menu() {
 
 function grade() {
     $(".grades").on("click", function () {
-        $("#grade h2").animate({
-            "margin-right": "30%",
-            "font-weight": "bold",
-            "font-size": "15px"
-        }, 500, "linear");
-        $("#grade h2").css({
-            "font-weight": "bold"
-        }, 500, "linear");
-        $("#grade .content").animate({
-            "margin-top": "1%",
-            "height": "10%",
-            "align-items": "normal",
-            "flex-wrap": "nowrap",
-            "width": "25%"
-        }, 500, "linear");
-        $("li.grades svg").css("width","75%");
+        $.fn.fullpage.reBuild();
+        $("#grade .container").addClass("active");
         $("#grade").css({
             "background-size": "65%",
             "background-position": "-17%"
         });
-        $(".grades").css("margin-left", "-3%"),
-            $("#grade .container").css("align-items", "flex-start")
-        $(".grades p,#grade .container > p").css({"display": "none"});
         $(".grades svg line,.grades svg path,.grades svg circle,.grades svg polyline").removeAttr('style');
         $(".grades svg line,.grades svg path,.grades svg circle,.grades svg polyline").css({
             "will-change": "fill,stroke",
@@ -147,7 +130,7 @@ function grade() {
         $(".curso").css('display', 'none');
         $("#" + $(this).data("grade") + "View").fadeIn(1500);
         $("#" + $(this).data("grade") + "View").css('display', 'flex');
-})
+    })
 }
 function actionPass(id, pagina) {
     $("#" + id + " .passCircles span.passCircle").on('click', function () {

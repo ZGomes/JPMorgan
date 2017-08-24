@@ -106,14 +106,14 @@ header #top nav ul li .btn-contrast-full.active {
   display: inline;
   white-space: nowrap;
 }
+.fp-viewing-bem-vindo #top .col-9 li:last-child a:hover {
+  background-color: #f5f5f5;
+  color: #d8157d;
+}
 .fp-viewing-bem-vindo .btn-contrast-full {
   border: 2px solid #f5f5f5;
   background-color: transparent;
   color: #f5f5f5;
-}
-.fp-viewing-bem-vindo .btn-contrast-full:hover {
-  background-color: #f5f5f5;
-  color: #d8157d !important;
 }
 section {
   width: 100%;
@@ -246,8 +246,8 @@ main #inicio .btn {
   color: #f5f5f5;
 }
 .title {
-  text-align: center;
-  margin-top: 5% !important;
+  text-align: start;
+  margin-top: 5%;
 }
 .title:before {
   content: "// ";
@@ -275,7 +275,6 @@ main #inicio .btn {
 }
 #nossaMissao #missao #missaoR {
   width: 55%;
-  display: block !important;
 }
 #nossaMissao #missao #missaoR h1 {
   color: #101d48;
@@ -454,7 +453,7 @@ main #inicio .btn {
 .fp-viewing-nossos-parceiros #top,
 .fp-viewing-contate-nos #top {
   background-color: #ef4e2e;
-  padding: 5px 0 0 0;
+  padding: 0;
 }
 .fp-viewing-a-iniciativa #top .col-3,
 .fp-viewing-o-curso #top .col-3,
@@ -474,7 +473,7 @@ main #inicio .btn {
 .fp-viewing-nossa-equipe-1 #top .col-9,
 .fp-viewing-nossos-parceiros #top .col-9,
 .fp-viewing-contate-nos #top .col-9 {
-  width: 74.6%;
+  width: 100%;
 }
 .fp-viewing-a-iniciativa #top .col-9 li:last-child,
 .fp-viewing-o-curso #top .col-9 li:last-child,
@@ -516,7 +515,8 @@ main #inicio .btn {
 .fp-viewing-o-curso-5 #top,
 .fp-viewing-o-curso-6 #top,
 .fp-viewing-o-curso-7 #top,
-.fp-viewing-o-curso-8 #top {
+.fp-viewing-o-curso-8 #top,
+.fp-viewing-contate-nos #top {
   background-color: #ef4e2e;
 }
 .fp-viewing-o-curso #top #menu a.active,
@@ -528,6 +528,7 @@ main #inicio .btn {
 .fp-viewing-o-curso-6 #top #menu a.active,
 .fp-viewing-o-curso-7 #top #menu a.active,
 .fp-viewing-o-curso-8 #top #menu a.active,
+.fp-viewing-contate-nos #top #menu a.active,
 .fp-viewing-o-curso #top li a.active,
 .fp-viewing-o-curso-4 #top li a.active,
 .fp-viewing-o-curso-1 #top li a.active,
@@ -536,7 +537,8 @@ main #inicio .btn {
 .fp-viewing-o-curso-5 #top li a.active,
 .fp-viewing-o-curso-6 #top li a.active,
 .fp-viewing-o-curso-7 #top li a.active,
-.fp-viewing-o-curso-8 #top li a.active {
+.fp-viewing-o-curso-8 #top li a.active,
+.fp-viewing-contate-nos #top li a.active {
   border-bottom-color: #743ad0;
 }
 .fp-viewing-o-curso #top #menu-icon.active,
@@ -547,8 +549,9 @@ main #inicio .btn {
 .fp-viewing-o-curso-5 #top #menu-icon.active,
 .fp-viewing-o-curso-6 #top #menu-icon.active,
 .fp-viewing-o-curso-7 #top #menu-icon.active,
-.fp-viewing-o-curso-8 #top #menu-icon.active {
-  background-color: #743ad0;
+.fp-viewing-o-curso-8 #top #menu-icon.active,
+.fp-viewing-contate-nos #top #menu-icon.active {
+  background-color: #f5f5f5;
 }
 .fp-viewing-o-curso #top #menu-icon.active .line,
 .fp-viewing-o-curso-4 #top #menu-icon.active .line,
@@ -558,7 +561,8 @@ main #inicio .btn {
 .fp-viewing-o-curso-5 #top #menu-icon.active .line,
 .fp-viewing-o-curso-6 #top #menu-icon.active .line,
 .fp-viewing-o-curso-7 #top #menu-icon.active .line,
-.fp-viewing-o-curso-8 #top #menu-icon.active .line {
+.fp-viewing-o-curso-8 #top #menu-icon.active .line,
+.fp-viewing-contate-nos #top #menu-icon.active .line {
   background-color: #ef4e2e;
 }
 .fp-viewing-grade-curricular #top {
@@ -570,17 +574,17 @@ main #inicio .btn {
 .fp-viewing-grade-curricular #top #menu-icon.active .line {
   background-color: #743ad0;
 }
-.fp-viewing-linha-do-tempo #top {
+.fp-viewing-agenda #top {
   background-color: #2acfc1;
 }
-.fp-viewing-linha-do-tempo #top #menu-icon.active {
+.fp-viewing-agenda #top #menu-icon.active {
   background-color: #f5f5f5;
 }
-.fp-viewing-linha-do-tempo #top #menu-icon.active .line {
+.fp-viewing-agenda #top #menu-icon.active .line {
   background-color: #2acfc1;
 }
-.fp-viewing-linha-do-tempo #top #menu a.active,
-.fp-viewing-linha-do-tempo #top li a.active {
+.fp-viewing-agenda #top #menu a.active,
+.fp-viewing-agenda #top li a.active {
   border-bottom-color: #743ad0;
 }
 .fp-viewing-inscreva-se #top {
@@ -636,9 +640,6 @@ main #inicio .btn {
 .fp-viewing-nossos-parceiros #top #menu a.active,
 .fp-viewing-nossos-parceiros #top li a.active {
   border-bottom-color: #2acfc1;
-}
-.fp-viewing-contate-nos #menu li a.active {
-  border-bottom-color: #743ad0;
 }
 .arrowLeft {
   transform: rotate(90deg);
@@ -765,6 +766,33 @@ input[type ='text']::placeholder:before {
   display: flex;
   align-items: center;
 }
+#grade .container.active {
+  align-items: flex-start;
+}
+#grade .container.active > p {
+  display: none;
+}
+#grade .container.active h2 {
+  margin-right: 30%;
+  font-weight: bold;
+  font-size: 15px;
+}
+#grade .container.active .content {
+  margin-top: 1%;
+  height: 10%;
+  align-items: normal;
+  flex-wrap: nowrap;
+  width: 25%;
+}
+#grade .container.active .content .grades {
+  margin-left: -3%;
+}
+#grade .container.active .content .grades svg {
+  width: 75%;
+}
+#grade .container.active .content .grades p {
+  display: none;
+}
 #grade .container > p {
   text-align: center;
   color: #2acfc1;
@@ -829,7 +857,7 @@ input[type ='text']::placeholder:before {
   font-weight: bold;
   padding: 3% 0 1% 3%;
   font-size: 12px;
-  margin-top: 0 !important;
+  margin-top: 0;
 }
 #grade .curso .info ul .title:before {
   content: "";
@@ -852,7 +880,7 @@ input[type ='text']::placeholder:before {
 }
 #grade .curso .info h2 {
   color: #101d48;
-  font-size: 4vh !important;
+  font-size: 4vmin;
   margin: 0;
 }
 #grade .curso .info p {
@@ -930,6 +958,7 @@ input[type ='text']::placeholder:before {
 }
 #equipe .title {
   color: #743ad0;
+  text-align: center;
 }
 #equipe .title:before {
   color: #2acfc1;
@@ -1010,9 +1039,9 @@ input[type ='text']::placeholder:before {
   background-color: #743ad0;
   color: #f5f5f5;
   width: 145px;
-  margin-top: -14vmin;
+  margin-top: -15vmin;
   left: calc(50% - 75px);
-  position: fixed;
+  position: absolute;
 }
 #tempo #timeline ul {
   display: flex;
@@ -1024,8 +1053,9 @@ input[type ='text']::placeholder:before {
   min-width: 200px;
   list-style: none;
 }
-#tempo #timeline ul li.fim {
-  border: 0 !important;
+#tempo #timeline ul li.fim:nth-last-child(1) {
+  border: 0;
+  height: 0;
 }
 #tempo #timeline ul li.fim .dia:before {
   background-color: #f5f5f5;
@@ -1079,6 +1109,9 @@ input[type ='text']::placeholder:before {
   position: relative;
   color: #743ad0;
 }
+#tempo #timeline ul li .dia.importante {
+  color: #743ad0;
+}
 #tempo #timeline ul li .dia:before {
   content: '';
   position: absolute;
@@ -1089,9 +1122,6 @@ input[type ='text']::placeholder:before {
   transform: translateY(-50%);
   z-index: 1000;
   align-self: center;
-}
-#tempo #timeline ul .importante {
-  color: #743ad0 !important;
 }
 #parceiros {
   background-color: #f5f5f5;
@@ -1137,20 +1167,12 @@ input[type ='text']::placeholder:before {
     justify-content: center;
     margin-bottom: -3%;
   }
-  header #top {
-    max-width: 100%;
-    padding: 0 !important;
-  }
   header #top .container {
-    padding: 0 !important;
+    padding: 0;
   }
   header #top .col-3 {
-    display: block !important;
     margin-top: 3%;
     margin-left: 3%;
-  }
-  header #top .col-9 {
-    width: 100% !important;
   }
   header #top img {
     float: left;
@@ -1193,14 +1215,16 @@ input[type ='text']::placeholder:before {
     flex-direction: column;
   }
   header #top nav ul li {
-    padding: 5px;
-    margin: 10px;
+    margin: 4%;
     text-align: center;
   }
   header #top nav ul li:last-child {
     margin-top: 10%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
     justify-content: center !important;
+  }
+  main > section {
+    padding-bottom: 80px;
   }
   main #inicio {
     padding-bottom: 10px;
@@ -1236,7 +1260,6 @@ input[type ='text']::placeholder:before {
   }
   main #parceiros .content a {
     width: 35vw;
-    height: 35vh;
   }
   main #parceiros .content a img {
     width: 100%;
@@ -1294,26 +1317,94 @@ input[type ='text']::placeholder:before {
     width: 90%;
     flex-direction: column;
   }
+  main #grade .container.active {
+    align-items: flex-start;
+  }
+  main #grade .container.active > p {
+    display: none;
+  }
+  main #grade .container.active h2 {
+    align-self: center;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  main #grade .container.active .content {
+    margin-top: 5%;
+    height: auto;
+    align-items: normal;
+    flex-wrap: nowrap;
+    width: 25%;
+  }
+  main #grade .container.active .content .grades {
+    margin-left: 0;
+    width: 20%;
+  }
+  main #grade .container.active .content .grades svg {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  main #grade .container.active .content .grades p {
+    display: none;
+    height: auto;
+  }
+  main #grade .container > p {
+    width: 100%;
+    font-size: 4vmin;
+    margin-top: 3%;
+  }
+  main #grade .container .curso {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column-reverse;
+    height: auto;
+    min-height: min-content;
+  }
+  main #grade .container .curso .btn {
+    margin-top: 5%;
+    left: calc(50% - 82px);
+  }
+  main #grade .container .curso iframe {
+    width: 120%;
+    margin-left: -10%;
+    margin-top: 30%;
+  }
+  main #grade .container .curso .info {
+    width: 100%;
+    padding: 0;
+  }
+  main #grade .container .curso .info .select {
+    width: 100%;
+  }
+  main #grade .container .curso .info ul {
+    width: 100%;
+  }
   main #grade h2 {
     margin-right: 0 !important;
   }
   main #grade .content {
     width: 100% !important;
     margin-right: 0 !important;
-    padding: 20px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 4%;
   }
   main #grade .content .grades {
     cursor: pointer;
     width: 50%;
     text-align: center;
+    margin-bottom: 2%;
   }
   main #grade .content .grades p {
+    height: auto;
     font-size: 3vw;
     margin-right: 0 !important;
+  }
+  #equipe img {
+    height: 130px;
   }
   #equipe .container {
     display: flex;
@@ -1382,7 +1473,6 @@ input[type ='text']::placeholder:before {
   }
   #tempo #timeline {
     margin-top: 15%;
-    margin-bottom: 25%;
   }
   #tempo #timeline ul {
     width: 100vw;
@@ -1393,16 +1483,6 @@ input[type ='text']::placeholder:before {
   #tempo #timeline ul .mes {
     background-color: #743ad0;
     color: #f5f5f5;
-  }
-  #tempo #timeline ul .gamb {
-    background-color: transparent;
-    width: 300px;
-    height: 100px;
-    top: -40px;
-    border-left: 2px solid #f5f5f5;
-    z-index: -1;
-    position: relative;
-    margin: -6vh 0px;
   }
   #tempo #timeline ul li {
     height: 15vh;
@@ -1450,23 +1530,37 @@ input[type ='text']::placeholder:before {
     width: 100%;
     text-align: center;
   }
-  #fale-conosco .content #contato #footer,
-  #fale-conosco .content #contato a {
-    padding: 10px;
+  #fale-conosco .content #contato #footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  #fale-conosco .content #contato #footer:hover,
-  #fale-conosco .content #contato a:hover {
+  #fale-conosco .content #contato #footer a {
+    margin-bottom: 3%;
+    padding: 0;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #fale-conosco .content #contato #footer a img {
+    margin-right: 5%;
+  }
+  #fale-conosco .content #contato #footer a:hover {
     color: #101d48;
   }
   #fale-conosco .content #contato #social-media {
     display: flex;
-    flex-direction: column;
-    padding-top: 20px;
+    padding-top: 0 !important;
+    width: 100%;
   }
   #fale-conosco .content #contato form {
     justify-content: center;
     text-align: center;
     padding: 0;
+    margin: 0;
+  }
+  #fale-conosco .content #contato form .btn {
     margin: 0;
   }
   #curso .fp-tableCell {
@@ -1506,28 +1600,6 @@ input[type ='text']::placeholder:before {
   }
   #curso .passCircles .passCircle:nth-child(n + 5) {
     display: block;
-  }
-  #grade {
-    height: auto !important;
-  }
-  #grade .curso {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: column-reverse;
-    height: auto;
-    min-height: min-content;
-  }
-  #grade .curso img {
-    width: 100%;
-  }
-  #grade .curso .info {
-    width: 100%;
-    padding: 0;
-  }
-  #grade .curso .info ul {
-    margin: 15% 0;
-    width: 100%;
   }
 }
 @-moz-keyframes lineGrowFX {

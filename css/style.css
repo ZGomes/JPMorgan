@@ -910,7 +910,7 @@ input[type ='text']::placeholder:before {
   background-color: #ef4e2e;
 }
 #grade .curso .info .btn {
-  z-index: -1;
+  z-index: 0;
 }
 #grade .circleGround {
   display: flex;

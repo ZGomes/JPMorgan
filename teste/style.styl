@@ -1,0 +1,1353 @@
+// PADRÃO DE CORES DO WEBSITE
+
+// PADRÕES
+color-1 = #101d48
+color-2 = #d8157d
+color-3 = #ef4e2e
+color-4 = #2acfc1
+contrastInside = #743ad0
+color-5 = #e2e2e2
+color-6 = #999999
+contrast = #f5f5f5
+
+@keyframes lineGrowFX {
+  from {
+    width 0
+  }
+  to {
+    width 100px
+  }
+}
+
+@keyframes appear {
+  from {
+    transform translateY(20px)
+    opacity 0
+  }
+  to {
+    transform translateY(0)
+    opacity 1
+  }
+}
+
+@keyframes appear-out {
+  from {
+    transform translateY(0)
+    opacity 1
+  }
+  to {
+    transform translateY(20px)
+    opacity 0
+  }
+}
+
+@keyframes pulse {
+  to{
+    text-shadow 0px 0px 15px rgba(216, 21, 125, 0.75)
+  }
+}
+
+@keyframes grades {
+  to {
+    stroke-dashoffset 0
+  }
+}
+
+// FONTS
+@font-face
+  font-family "Proxima Nova"
+  src url('../fonts/Proxima Nova Bold.ttf')
+  font-weight bold
+
+@font-face
+  font-family "Proxima Nova"
+  src url('../fonts/Proxima Nova Extrabold.otf')
+  font-weight 800
+
+@font-face
+  font-family "Proxima Nova"
+  src url('../fonts/Proxima Nova Semibold.otf')
+  font-weight 700
+
+@font-face
+  font-family "Proxima Nova"
+  src url('../fonts/Proxima Nova Light.otf')
+
+*
+  margin 0
+  padding 0
+  box-sizing border-box
+
+body
+  font-size 16px
+  margin 0
+  padding 0
+  font-family "Proxima Nova"
+  background url('../images/inicio/top-bg.jpg') no-repeat 0 0
+  background-size 100% 100%
+
+a
+  text-decoration none
+  color white
+
+header
+  display flex
+  justify-content center
+  #top
+    background-color transparent
+    padding 5px 0 0 0
+    z-index 20
+    transition all 1s ease
+    .container
+      padding 2px
+      .row
+        .col-3
+          img
+            transition all 2s ease
+    nav
+      padding 20px
+      ul
+        display flex
+        list-style none
+        justify-content space-between
+        li
+          a
+            font-size max(13px, .9vw)
+            color contrast
+            transition border 1s, color 1s
+            &.active
+              border-bottom 2px solid color-2
+              font-weight bold
+          &:hover
+            a
+              font-weight bold
+          .btn-contrast-full
+            border 2px solid contrast
+            &:hover
+              background-color contrast
+              color color-3
+          .btn-contrast-full.active
+            border 2px solid contrast
+
+.fp-viewing-bem-vindo
+  #top
+    padding 20px
+    padding-top 40px
+    background-color transparent
+    min-height min-content
+    .col-3
+      img
+        display none
+    .col-9
+      width 100%
+      li
+        flex 1
+        display flex
+        justify-content center
+        align-items center
+        &:last-child
+          flex 3
+          justify-content flex-end
+          a
+            display inline
+            white-space nowrap
+  .btn-contrast-full
+    border 2px solid contrast
+    background-color transparent
+    color contrast
+    &:hover
+      background-color contrast
+      color color-2!important
+
+section
+  width 100%
+  overflow hidden
+  display flex
+  align-items center
+  flex-direction column
+  .divisor
+    display block
+    .l1
+      border-radius 50%
+      display inline-block
+      height 4px
+      width 4px
+    .l2
+      border-radius 10px
+      display inline-block
+      height 4px
+      transform-origin left
+      margin-left 3px
+  .fp-tableCell
+    opacity 0
+    animation appear-out 0.6s ease forwards
+  &.active
+    .fp-tableCell
+      animation appear 1.3s ease forwards 0.4s
+    .divisor
+      .l2
+        animation lineGrowFX 1s ease forwards 0.8s
+
+main
+  #inicio
+    align-content center
+    align-items center
+    color contrast
+    display flex
+    justify-content center
+    .container
+      width 90%
+      display flex
+      flex-direction column
+      height 75vh
+      justify-content space-around
+      img
+        width 50%
+        margin-bottom 5%
+      .row
+        &:nth-child(2)
+          height auto
+          display flex
+          .col-4
+            &:nth-child(1)
+              font-size max(4vw, 50px)
+              font-weight 800
+              color color-2
+              display flex
+              align-items center
+              span
+                animation pulse 1s infinite cubic-bezier(0.66, 0, 0, 1)
+                text-shadow 0px 0px 0px rgba(216, 21, 125, 0.9)
+            &:nth-child(3)
+              display flex
+              flex-direction column
+              span
+                margin-bottom 3%
+                color color-4
+                font-weight bold
+                font-size max(2vw, 15px)
+              div
+                display flex
+                align-items center
+                justify-content space-between
+                img
+                  width 40%
+                  margin-bottom 0
+                  &:nth-child(2)
+                    margin-top 2%
+    h2
+      font-size max(5vw, 72px)
+      font-weight 700
+    .divisor
+      .l1
+        background-color color-4
+      .l2
+        background-color color-2
+    p
+      font-size max(3vw, 25px)
+      margin-top 30px
+      margin-bottom 30px
+      max-width 40%
+      font-weight bold
+      span
+        color color-4
+
+    .btn
+      padding 15px 17px 15px 17px
+      margin-top 50px
+      font-weight bold
+
+//  BOTÕES
+.btn
+  padding 10px 30px 10px 30px
+  border-radius 25px
+  font-weight bold
+  width auto
+  font-size 16px
+  transition all 1s
+  outline none
+  border none
+
+.btn.btn-contrast
+  border 3px solid contrastInside
+  color contrastInside
+  transition 0.3s ease
+  &:hover
+    background-color contrastInside
+    color contrast
+
+.title
+  text-align center
+  margin-top 5% !important
+  &:before
+    content "// "
+
+#nossaMissao
+  background-image url('../images/missao/background.svg')
+  background-repeat no-repeat
+  background-size 80%
+  background-position -120% 50%
+  background-color contrast
+  justify-content center
+  display flex
+  margin-top -3vh
+  #missao
+    display flex
+    flex-direction row
+    align-content center
+    margin auto
+    padding 0
+    justify-content space-between
+    img
+      width 40%
+    #missaoR
+      width 55%
+      display block !important
+      h1
+        color color-1
+        font-size 4vw
+        margin-bottom 3vh
+      .divisor
+        margin-bottom 3vh
+        .l1
+          background-color color-4
+        .l2
+          background-color color-3
+      h3
+        color color-4
+        font-size max(1.5vw, 24px)
+        margin-bottom 3%
+        width 100%
+        padding 1% 0
+      p
+        color color-6
+
+        font-size max(1.1vw, 20px)
+      .passCircles
+        width 20%
+        margin-top 8vh
+        .passCircle
+          background-color color-5
+          &:hover
+            background-color contrastInside
+          &:active
+            border 2px solid contrastInside
+            background-color transparent
+
+.passCircles
+  display flex
+  height 15px
+  flex-direction row
+  justify-content space-evenly
+  float right
+  position relative
+  .passCircle
+    width 10px
+    height 10px
+    border-radius 50%
+
+#passArrowMissao
+  height 50px
+  display flex
+  align-items center
+  &:hover
+    border none
+  svg
+    width 3%
+    margin-left 2%
+    &:nth-child(2)
+      margin-left 5%
+      rect
+        fill color-4
+
+// Curso
+#curso
+  background-color color-3
+  .container
+    display flex
+    flex-wrap wrap
+    justify-content center
+  .slide
+    &:nth-child(-n + 4)
+      .passos
+        .passo
+          &:nth-child(-n + 2)
+            display block
+          &:nth-child(3)
+            display none
+  .title
+    color contrast
+    &:before
+      color contrastInside
+  .passCircles
+    width 25%
+    .passCircle
+      background-color contrast
+      &:nth-child(n + 5)
+        display none
+      &:hover
+        background-color color-4
+    .passCircle.active
+      border 2px solid color-4
+      background-color transparent
+  .fp-tableCell
+    height 70vh !important
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  .content
+    display flex
+    align-items baseline
+    justify-content center
+    .passArrow
+      display flex
+      color contrast
+      font-weight 800
+      width auto
+      &:hover
+        padding 0
+        border none
+        color contrastInside
+        .arrowLeft
+          transform scale(1.3) rotate(90deg)
+        .arrowRight
+          transform scale(1.3) rotate(-90deg)
+      svg
+        margin-bottom 3%
+        width 20px
+        height 30px
+    .passos
+      width 70%
+      display flex
+      justify-content space-between
+      align-items flex-start
+      .passo
+        width 45%
+        display flex
+        justify-content center
+        flex-direction column
+        align-items center
+        img
+          width 90%
+          margin-bottom 10%
+        h2
+          width: 100%;
+          font-size max(1.5vw, 24px)
+          font-weight 800
+          color contrast
+          margin-bottom 4%
+        p
+          font-size max(16px, 1.2vw)
+          color contrast
+          font-weight normal
+
+//           MENU COLOR STYLES
+.fp-viewing-a-iniciativa, .fp-viewing-o-curso, .fp-viewing-grade-curricular, .fp-viewing-linha-do-tempo, .fp-viewing-inscreva-se, .fp-viewing-nossa-equipe-1, .fp-viewing-nossos-parceiros, .fp-viewing-contate-nos
+  #top
+    background-color color-3
+    padding 5px 0 0 0
+    .col-3
+      display block
+    .col-9
+      width 74.6%
+      li
+        &:last-child
+          padding-left 0
+    .btn-contrast-full
+      &:hover
+        color color-3
+
+.fp-viewing-a-iniciativa
+  #top
+    background-color color-4
+    #menu-icon
+      &.active
+        background-color contrast
+        .line
+          background-color color-4
+    #menu
+      li
+        a.active
+          border-bottom-color color-3
+
+.fp-viewing-o-curso, .fp-viewing-o-curso-4, .fp-viewing-o-curso-1, .fp-viewing-o-curso-2, .fp-viewing-o-curso-3,
+.fp-viewing-o-curso-4, .fp-viewing-o-curso-5, .fp-viewing-o-curso-6, .fp-viewing-o-curso-7, .fp-viewing-o-curso-8
+  #top
+    background-color color-3
+    #menu
+    li
+      a.active
+        border-bottom-color contrastInside
+    #menu-icon
+      &.active
+        background-color contrastInside
+        .line
+          background-color color-3
+
+.fp-viewing-grade-curricular
+  #top
+    background-color contrastInside
+    #menu-icon
+      &.active
+        background-color contrast
+        .line
+          background-color contrastInside
+
+.fp-viewing-linha-do-tempo
+  #top
+    background-color color-4
+    #menu-icon
+      &.active
+        background-color contrast
+        .line
+          background-color color-4
+    #menu
+    li
+      a.active
+        border-bottom-color contrastInside
+
+.fp-viewing-inscreva-se
+  #top
+    background-color color-4
+    #menu-icon
+      &.active
+        background-color contrast
+        .line
+          background-color color-4
+    #menu
+      .btn-contrast-full
+        background-color contrast
+        color color-4
+
+.fp-viewing-nossa-equipe-1, .fp-viewing-nossa-equipe-2, .fp-viewing-nossa-equipe-3, .fp-viewing-nossa-equipe-4
+  #top
+    background-color contrastInside
+    #menu-icon
+      &.active
+        background-color contrast
+        .line
+          background-color contrastInside
+    #menu
+    li
+      a.active
+        border-bottom-color color-4
+
+.fp-viewing-nossos-parceiros
+  #top
+    background-color contrastInside
+    #menu-icon
+      &.active
+        background-color contrast
+        .line
+          background-color contrastInside
+    #menu
+    li
+      a.active
+        border-bottom-color color-4
+
+.fp-viewing-contate-nos
+  #menu
+    li
+      a.active
+        border-bottom-color contrastInside
+
+//edit arrows
+.arrowLeft
+  transform rotate(90deg)
+  &:hover
+    transform rotate(90deg) scale(1.5)
+
+.arrowRight
+  transform rotate(-90deg)
+  &:hover
+    transform rotate(-90deg) scale(1.3)
+
+.arrow
+  transition transform 1s
+  cursor pointer
+
+//Inscricoes
+#inscricoes
+  background-image url('../images/inscricoes/pessoas.jpg')
+  background-repeat no-repeat
+  background-size cover
+  .title
+    color contrast
+    &:before
+      color contrastInside
+  .fp-tableCell
+    height 100vh !important
+  .content
+    justify-content space-evenly
+    margin-top 5%
+    display flex
+    align-items center
+    flex-direction column
+    width 50%
+    height 70%
+    .divisor
+      margin-top 2%
+      margin-bottom 2%
+      .l1
+        background-color color-4
+      .l2
+        background-color contrast
+    h3
+      text-align center
+      font-size 65px
+      color color-4
+      width 100%
+      padding 10px
+    p
+      text-align center
+      font-size 26px
+      color contrast
+      margin-bottom 5%
+    .btn
+      background-color transparent
+      color contrast
+      border 1px solid contrast
+      font-size 25px
+      font-weight bold
+      &:hover
+        background-color contrast
+        color color-4
+
+textarea
+  border-radius 5px
+  border none
+  outline none
+  font-size 18px
+  padding 20px
+
+input[type ='text']
+  background-color transparent
+  border none
+  outline none
+  color contrast
+  height 40px
+  padding-left 1%
+  font-size 18px
+  border-bottom 2px solid contrast
+  &::placeholder
+    color contrast
+    &:before
+      content "//"
+
+#fale-conosco
+  background-image url('../images/contato/bg.png')
+  background-repeat no-repeat
+  background-size 100%
+  background-position-y bottom
+  background-color color-3
+  .content
+    display flex
+    width 100%
+    #mapa
+      width 50%
+      height 100vh
+      #mapCustom
+        width 100%
+        height 100%
+      #local
+        background-color contrastInside
+        color white
+        font-size 22px
+        padding-top -50px
+    #contato
+      padding 5%
+      width 50%
+      #footer
+        a
+          padding 10px
+          &:hover
+            color color-1
+        #social-media
+          padding-top 20px
+      .title
+        text-align left
+        color contrast
+        margin-bottom 5%
+        font-size 28px
+        &:before
+          color contrastInside
+      form
+        display flex
+        width 100%
+        flex-direction column
+        padding-right 25%
+        input
+          margin-bottom 5%
+        textarea
+          color color-3
+          border-radius 0
+        .btn
+          padding 15px 30px 15px 30px
+          align-self center
+          top -15px
+          position relative
+          background-color contrastInside
+          color white
+          box-shadow 5px 5px 12px rgba(0, 0, 0, 0.1), -5px -5px 12px rgba(0, 0, 0, 0.1), -5px 5px 12px rgba(0, 0, 0, 0.1), 5px -5px 12px rgba(0, 0, 0, 0.1)
+          &:hover
+            background-color color-4
+            box-shadow 0 0 7px rgba(0, 0, 0, 0.05), -0px -0px 7px rgba(0, 0, 0, 0.05), -0px 0px 7px rgba(0, 0, 0, 0.05), 0px -0px 7px rgba(0, 0, 0, 0.05)
+
+#grade
+  background-image url('../images/grade/background.svg')
+  background-repeat no-repeat
+  background-size 85%
+  background-position center
+  background-color contrast
+  .container
+    flex-direction column
+    height 100%
+    display flex
+    align-items center
+    > p
+      text-align center
+      color color-4
+      width 75%
+  .fp-tableCell
+    height 100% !important
+  .curso
+    margin-top 2%
+    display none
+    width 100%
+    height 62%
+    .btn
+      margin-bottom 10px
+    img
+      flex 1
+      width 80%
+    .info
+      flex 1
+      padding-left 5%
+      width 100%
+      ul
+        list-style none
+        background-color white
+        border-left 5px solid contrastInside
+        margin 15% 0%
+        box-shadow 5px 5px 12px rgba(0, 0, 0, 0.05), -5px -5px 12px rgba(0, 0, 0, 0.05), -5px 5px 12px rgba(0, 0, 0, 0.05), 5px -5px 12px rgba(0, 0, 0, 0.05)
+        width 50%
+        .select
+          display flex
+          align-items center
+          color gray
+          padding 10px 0
+          svg
+            width 24px
+            height 37px
+            margin-right 20px
+            margin-left 20px
+        p
+          display none
+          background-color contrastInside
+          color contrast
+          font-weight bold
+          padding 2% 0 1% 3%
+          font-size max(12px, 1vw)
+        li
+          padding 12px
+          display none
+          opacity 0
+          transition all 1s ease
+          font-size max(13px, 1vw)
+        &:hover
+          position relative
+          margin-top -25%
+          cursor pointer
+          margin-bottom -5%
+          p
+            display block
+          li
+            opacity 1
+            color contrast
+            display block
+            background-color contrastInside
+            &:before
+              content "• "
+              color color-4
+      h2
+        color color-1
+        font-size 4vh !important
+        margin 0
+      p
+        color contrastInside
+      .divisor
+        margin-top 10%
+        margin-bottom 10%
+        .l1
+          background-color color-4
+        .l2
+          background-color color-3
+  .circleGround
+    display flex
+    justify-content center
+    width 87%
+    height 180vh
+    top -35vh
+    border 1px solid #27c3b6
+    .circleGround
+      width 73%
+      height 130vh
+      top 25vh
+  h2
+    margin-top 5%
+    font-weight normal
+    color contrastInside
+  .content
+    height 75%
+    width 75%
+    display flex
+    align-items center
+    justify-content space-between
+    .grades
+      cursor pointer
+      width 24%
+      text-align center
+      display flex
+      flex-direction column
+      align-items center
+      &:hover
+        svg
+          transform scale(1.1)
+
+      svg
+        margin-bottom 5%
+        transition all 0.8s
+        width 60%
+      p
+        width 80%
+        height 50px
+        margin-top 5%
+        margin-bottom 5%
+        color color-6
+
+#equipe
+  background-image url('../images/equipe/background.png')
+  background-repeat no-repeat
+  background-size cover
+  background-color contrast
+  #equipe-canvas
+    width 100%
+    height 100%
+    min-height 500px
+  .title
+    color contrastInside
+    &:before
+      color color-4
+  .slide, .passCircles
+    display none
+  #equipe-list
+    width 100%
+    list-style none
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    li
+      margin 20px
+      border 10px solid white
+      border-radius 50%
+      overflow hidden
+      min-width 20%
+      min-height 20%
+      max-height 50%
+      max-width 50%
+      display flex
+      justify-content center
+      align-content center
+      background-color color-4
+      box-shadow 5px 5px 12px rgba(0, 0, 0, 0.05), -5px -5px 12px rgba(0, 0, 0, 0.05), -5px 5px 12px rgba(0, 0, 0, 0.05), 5px -5px 12px rgba(0, 0, 0, 0.05)
+      img
+        filter grayscale(100%)
+        width 100%
+        height 100%
+        transition all 0.6s ease
+      .content
+        color white
+        position absolute
+        align-self center
+        text-align center
+        opacity 0
+        transition all 0.6s ease
+        span
+          display block
+        .nome
+          font-size 20px
+      &:hover
+        cursor pointer
+        .content
+          opacity 1
+        img
+          filter grayscale(0%)
+          opacity 0.6
+          transform scale(1.6)
+
+#tempo
+  background-color color-4
+  .title
+    color contrast
+    text-align center
+    &:before
+      color contrastInside
+  #timeline
+    margin-top 10vh
+    margin-bottom 10vh
+    padding-bottom 1vh
+    ul
+      display flex
+      flex-direction column
+      align-items center
+      .mes
+        background-color contrastInside
+        color contrast
+      .gamb
+        background-color contrast
+        width 2px
+        height 10vh
+      li
+        height 10vh
+        min-width 200px
+        list-style none
+        .atividade
+          color white
+        &:nth-child(odd)
+          text-align end
+          padding-right 40px
+          margin-right 296px
+          width 300px
+          border-right 2px solid contrast
+          .dia
+            font-size 16px
+            &:before
+              right -45px
+          .importante.dia
+            &:before
+              right -52px
+        &:nth-child(even)
+          width 300px
+          padding-left 40px
+          margin-left 300px
+          border-left 2px solid contrast
+          .dia
+            color contrastInside
+            font-size 16px
+            &:before
+              right 295px
+          .importante.dia
+            &:before
+              right 287px
+        &:nth-last-child(1)
+          border none !important
+          .dia
+            &:before
+              background-color contrast
+        .importante.dia
+          &:before
+            border 6px solid contrast
+            width 13px
+            height 13px
+        .dia
+          font-size 19px
+          font-weight 700
+          position relative
+          color contrastInside
+          &:before
+            content ''
+            position absolute
+            width 9px
+            height 9px
+            background-color contrastInside
+            border-radius 100%
+            transform translateY(-50%)
+            z-index 1000
+            align-self center
+      .importante
+        color contrastInside !important
+
+#parceiros
+  background-color contrast
+  .title
+    color contrastInside
+    text-align center
+    &:before
+      color color-4
+  .content
+    display flex
+    flex-wrap wrap
+    flex-grow 0
+    justify-content space-around
+    height 100%
+    margin-left auto
+    margin-right auto
+    a
+      min-height 25%
+      min-width 25%
+      text-align center
+      margin 4% 2%
+      &:hover
+        img
+          transform scale(1.2)
+      img
+        max-width 20vw
+        max-height 20vh
+        padding 5%
+        transition all 0.6s ease
+
+@media only screen and (max-width 1023px)
+  body
+    background-size auto auto
+    background-position center center
+
+  header
+    display flex
+    justify-content center
+    margin-bottom -3%
+    #top
+      max-width 100%
+      padding 0 !important
+      .container
+        padding 0 !important
+      .col-3
+        display block !important
+        margin-top 3%
+        margin-left 3%
+      .col-9
+        width 100% !important
+      img
+        float left
+        max-width 100px
+      #menu-icon
+        padding 8px
+        width 40px
+        height 40px
+        border 2px solid contrast
+        float right
+        margin-right 20px
+        &.active
+          background-color contrast
+          .line
+            background-color color-4
+        .line
+          width 100%
+          height 2px
+          background-color contrast
+          display block
+          margin-top 20%
+      nav
+        padding 5px
+        display none
+        height 0
+        &.active
+          display block
+          height 75vh
+        ul
+          display flex
+          list-style none
+          justify-content space-between
+          flex-direction column
+          li
+            padding 5px
+            margin 10px
+            text-align center
+            &:last-child
+              margin-top 10%
+              margin-bottom 5%
+              justify-content center !important
+
+  main
+    #inicio
+      padding-bottom 10px
+      padding-top 0 !important
+      .btn
+        display none
+      h2
+        font-size max(10vw, 40px)
+      .container
+        justify-content flex-end
+        img
+          width 100%
+        .row
+          &:nth-child(1)
+            margin-bottom 15%
+          &:nth-child(2)
+            .col-4
+              &:nth-child(1), &:nth-child(2)
+                display none
+      p
+        font-size 5vmin
+        max-width 100%
+      .col-4
+        &:nth-child(3)
+          display flex
+          justify-content space-between
+          margin-bottom 23px
+    #parceiros
+      .content
+        a
+          width 35vw
+          height 35vh
+          img
+            width 100%
+            max-height 100%
+            max-width 100%
+    #nossaMissao
+      .fp-tableCell
+        height 100% !important
+      #missao
+        margin-top 0
+        padding 20px
+        display flex
+        justify-content center
+        height 100%
+        img
+          display none
+        #missaoR
+          width 80%
+          display flex !important
+          flex-direction column
+          align-items center
+          .divisor
+            align-self flex-start
+          #passArrowMissao
+            display none
+          .passCircles
+            display flex
+            justify-content space-around
+            position initial
+            width 65%
+            margin-top 10%
+          svg
+            width 10%
+
+          h1
+            margin-top 7vh
+            font-size 10vw
+          h3
+            padding 0
+            font-size 5vw
+          p
+            font-size 4vw
+    #fale-conosco
+      form
+        display flex
+        width 90%
+        flex-direction column
+    #inscricoes
+      .content
+        margin-top 5%
+        display flex
+        align-items center
+        flex-direction column
+        width 90%
+        height 70%
+    #grade
+      h2
+        margin-right 0 !important
+      .content
+        width 100% !important
+        margin-right 0 !important
+        padding 20px
+        display flex
+        align-items center
+        justify-content space-between
+        flex-wrap wrap
+        .grades
+          cursor pointer
+          width 50%
+          text-align center
+          p
+            font-size 3vw
+            margin-right 0 !important
+
+  #equipe
+    .container
+      display flex
+      flex-direction column
+      align-items center
+    #equipe-list
+      display none
+    .passCircles
+      display flex
+      justify-content space-around
+      width 65%
+      .passCircle
+        background-color color-6
+        &.active
+          background-color color-4
+    .fp-slides
+      height 70vh
+    .slide
+      display flex
+      flex-wrap wrap
+      justify-content space-around
+      .fp-tableCell
+        height 100% !important
+        display flex
+        flex-wrap wrap
+        justify-content space-around
+        li
+          list-style none
+          width 40vw !important
+          display flex
+          flex-direction column
+          align-items center
+          .content
+            display flex
+            flex-direction column
+            justify-content center
+            align-items center
+            .nome
+              font-size 4vw
+              color color-1
+              .sobrenome
+                font-weight bolder
+              &:before
+                content "</"
+                color color-6
+              &:after
+                color color-6
+                content ">"
+            .funcao
+              font-size 3vw
+              color color-2
+
+  #tempo
+    #timeline
+      margin-top 15%
+      margin-bottom 25%
+      ul
+        width 100vw
+        display flex
+        flex-direction column
+        align-items center
+        .mes
+          background-color contrastInside
+          color contrast
+        .gamb
+          background-color transparent
+          width 300px
+          height 100px
+          top -40px
+          border-left 2px solid contrast
+          z-index -1
+          position relative
+          margin -6vh 0px
+        li
+          height 15vh
+          min-width 250px
+          list-style none
+          padding-left 40px
+          padding-right 0 !important
+          margin 0 !important
+          border-right 0 !important
+          border-left 2px solid contrast
+          text-align start !important
+          .dia
+            color contrastInside
+            &:before
+              right 295px !important
+          .importante.dia
+            &:before
+              right 287px !important
+
+  #inscricoes
+    .content
+      width 85% !important
+      h3
+        font-size 8vw
+      p
+        font-size 5vw
+      .btn
+        margin-top 4vh
+
+  #fale-conosco
+    background-color color-3
+    .content
+      display flex
+      width 100%
+      flex-direction column
+      #mapa
+        width 100%
+        height 20vh
+        #mapCustom
+          width 100%
+          height 100%
+        #local
+          background-color contrastInside
+          color white
+          font-size 22px
+          padding-top -50px
+      #contato
+        #footer
+        a
+          padding 10px
+          &:hover
+            color color-1
+        #social-media
+          display flex
+          flex-direction column
+          padding-top 20px
+        width 100%
+        text-align center
+        form
+          justify-content center
+          text-align center
+          padding 0
+          margin 0
+
+  #curso
+    .fp-tableCell
+      height 60vh !important
+    .content
+      width 90%
+      .slide
+        &:nth-child(-n + 4)
+          .passos
+            .passo
+              &:nth-child(-n + 2)
+                display none
+              &:nth-child(3)
+                display block
+
+      .fp-controlArrow
+        display none !important
+      a
+        display none
+      .passos
+        .passo
+          width 100% !important
+          h2
+            font-size 5vw
+          p
+            font-size 4vw
+          &:nth-child(2)
+            display none !important
+    .passCircles
+      width 75%
+      display flex
+      justify-content space-around
+      .passCircle
+        &:nth-child(n + 5)
+          display block
+
+  #grade
+    height auto !important
+    .curso
+      width 90%
+      margin-left auto
+      margin-right auto
+      flex-direction column-reverse
+      height auto
+      min-height min-content
+      img
+        width 100%
+      .info
+        width 100%
+        padding 0%
+        ul
+          margin 15% 0%
+          width 100%
+

@@ -1,21 +1,21 @@
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/pBold.ttf");
+  src: url("../fonts/Proxima Nova Bold.ttf");
   font-weight: bold;
 }
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/pExtra.otf");
+  src: url("../fonts/Proxima Nova Extrabold.otf");
   font-weight: 800;
 }
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/pSemibold.otf");
+  src: url("../fonts/Proxima Nova Semibold.otf");
   font-weight: 700;
 }
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/pLight.otf");
+  src: url("../fonts/Proxima Nova Light.otf");
 }
 * {
   margin: 0;
@@ -27,8 +27,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Proxima Nova";
-  background: url("../images/inicio/top-bg.jpg") no-repeat center center;
-  background-size: cover;
+  background: url("../images/inicio/top-bg.jpg") no-repeat 0 0;
+  background-size: 100% 100%;
 }
 a {
   text-decoration: none;
@@ -106,14 +106,14 @@ header #top nav ul li .btn-contrast-full.active {
   display: inline;
   white-space: nowrap;
 }
-.fp-viewing-bem-vindo #top .col-9 li:last-child a:hover {
-  background-color: #f5f5f5;
-  color: #d8157d;
-}
 .fp-viewing-bem-vindo .btn-contrast-full {
   border: 2px solid #f5f5f5;
   background-color: transparent;
   color: #f5f5f5;
+}
+.fp-viewing-bem-vindo .btn-contrast-full:hover {
+  background-color: #f5f5f5;
+  color: #d8157d !important;
 }
 section {
   width: 100%;
@@ -140,13 +140,10 @@ section .divisor .l2 {
 }
 section .fp-tableCell {
   opacity: 0;
-  animation: appear-out 0.6s ease-in forwards;
-  will-change: transform, opacity;
+  animation: appear-out 0.6s ease forwards;
 }
 section.active .fp-tableCell {
-  animation: appear 1.3s ease-in forwards 0.4s;
-  will-change: transform, opacity;
-
+  animation: appear 1.3s ease forwards 0.4s;
 }
 section.active .divisor .l2 {
   animation: lineGrowFX 1s ease forwards 0.8s;
@@ -179,6 +176,10 @@ main #inicio .container .row:nth-child(2) .col-4:nth-child(1) {
   color: #d8157d;
   display: flex;
   align-items: center;
+}
+main #inicio .container .row:nth-child(2) .col-4:nth-child(1) span {
+  animation: pulse 1s infinite cubic-bezier(0.66, 0, 0, 1);
+  text-shadow: 0px 0px 0px rgba(216,21,125,0.9);
 }
 main #inicio .container .row:nth-child(2) .col-4:nth-child(3) {
   display: flex;
@@ -236,7 +237,6 @@ main #inicio .btn {
   transition: all 1s;
   outline: none;
   border: none;
-  z-index: 0;
 }
 .btn.btn-contrast {
   border: 3px solid #743ad0;
@@ -248,8 +248,8 @@ main #inicio .btn {
   color: #f5f5f5;
 }
 .title {
-  text-align: start;
-  margin-top: 5%;
+  text-align: center;
+  margin-top: 5% !important;
 }
 .title:before {
   content: "// ";
@@ -264,9 +264,6 @@ main #inicio .btn {
   display: flex;
   margin-top: -3vh;
 }
-#nossaMissao.active img {
-  transform: scale(1.4);
-}
 #nossaMissao #missao {
   display: flex;
   flex-direction: row;
@@ -276,11 +273,10 @@ main #inicio .btn {
   justify-content: space-between;
 }
 #nossaMissao #missao img {
-  transition: 1s 0.4s ease;
   width: 40%;
 }
 #nossaMissao #missao #missaoR {
-  width: 45%;
+  width: 55%;
   display: block !important;
 }
 #nossaMissao #missao #missaoR h1 {
@@ -460,7 +456,7 @@ main #inicio .btn {
 .fp-viewing-nossos-parceiros #top,
 .fp-viewing-contate-nos #top {
   background-color: #ef4e2e;
-  padding: 0;
+  padding: 5px 0 0 0;
 }
 .fp-viewing-a-iniciativa #top .col-3,
 .fp-viewing-o-curso #top .col-3,
@@ -522,8 +518,7 @@ main #inicio .btn {
 .fp-viewing-o-curso-5 #top,
 .fp-viewing-o-curso-6 #top,
 .fp-viewing-o-curso-7 #top,
-.fp-viewing-o-curso-8 #top,
-.fp-viewing-contate-nos #top {
+.fp-viewing-o-curso-8 #top {
   background-color: #ef4e2e;
 }
 .fp-viewing-o-curso #top #menu a.active,
@@ -535,7 +530,6 @@ main #inicio .btn {
 .fp-viewing-o-curso-6 #top #menu a.active,
 .fp-viewing-o-curso-7 #top #menu a.active,
 .fp-viewing-o-curso-8 #top #menu a.active,
-.fp-viewing-contate-nos #top #menu a.active,
 .fp-viewing-o-curso #top li a.active,
 .fp-viewing-o-curso-4 #top li a.active,
 .fp-viewing-o-curso-1 #top li a.active,
@@ -544,8 +538,7 @@ main #inicio .btn {
 .fp-viewing-o-curso-5 #top li a.active,
 .fp-viewing-o-curso-6 #top li a.active,
 .fp-viewing-o-curso-7 #top li a.active,
-.fp-viewing-o-curso-8 #top li a.active,
-.fp-viewing-contate-nos #top li a.active {
+.fp-viewing-o-curso-8 #top li a.active {
   border-bottom-color: #743ad0;
 }
 .fp-viewing-o-curso #top #menu-icon.active,
@@ -556,9 +549,8 @@ main #inicio .btn {
 .fp-viewing-o-curso-5 #top #menu-icon.active,
 .fp-viewing-o-curso-6 #top #menu-icon.active,
 .fp-viewing-o-curso-7 #top #menu-icon.active,
-.fp-viewing-o-curso-8 #top #menu-icon.active,
-.fp-viewing-contate-nos #top #menu-icon.active {
-  background-color: #f5f5f5;
+.fp-viewing-o-curso-8 #top #menu-icon.active {
+  background-color: #743ad0;
 }
 .fp-viewing-o-curso #top #menu-icon.active .line,
 .fp-viewing-o-curso-4 #top #menu-icon.active .line,
@@ -568,8 +560,7 @@ main #inicio .btn {
 .fp-viewing-o-curso-5 #top #menu-icon.active .line,
 .fp-viewing-o-curso-6 #top #menu-icon.active .line,
 .fp-viewing-o-curso-7 #top #menu-icon.active .line,
-.fp-viewing-o-curso-8 #top #menu-icon.active .line,
-.fp-viewing-contate-nos #top #menu-icon.active .line {
+.fp-viewing-o-curso-8 #top #menu-icon.active .line {
   background-color: #ef4e2e;
 }
 .fp-viewing-grade-curricular #top {
@@ -581,17 +572,17 @@ main #inicio .btn {
 .fp-viewing-grade-curricular #top #menu-icon.active .line {
   background-color: #743ad0;
 }
-.fp-viewing-agenda #top {
+.fp-viewing-linha-do-tempo #top {
   background-color: #2acfc1;
 }
-.fp-viewing-agenda #top #menu-icon.active {
+.fp-viewing-linha-do-tempo #top #menu-icon.active {
   background-color: #f5f5f5;
 }
-.fp-viewing-agenda #top #menu-icon.active .line {
+.fp-viewing-linha-do-tempo #top #menu-icon.active .line {
   background-color: #2acfc1;
 }
-.fp-viewing-agenda #top #menu a.active,
-.fp-viewing-agenda #top li a.active {
+.fp-viewing-linha-do-tempo #top #menu a.active,
+.fp-viewing-linha-do-tempo #top li a.active {
   border-bottom-color: #743ad0;
 }
 .fp-viewing-inscreva-se #top {
@@ -648,6 +639,9 @@ main #inicio .btn {
 .fp-viewing-nossos-parceiros #top li a.active {
   border-bottom-color: #2acfc1;
 }
+.fp-viewing-contate-nos #menu li a.active {
+  border-bottom-color: #743ad0;
+}
 .arrowLeft {
   transform: rotate(90deg);
 }
@@ -664,6 +658,63 @@ main #inicio .btn {
   transition: transform 1s;
   cursor: pointer;
 }
+#inscricoes {
+  background-image: url("../images/inscricoes/pessoas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#inscricoes .title {
+  color: #f5f5f5;
+}
+#inscricoes .title:before {
+  color: #743ad0;
+}
+#inscricoes .fp-tableCell {
+  height: 100vh !important;
+}
+#inscricoes .content {
+  justify-content: space-evenly;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 70%;
+}
+#inscricoes .content .divisor {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+#inscricoes .content .divisor .l1 {
+  background-color: #2acfc1;
+}
+#inscricoes .content .divisor .l2 {
+  background-color: #f5f5f5;
+}
+#inscricoes .content h3 {
+  text-align: center;
+  font-size: 65px;
+  color: #2acfc1;
+  width: 100%;
+  padding: 10px;
+}
+#inscricoes .content p {
+  text-align: center;
+  font-size: 26px;
+  color: #f5f5f5;
+  margin-bottom: 5%;
+}
+#inscricoes .content .btn {
+  background-color: transparent;
+  color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  font-size: 25px;
+  font-weight: bold;
+}
+#inscricoes .content .btn:hover {
+  background-color: #f5f5f5;
+  color: #2acfc1;
+}
 textarea {
   border-radius: 5px;
   border: none;
@@ -671,7 +722,7 @@ textarea {
   font-size: 18px;
   padding: 20px;
 }
-input[type ='text'], input[type ='email'] {
+input[type ='text'] {
   background-color: transparent;
   border: none;
   outline: none;
@@ -681,10 +732,10 @@ input[type ='text'], input[type ='email'] {
   font-size: 18px;
   border-bottom: 2px solid #f5f5f5;
 }
-input[type ='text']::placeholder, input[type ='email']::placeholder {
+input[type ='text']::placeholder {
   color: #f5f5f5;
 }
-input[type ='text']::placeholder:before, input[type ='email']::placeholder:before {
+input[type ='text']::placeholder:before {
   content: "//";
 }
 #fale-conosco {
@@ -773,33 +824,6 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   display: flex;
   align-items: center;
 }
-#grade .container.active {
-  align-items: flex-start;
-}
-#grade .container.active > p {
-  display: none;
-}
-#grade .container.active h2 {
-  margin-right: 30%;
-  font-weight: bold;
-  font-size: 15px;
-}
-#grade .container.active .content {
-  margin-top: 1%;
-  height: 10%;
-  align-items: normal;
-  flex-wrap: nowrap;
-  width: 25%;
-}
-#grade .container.active .content .grades {
-  margin-left: -3%;
-}
-#grade .container.active .content .grades svg {
-  width: 75%;
-}
-#grade .container.active .content .grades p {
-  display: none;
-}
 #grade .container > p {
   text-align: center;
   color: #2acfc1;
@@ -808,13 +832,6 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
 #grade .fp-tableCell {
   height: 100% !important;
 }
-
-#grade .info_curso{
-  font-size:1.3em;
-  padding:50px 0;
-}
-
-
 #grade .curso {
   margin-top: 2%;
   display: none;
@@ -822,8 +839,7 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   height: 62%;
 }
 #grade .curso .btn {
-  position: absolute;
-  margin-top: 2%;
+  margin-bottom: 10px;
 }
 #grade .curso img {
   flex: 1;
@@ -831,74 +847,62 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
 }
 #grade .curso .info {
   flex: 1;
-  padding: 0% 8%;
+  padding-left: 5%;
+  width: 100%;
+}
+#grade .curso .info ul {
+  list-style: none;
+  background-color: #fff;
+  border-left: 5px solid #743ad0;
+  margin: 15% 0%;
+  box-shadow: 5px 5px 12px rgba(0,0,0,0.05), -5px -5px 12px rgba(0,0,0,0.05), -5px 5px 12px rgba(0,0,0,0.05), 5px -5px 12px rgba(0,0,0,0.05);
   width: 50%;
 }
-#grade .curso .info .select {
-  background: #fff;
-  box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
+#grade .curso .info ul .select {
   display: flex;
   align-items: center;
   color: #808080;
-  width: 75%;
-  margin-top: 5%;
   padding: 10px 0;
-  cursor: pointer;
-  z-index: 90;
-  border-left: 4px solid #fff;
 }
-#grade .curso .info .select:hover {
-  border-left: 4px solid #743ad0;
-}
-#grade .curso .info .select:hover ~ ul,
-#grade .curso .info .select ~ ul:hover {
-  transform: scaleY(1);
-}
-#grade .curso .info .select svg {
+#grade .curso .info ul .select svg {
   width: 24px;
   height: 37px;
   margin-right: 20px;
   margin-left: 20px;
 }
-#grade .curso .info ul {
-  z-index: 89;
-  transform: scaleY(0);
-  transition: 0.2s ease-in;
-  transform-origin: top;
-  list-style: none;
-  background-color: #fff;
-  border-left: 5px solid #743ad0;
-  box-shadow: 5px 5px 12px rgba(0,0,0,0.05), -5px -5px 12px rgba(0,0,0,0.05), -5px 5px 12px rgba(0,0,0,0.05), 5px -5px 12px rgba(0,0,0,0.05);
-  width: 75%;
-  height: 1px;
-}
-#grade .curso .info ul .title {
+#grade .curso .info ul p {
+  display: none;
   background-color: #743ad0;
   color: #f5f5f5;
   font-weight: bold;
-  padding: 3% 0 1% 3%;
+  padding: 2% 0 1% 3%;
   font-size: 12px;
-  margin-top: 0 !important;
-}
-#grade .curso .info ul .title:before {
-  content: "";
 }
 #grade .curso .info ul li {
-  z-index: 89;
   padding: 12px;
+  display: none;
+  opacity: 0;
   transition: all 1s ease;
   font-size: 13px;
+}
+#grade .curso .info ul:hover {
+  position: relative;
+  margin-top: -25%;
+  cursor: pointer;
+  margin-bottom: -5%;
+}
+#grade .curso .info ul:hover p {
+  display: block;
+}
+#grade .curso .info ul:hover li {
   opacity: 1;
   color: #f5f5f5;
   display: block;
   background-color: #743ad0;
 }
-#grade .curso .info ul li:before {
+#grade .curso .info ul:hover li:before {
   content: "• ";
   color: #2acfc1;
-}
-#grade .curso .info ul:hover {
-  position: relative;
 }
 #grade .curso .info h2 {
   color: #101d48;
@@ -909,17 +913,14 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   color: #743ad0;
 }
 #grade .curso .info .divisor {
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 #grade .curso .info .divisor .l1 {
   background-color: #2acfc1;
 }
 #grade .curso .info .divisor .l2 {
   background-color: #ef4e2e;
-}
-#grade .curso .info .btn {
-  /*z-index: -1;*/
 }
 #grade .circleGround {
   display: flex;
@@ -943,7 +944,7 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   height: 75%;
   width: 75%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
 }
 #grade .content .grades {
@@ -970,11 +971,10 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   color: #999;
 }
 #equipe {
-  background-image: url("../images/equipe/background.svg");
+  background-image: url("../images/equipe/background.png");
   background-repeat: no-repeat;
-  background-size: 75%;
+  background-size: cover;
   background-color: #f5f5f5;
-  background-position: 50% 60%;
 }
 #equipe #equipe-canvas {
   width: 100%;
@@ -983,7 +983,6 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
 }
 #equipe .title {
   color: #743ad0;
-  text-align: center;
 }
 #equipe .title:before {
   color: #2acfc1;
@@ -1000,12 +999,14 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   justify-content: space-between;
 }
 #equipe #equipe-list li {
-  width:280px;
-  height:280px;
   margin: 20px;
   border: 10px solid #fff;
   border-radius: 50%;
   overflow: hidden;
+  min-width: 20%;
+  min-height: 20%;
+  max-height: 50%;
+  max-width: 50%;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -1041,7 +1042,7 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
 #equipe #equipe-list li:hover img {
   filter: grayscale(0%);
   opacity: 0.6;
-  transform: scale(1.1);
+  transform: scale(1.6);
 }
 #tempo {
   background-color: #2acfc1;
@@ -1058,30 +1059,24 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   margin-bottom: 10vh;
   padding-bottom: 1vh;
 }
-#tempo #timeline .mes {
-  background-color: #743ad0;
-  color: #f5f5f5;
-  width: 145px;
-  margin-top: -15vmin;
-  left: calc(50% - 75px);
-  position: absolute;
-}
 #tempo #timeline ul {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+#tempo #timeline ul .mes {
+  background-color: #743ad0;
+  color: #f5f5f5;
+}
+#tempo #timeline ul .gamb {
+  background-color: #f5f5f5;
+  width: 2px;
+  height: 10vh;
+}
 #tempo #timeline ul li {
   height: 10vh;
   min-width: 200px;
   list-style: none;
-}
-#tempo #timeline ul li.fim:nth-last-child(1) {
-  border: 0;
-  height: 0;
-}
-#tempo #timeline ul li.fim .dia:before {
-  background-color: #f5f5f5;
 }
 #tempo #timeline ul li .atividade {
   color: #fff;
@@ -1119,7 +1114,10 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   right: 287px;
 }
 #tempo #timeline ul li:nth-last-child(1) {
-  height: 25vh;
+  border: none !important;
+}
+#tempo #timeline ul li:nth-last-child(1) .dia:before {
+  background-color: #f5f5f5;
 }
 #tempo #timeline ul li .importante.dia:before {
   border: 6px solid #f5f5f5;
@@ -1132,9 +1130,6 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   position: relative;
   color: #743ad0;
 }
-#tempo #timeline ul li .dia.importante {
-  color: #743ad0;
-}
 #tempo #timeline ul li .dia:before {
   content: '';
   position: absolute;
@@ -1145,6 +1140,9 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   transform: translateY(-50%);
   z-index: 1000;
   align-self: center;
+}
+#tempo #timeline ul .importante {
+  color: #743ad0 !important;
 }
 #parceiros {
   background-color: #f5f5f5;
@@ -1180,45 +1178,31 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   padding: 5%;
   transition: all 0.6s ease;
 }
-
-.btn-edital{
-  border:2px solid #666;
-  color:#666;
-  display: inline-block;
-  margin: 20px 0;
-  z-index:400;
-}
-
 @media only screen and (max-width: 1023px) {
-  .fp-viewing-bem-vindo #top .col-9 li:last-child {
-    justify-content: center;
-  }
-  
   body {
     background-size: auto auto;
     background-position: center center;
   }
-  
   header {
     display: flex;
     justify-content: center;
-    margin-bottom: -10%;
+    margin-bottom: -3%;
   }
-  
+  header #top {
+    max-width: 100%;
+    padding: 0 !important;
+  }
   header #top .container {
     padding: 0 !important;
   }
-  
   header #top .col-3 {
     display: block !important;
     margin-top: 3%;
     margin-left: 3%;
   }
-  
   header #top .col-9 {
     width: 100% !important;
   }
-  
   header #top img {
     float: left;
     max-width: 100px;
@@ -1229,7 +1213,7 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
     height: 40px;
     border: 2px solid #f5f5f5;
     float: right;
-    margin-right: 6%;
+    margin-right: 20px;
   }
   header #top #menu-icon.active {
     background-color: #f5f5f5;
@@ -1264,17 +1248,10 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
     margin: 10px;
     text-align: center;
   }
-  header #top nav ul li:last-child(1) {
+  header #top nav ul li:last-child {
     margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     justify-content: center !important;
-  }
-  
-  .fp-viewing-bem-vindo #top{
-	  padding:0;
-  }
-  main > section {
-    padding-bottom: 80px;
   }
   main #inicio {
     padding-bottom: 10px;
@@ -1293,7 +1270,7 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
     width: 100%;
   }
   main #inicio .container .row:nth-child(1) {
-    margin-bottom: 20%;
+    margin-bottom: 15%;
   }
   main #inicio .container .row:nth-child(2) .col-4:nth-child(1),
   main #inicio .container .row:nth-child(2) .col-4:nth-child(2) {
@@ -1302,8 +1279,6 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   main #inicio p {
     font-size: 5vmin;
     max-width: 100%;
-    margin-bottom: 0;
-    height: 20vmin;
   }
   main #inicio .col-4:nth-child(3) {
     display: flex;
@@ -1312,6 +1287,7 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   }
   main #parceiros .content a {
     width: 35vw;
+    height: 35vh;
   }
   main #parceiros .content a img {
     width: 100%;
@@ -1332,7 +1308,7 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
     display: none;
   }
   main #nossaMissao #missao #missaoR {
-    width: 90%;
+    width: 80%;
     display: flex !important;
     flex-direction: column;
     align-items: center;
@@ -1369,64 +1345,13 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
     width: 90%;
     flex-direction: column;
   }
-  main #grade .container.active {
+  main #inscricoes .content {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
     flex-direction: column;
-  }
-  main #grade .container.active > p {
-    display: none;
-  }
-  main #grade .container.active h2 {
-    align-self: center;
-    font-weight: bold;
-    font-size: 15px;
-  }
-  main #grade .container.active .content {
-    margin-top: 5%;
-    height: auto;
-    align-items: normal;
-    flex-wrap: nowrap;
-    width: 25%;
-  }
-  main #grade .container.active .content .grades {
-    margin-left: 0;
-    width: 20%;
-  }
-  main #grade .container.active .content .grades svg {
-    width: 100%;
-    margin-bottom: 0;
-  }
-  main #grade .container.active .content .grades p {
-    display: none;
-    height: auto;
-  }
-  main #grade .container > p {
-    width: 100%;
-    font-size: 4vmin;
-    margin-top: 3%;
-  }
-  main #grade .container .curso {
-    width: 100%;
-    flex-direction: column-reverse;
-  }
-  main #grade .container .curso .btn {
-    margin-top: 5%;
-    left: calc(50% - 82px);
-  }
-  main #grade .container .curso iframe {
-    width: 120%;
-    margin-left: -10%;
-    margin-top: 30%;
-  }
-  main #grade .container .curso .info {
-    width: 100%;
-    padding: 0;
-  }
-  main #grade .container .curso .info .select {
-    width: 100%;
-    z-index: 100;
-  }
-  main #grade .container .curso .info ul {
-    width: 100%;
+    width: 90%;
+    height: 70%;
   }
   main #grade h2 {
     margin-right: 0 !important;
@@ -1434,28 +1359,20 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   main #grade .content {
     width: 100% !important;
     margin-right: 0 !important;
-    height: auto;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 4%;
   }
   main #grade .content .grades {
     cursor: pointer;
     width: 50%;
     text-align: center;
-    margin: 2% 0;
-  }
-  main #grade .content .grades svg {
-    width: 20vmin;
   }
   main #grade .content .grades p {
-    height: auto;
-    font-size: 3vmin;
-  }
-  #equipe img {
-    height: 25vmax;
+    font-size: 3vw;
+    margin-right: 0 !important;
   }
   #equipe .container {
     display: flex;
@@ -1469,7 +1386,6 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
     display: flex;
     justify-content: space-around;
     width: 65%;
-    margin-top: 5%;
   }
   #equipe .passCircles .passCircle {
     background-color: #999;
@@ -1478,7 +1394,7 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
     background-color: #2acfc1;
   }
   #equipe .fp-slides {
-    height: 80vh;
+    height: 70vh;
   }
   #equipe .slide {
     display: flex;
@@ -1525,6 +1441,7 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   }
   #tempo #timeline {
     margin-top: 15%;
+    margin-bottom: 25%;
   }
   #tempo #timeline ul {
     width: 100vw;
@@ -1535,6 +1452,16 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   #tempo #timeline ul .mes {
     background-color: #743ad0;
     color: #f5f5f5;
+  }
+  #tempo #timeline ul .gamb {
+    background-color: transparent;
+    width: 300px;
+    height: 100px;
+    top: -40px;
+    border-left: 2px solid #f5f5f5;
+    z-index: -1;
+    position: relative;
+    margin: -6vh 0px;
   }
   #tempo #timeline ul li {
     height: 15vh;
@@ -1555,6 +1482,18 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   }
   #tempo #timeline ul li .importante.dia:before {
     right: 287px !important;
+  }
+  #inscricoes .content {
+    width: 85% !important;
+  }
+  #inscricoes .content h3 {
+    font-size: 8vw;
+  }
+  #inscricoes .content p {
+    font-size: 5vw;
+  }
+  #inscricoes .content .btn {
+    margin-top: 4vh;
   }
   #fale-conosco {
     background-color: #ef4e2e;
@@ -1582,37 +1521,23 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
     width: 100%;
     text-align: center;
   }
-  #fale-conosco .content #contato #footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  #fale-conosco .content #contato #footer,
+  #fale-conosco .content #contato a {
+    padding: 10px;
   }
-  #fale-conosco .content #contato #footer a {
-    margin-bottom: 3%;
-    padding: 0;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #fale-conosco .content #contato #footer a img {
-    margin-right: 5%;
-  }
-  #fale-conosco .content #contato #footer a:hover {
+  #fale-conosco .content #contato #footer:hover,
+  #fale-conosco .content #contato a:hover {
     color: #101d48;
   }
   #fale-conosco .content #contato #social-media {
     display: flex;
-    padding-top: 0 !important;
-    width: 100%;
+    flex-direction: column;
+    padding-top: 20px;
   }
   #fale-conosco .content #contato form {
     justify-content: center;
     text-align: center;
     padding: 0;
-    margin: 0;
-  }
-  #fale-conosco .content #contato form .btn {
     margin: 0;
   }
   #curso .fp-tableCell {
@@ -1652,6 +1577,28 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   }
   #curso .passCircles .passCircle:nth-child(n + 5) {
     display: block;
+  }
+  #grade {
+    height: auto !important;
+  }
+  #grade .curso {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column-reverse;
+    height: auto;
+    min-height: min-content;
+  }
+  #grade .curso img {
+    width: 100%;
+  }
+  #grade .curso .info {
+    width: 100%;
+    padding: 0%;
+  }
+  #grade .curso .info ul {
+    margin: 15% 0%;
+    width: 100%;
   }
 }
 @-moz-keyframes lineGrowFX {
@@ -1766,6 +1713,26 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
     opacity: 0;
   }
 }
+@-moz-keyframes pulse {
+  to {
+    text-shadow: 0px 0px 15px rgba(216,21,125,0.75);
+  }
+}
+@-webkit-keyframes pulse {
+  to {
+    text-shadow: 0px 0px 15px rgba(216,21,125,0.75);
+  }
+}
+@-o-keyframes pulse {
+  to {
+    text-shadow: 0px 0px 15px rgba(216,21,125,0.75);
+  }
+}
+@keyframes pulse {
+  to {
+    text-shadow: 0px 0px 15px rgba(216,21,125,0.75);
+  }
+}
 @-moz-keyframes grades {
   to {
     stroke-dashoffset: 0;
@@ -1785,38 +1752,4 @@ input[type ='text']::placeholder:before, input[type ='email']::placeholder:befor
   to {
     stroke-dashoffset: 0;
   }
-}
-
-
-.fp-scroller{
-	min-height:130%;
-}
-
-@media screen and (max-width:940px){
-	#grade{
-		padding:20px 0 0 0!important;
-		height:400px
-		
-	}
-	#grade .info_curso{
-	  font-size:2em;
-	  padding:20px 0;
-	  
-	}
-	
-	#grade .curso{
-		
-	}
-	
-	#grade h2{
-		margin-top:0;
-	}
-		
-	#grade .fp-scrollable{
-		padding-bottom:50px;
-	}
-
-	#mapCustom{
-		height:300px;
-	}
 }

@@ -235,6 +235,7 @@ main #inicio .btn {
   transition: all 1s;
   outline: none;
   border: none;
+  z-index: 0;
 }
 .btn.btn-contrast {
   border: 3px solid #743ad0;
@@ -262,6 +263,9 @@ main #inicio .btn {
   display: flex;
   margin-top: -3vh;
 }
+#nossaMissao.active img {
+  transform: scale(1.4);
+}
 #nossaMissao #missao {
   display: flex;
   flex-direction: row;
@@ -271,10 +275,16 @@ main #inicio .btn {
   justify-content: space-between;
 }
 #nossaMissao #missao img {
-  width: 40%;
+  transition: 1s 0.4s ease;
+  width: 55%;
 }
 #nossaMissao #missao #missaoR {
+<<<<<<< HEAD
   width: 55%;
+=======
+  width: 45%;
+  display: block !important;
+>>>>>>> c6fc9f1b180747a08c973526b7df46be65e49376
 }
 #nossaMissao #missao #missaoR h1 {
   color: #101d48;
@@ -817,8 +827,8 @@ input[type ='text']::placeholder:before {
 }
 #grade .curso .info {
   flex: 1;
-  padding-left: 5%;
-  width: 100%;
+  padding: 0% 8%;
+  width: 50%;
 }
 #grade .curso .info .select {
   background: #fff;
@@ -830,6 +840,11 @@ input[type ='text']::placeholder:before {
   margin-top: 5%;
   padding: 10px 0;
   cursor: pointer;
+  z-index: 90;
+  border-left: 4px solid #fff;
+}
+#grade .curso .info .select:hover {
+  border-left: 4px solid #743ad0;
 }
 #grade .curso .info .select:hover ~ ul {
   transform: scaleY(1);
@@ -841,6 +856,7 @@ input[type ='text']::placeholder:before {
   margin-left: 20px;
 }
 #grade .curso .info ul {
+  z-index: 89;
   transform: scaleY(0);
   transition: 0.2s ease-in;
   transform-origin: top;
@@ -863,6 +879,7 @@ input[type ='text']::placeholder:before {
   content: "";
 }
 #grade .curso .info ul li {
+  z-index: 89;
   padding: 12px;
   transition: all 1s ease;
   font-size: 13px;
@@ -895,6 +912,9 @@ input[type ='text']::placeholder:before {
 }
 #grade .curso .info .divisor .l2 {
   background-color: #ef4e2e;
+}
+#grade .curso .info .btn {
+  z-index: 0;
 }
 #grade .circleGround {
   display: flex;
@@ -1158,9 +1178,12 @@ input[type ='text']::placeholder:before {
   transition: all 0.6s ease;
 }
 @media only screen and (max-width: 1023px) {
+<<<<<<< HEAD
   .fp-viewing-bem-vindo #top {
     padding: 0;
   }
+=======
+>>>>>>> c6fc9f1b180747a08c973526b7df46be65e49376
   .fp-viewing-bem-vindo #top .col-9 li:last-child {
     justify-content: center;
   }

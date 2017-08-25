@@ -146,13 +146,15 @@ header
           a
             display inline
             white-space nowrap
+            &:hover
+              background-color contrast
+              color color-2
   .btn-contrast-full
     border 2px solid contrast
     background-color transparent
     color contrast
-    &:hover
-      background-color contrast
-      color color-2!important
+
+
 
 section
   width 100%
@@ -272,7 +274,7 @@ main
 
 .title
   text-align start
-  margin-top 5% !important
+  margin-top 5%
   &:before
     content "// "
 
@@ -296,7 +298,6 @@ main
       width 40%
     #missaoR
       width 55%
-      display block !important
       h1
         color color-1
         font-size 4vw
@@ -439,7 +440,7 @@ main
 .fp-viewing-a-iniciativa, .fp-viewing-o-curso, .fp-viewing-grade-curricular, .fp-viewing-linha-do-tempo, .fp-viewing-inscreva-se, .fp-viewing-nossa-equipe-1, .fp-viewing-nossos-parceiros, .fp-viewing-contate-nos
   #top
     background-color color-3
-    padding 5px 0 0 0
+    padding 0
     .col-3
       display block
     .col-9
@@ -806,6 +807,7 @@ input[type ='text']
     min-height 500px
   .title
     color contrastInside
+    text-align center
     &:before
       color color-4
   .slide, .passCircles
@@ -971,6 +973,13 @@ input[type ='text']
         transition all 0.6s ease
 
 @media only screen and (max-width 1023px)
+  .fp-viewing-bem-vindo
+    #top
+      padding 0
+      .col-9
+        li
+          &:last-child
+            justify-content center
   body
     background-size auto auto
     background-position center center
@@ -979,8 +988,6 @@ input[type ='text']
     justify-content center
     margin-bottom -3%
     #top
-      max-width 100%
-      padding 0 !important
       .container
         padding 0 !important
       .col-3
@@ -1046,7 +1053,7 @@ input[type ='text']
           width 100%
         .row
           &:nth-child(1)
-            margin-bottom 15%
+            margin-bottom 20%
           &:nth-child(2)
             .col-4
               &:nth-child(1), &:nth-child(2)
@@ -1054,6 +1061,8 @@ input[type ='text']
       p
         font-size 5vmin
         max-width 100%
+        margin-bottom 0
+        height 20vmin
       .col-4
         &:nth-child(3)
           display flex
@@ -1079,7 +1088,7 @@ input[type ='text']
         img
           display none
         #missaoR
-          width 80%
+          width 90%
           display flex !important
           flex-direction column
           align-items center
@@ -1112,7 +1121,7 @@ input[type ='text']
     #grade
       .container
         &.active
-          align-items flex-start
+          flex-direction column
           > p
             display none
           h2
@@ -1140,11 +1149,7 @@ input[type ='text']
           margin-top 3%
         .curso
           width 100%
-          margin-left auto
-          margin-right auto
           flex-direction column-reverse
-          height auto
-          min-height min-content
           .btn
             margin-top 5%
             left calc(50% - 82px)
@@ -1174,16 +1179,16 @@ input[type ='text']
           cursor pointer
           width 50%
           text-align center
-          margin-bottom 2%
+          margin 2% 0
+          svg
+            width 20vmin
           p
             height auto
-            font-size 3vw
-            margin-right 0 !important
-
+            font-size 3vmin
 
   #equipe
     img
-      height 130px;
+      height 25vmax;
     .container
       display flex
       flex-direction column
@@ -1194,12 +1199,13 @@ input[type ='text']
       display flex
       justify-content space-around
       width 65%
+      margin-top 5%
       .passCircle
         background-color color-6
         &.active
           background-color color-4
     .fp-slides
-      height 70vh
+      height 80vh
     .slide
       display flex
       flex-wrap wrap

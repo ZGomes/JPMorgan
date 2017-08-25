@@ -40,7 +40,6 @@ function scroll() {
         anchors: ['bem-vindo', 'a-iniciativa', 'o-curso', 'grade-curricular', 'agenda', 'nossa-equipe', 'nossos-parceiros', 'contate-nos'],
         menu: '#menu',
         afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
-
             if (anchorLink == 'o-curso') {
                 activePass("curso", slideIndex);
                 if (slideIndex === 0) {

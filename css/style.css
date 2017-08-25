@@ -106,14 +106,14 @@ header #top nav ul li .btn-contrast-full.active {
   display: inline;
   white-space: nowrap;
 }
+.fp-viewing-bem-vindo #top .col-9 li:last-child a:hover {
+  background-color: #f5f5f5;
+  color: #d8157d;
+}
 .fp-viewing-bem-vindo .btn-contrast-full {
   border: 2px solid #f5f5f5;
   background-color: transparent;
   color: #f5f5f5;
-}
-.fp-viewing-bem-vindo .btn-contrast-full:hover {
-  background-color: #f5f5f5;
-  color: #d8157d !important;
 }
 section {
   width: 100%;
@@ -247,7 +247,7 @@ main #inicio .btn {
 }
 .title {
   text-align: start;
-  margin-top: 5% !important;
+  margin-top: 5%;
 }
 .title:before {
   content: "// ";
@@ -275,7 +275,6 @@ main #inicio .btn {
 }
 #nossaMissao #missao #missaoR {
   width: 55%;
-  display: block !important;
 }
 #nossaMissao #missao #missaoR h1 {
   color: #101d48;
@@ -454,7 +453,7 @@ main #inicio .btn {
 .fp-viewing-nossos-parceiros #top,
 .fp-viewing-contate-nos #top {
   background-color: #ef4e2e;
-  padding: 5px 0 0 0;
+  padding: 0;
 }
 .fp-viewing-a-iniciativa #top .col-3,
 .fp-viewing-o-curso #top .col-3,
@@ -959,6 +958,7 @@ input[type ='text']::placeholder:before {
 }
 #equipe .title {
   color: #743ad0;
+  text-align: center;
 }
 #equipe .title:before {
   color: #2acfc1;
@@ -1158,6 +1158,12 @@ input[type ='text']::placeholder:before {
   transition: all 0.6s ease;
 }
 @media only screen and (max-width: 1023px) {
+  .fp-viewing-bem-vindo #top {
+    padding: 0;
+  }
+  .fp-viewing-bem-vindo #top .col-9 li:last-child {
+    justify-content: center;
+  }
   body {
     background-size: auto auto;
     background-position: center center;
@@ -1166,10 +1172,6 @@ input[type ='text']::placeholder:before {
     display: flex;
     justify-content: center;
     margin-bottom: -3%;
-  }
-  header #top {
-    max-width: 100%;
-    padding: 0 !important;
   }
   header #top .container {
     padding: 0 !important;
@@ -1252,7 +1254,7 @@ input[type ='text']::placeholder:before {
     width: 100%;
   }
   main #inicio .container .row:nth-child(1) {
-    margin-bottom: 15%;
+    margin-bottom: 20%;
   }
   main #inicio .container .row:nth-child(2) .col-4:nth-child(1),
   main #inicio .container .row:nth-child(2) .col-4:nth-child(2) {
@@ -1261,6 +1263,8 @@ input[type ='text']::placeholder:before {
   main #inicio p {
     font-size: 5vmin;
     max-width: 100%;
+    margin-bottom: 0;
+    height: 20vmin;
   }
   main #inicio .col-4:nth-child(3) {
     display: flex;
@@ -1289,7 +1293,7 @@ input[type ='text']::placeholder:before {
     display: none;
   }
   main #nossaMissao #missao #missaoR {
-    width: 80%;
+    width: 90%;
     display: flex !important;
     flex-direction: column;
     align-items: center;
@@ -1327,7 +1331,7 @@ input[type ='text']::placeholder:before {
     flex-direction: column;
   }
   main #grade .container.active {
-    align-items: flex-start;
+    flex-direction: column;
   }
   main #grade .container.active > p {
     display: none;
@@ -1363,11 +1367,7 @@ input[type ='text']::placeholder:before {
   }
   main #grade .container .curso {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     flex-direction: column-reverse;
-    height: auto;
-    min-height: min-content;
   }
   main #grade .container .curso .btn {
     margin-top: 5%;
@@ -1405,15 +1405,17 @@ input[type ='text']::placeholder:before {
     cursor: pointer;
     width: 50%;
     text-align: center;
-    margin-bottom: 2%;
+    margin: 2% 0;
+  }
+  main #grade .content .grades svg {
+    width: 20vmin;
   }
   main #grade .content .grades p {
     height: auto;
-    font-size: 3vw;
-    margin-right: 0 !important;
+    font-size: 3vmin;
   }
   #equipe img {
-    height: 130px;
+    height: 25vmax;
   }
   #equipe .container {
     display: flex;
@@ -1427,6 +1429,7 @@ input[type ='text']::placeholder:before {
     display: flex;
     justify-content: space-around;
     width: 65%;
+    margin-top: 5%;
   }
   #equipe .passCircles .passCircle {
     background-color: #999;
@@ -1435,7 +1438,7 @@ input[type ='text']::placeholder:before {
     background-color: #2acfc1;
   }
   #equipe .fp-slides {
-    height: 70vh;
+    height: 80vh;
   }
   #equipe .slide {
     display: flex;

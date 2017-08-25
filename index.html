@@ -610,10 +610,13 @@
             </div>
             <div id="contato">
                 <h2 class="title">Fale Conosco</h2>
-                <form action="">
-                    <input type="text" placeholder="// Nome">
-                    <input type="text" placeholder="// E-mail">
-                    <textarea name="" id="mensagem" placeholder="// Mensagem"></textarea>
+                <form action="https://formspree.io/senaicodeexperience@gmail.com" method="POST">
+                    <input type="text" placeholder="// Nome" name="nome">
+                    <input type="text" placeholder="// E-mail" email="email">
+                    <textarea name="mensagem" id="mensagem" placeholder="// Mensagem"></textarea>
+                    <input type="hidden" name="_next" value="https://codexp.sp.senai.br" />
+                    <input type="hidden" name="_subject" value="CODEXP | Novo Contato " />
+                    <input type="text" name="_gotcha" style="display:none" />
                     <input type="submit" class="btn" value="Enviar mensagem">
                 </form>
                 <div id="footer">

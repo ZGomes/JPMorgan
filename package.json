@@ -15,7 +15,8 @@
     "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^3.0.0",
     "stylus": "^0.54.5",
-    "webpack": "^3.5.3"
+    "webpack": "^3.5.3",
+    "browser-sync": "*"
   },
   "repository": {
     "type": "git",
